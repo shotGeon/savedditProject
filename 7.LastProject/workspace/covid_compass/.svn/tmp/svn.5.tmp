@@ -1,0 +1,35 @@
+package com.spring.compass.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@RequestMapping("/admin")
+@Controller
+public class AdminController {
+
+
+	@RequestMapping("/inst-list")
+	public String insttList() {
+		String url="admin/instt-list";
+
+		return url;
+	}
+
+	@RequestMapping("/inst-registForm")
+	public String insttRegistForm() {
+		String url="admin/instt-registForm";
+
+		return url;
+	}
+	@RequestMapping("/inst-regist")
+	public String insttRegist() {
+		System.out.println("안녕");
+		String url="";
+
+		return url;
+	}
+
+	
+	
+	
+}

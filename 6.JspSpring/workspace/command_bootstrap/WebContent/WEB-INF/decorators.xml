@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<decorators defaultdir="/WEB-INF/views/decorator">
+	<decorator name="starter" page="main_decorators.jsp">
+		<pattern>/*</pattern>
+	</decorator>
+	
+	<decorator name="openWindow" page="open_decorators.jsp">
+		<pattern>/**/*</pattern>
+		<patter>/main.do</patter>
+	</decorator>
+	
+	<decorator name="guest" page="guest_decorators.jsp">
+		<pattern>/guest/*</pattern>
+	</decorator>
+	
+	<excludes>
+		<pattern>/resources/*</pattern>
+	</excludes>
+	
+	<excludes>
+		<pattern>/guest/*</pattern>
+	</excludes>
+	
+</decorators>
+
+

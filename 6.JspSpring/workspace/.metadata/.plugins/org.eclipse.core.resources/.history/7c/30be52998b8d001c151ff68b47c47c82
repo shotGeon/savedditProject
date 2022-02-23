@@ -1,0 +1,425 @@
+<html class="no-handy"><head>
+		<title>코로나19 정보관리시스템</title>
+		
+
+
+
+
+
+
+
+
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="shortcut icon" type="image/x-icon" href="/static/assets/images/favicon.png">
+<link rel="stylesheet" href="/static/css/mCustomScrollbar.min.css">
+<link rel="stylesheet" href="/static/css/visitor.css">
+<script src="/static/libs/js/jquery.min.js"></script>
+<script src="/static/js/mCustomScrollbar.min.js"></script>
+<script src="/static/js/front/fes/fes.object.js"></script>
+<script src="/static/js/front/fes/fes.core.js"></script>
+<script src="/static/js/front/fes/fes.md.js"></script>
+<script src="/static/js/front/vendor/gsap.min.js"></script>
+<script src="/static/js/front/vendor/jquery.resize.js"></script>
+<script src="/static/js/front/vendor/lodash.2.4.1.js"></script>
+<script src="/static/js/front/vendor/toggle.js"></script>
+<script src="/static/js/front/vendor/selectstyle.js"></script>
+<script src="/static/js/front/vendor/modal.js?v=1644838981122"></script>
+<script src="/static/js/front/vendor/step-section.js"></script>
+<script src="/static/js/front/visitor.js"></script>
+<script src="/static/js/common.js?v=1644838981122"></script>
+	</head>
+	<body>
+	    
+
+
+
+
+
+
+
+
+
+
+<div class="wrapper">
+	<div class="container">
+		<main class="content">
+			<div class="step-header step-header--no-border">
+				<p>코로나19 정보 관리시스템</p>
+				<div class="step-lang" data-js="toggle__wrapper">
+					<button type="button" class="step-lang__anchor" data-js="toggle" aria-controls="uiToggle-0"><span class="screen--out">언어선택</span></button>
+					<div class="step-lang__panel" data-js="toggle__panel" id="uiToggle-0">
+						
+							
+								<button type="button" class="step-lang__btn" value="en"><span>English</span></button>
+								<!-- button type="button" class="step-lang__btn" value="cn"><span>中文</span></button -->
+								<button type="button" class="step-lang__btn step-lang__btn--selected" value="ko"><span>한국어</span></button>
+							
+							
+							
+						
+					</div>
+				</div>
+			</div>
+			<div class="step-intro">
+				<div class="step-intro__logo">
+				
+					<img src="/static/assets/images/visitor/ci.svg" alt="질병관리청">
+				
+				
+				</div>
+				<div class="step-intro__container">
+					<div class="step-intro__content">
+						<p class="step-intro__title">
+						
+							<strong>방문하실 선별진료소</strong> 입니다
+							
+						</p>
+						<div class="step-intro__info">
+							<div class="step-intro__box">
+								
+									<span>영등포구보건소</span>
+                                    <a class="step-intro__cta step-intro__cta--write">
+                                        <span>전자 문진표 작성하기</span>
+                                    </a>									
+								
+								
+							</div>
+						</div>
+						<div class="step-intro__warn">
+							<p class="warn-ico">전자 문진표 작성 후 24시간이내 선별진료소에 방문하지 않으시면 자동 삭제됩니다.</p>
+						</div>
+						
+							<div class="step-intro__tel">
+								<a class="step-intro__cta step-intro__cta--tel">
+									<span>대표전화 <em> 02-2670-4953~9</em></span>
+								</a>
+							</div>
+							<input type="hidden" id="instt" value="11700084A">
+						
+					</div>
+				</div>
+				<div class="copyright">
+				
+					<img src="/static/assets/images/visitor/footer-logo.svg" alt="질병관리청">
+				
+				
+					<p>© COPYRIGHT 2021 질병청. All RIGHTS RESERVED.</p>
+				</div>
+			</div>
+		</main>
+	</div>
+</div>
+<script>
+
+$(function(){
+	
+	localStorage.removeItem('imsmm.selfcheckInfo');
+	localStorage.removeItem('imsmm.address');
+	
+	$('.step-lang__btn').click(function(){
+		if ('ko' == this.value) {
+			$('.step-lang__anchor').data('plugin_uiToggle').close();
+		} else {
+			var instid = getInstId('L');
+			ComUtils.redirect('/KP/language.do', {instt: instid, lang: this.value});
+		}
+	});
+	
+    $('.step-intro__cta--write').click(function(){
+    	var instId = getInstId('P');
+    	if(instId){
+	    	ComUtils.redirect('/KP/epq/'+instId, {});
+    	} else {
+    		ComUtils.alert('선별진료소를 선택해주세요.', '알림');
+    		return false;
+    	}
+    });
+});
+function getInstId(type){
+	if( type === 'L'){
+	 	if(ComUtils.isEmpty(ComUtils.getValue('instt'))){
+	 		instt = $('.toggle-select__panel > input')[0].value.endsWith('A') ?  $('.toggle-select__panel > input')[0].value.substr(0,8) : $('.toggle-select__panel > input')[0].value; 
+	 	} else {
+	 		instt = ComUtils.getValue('instt').endsWith('A')  ? ComUtils.getValue('instt').substr(0,8) : ComUtils.getValue('instt');
+	 	}
+	} else {
+	 	if(ComUtils.isEmpty(ComUtils.getValue('instt'))){
+	 		instt = $('.toggle-select__panel > input')[0].value;
+	 	} else {
+	 		instt = ComUtils.getValue('instt');
+	 	}
+	}
+	return instt;
+} 
+</script>
+	    
+
+
+
+
+
+
+
+
+
+
+
+<section id="modal_alert" class="c-modal c-modal--alert c-modal--sizeM has-button" role="dialog" aria-labelledby="modal_alert__title">
+    <div class="c-modal__wrap" role="document" tabindex="-1">
+        <header class="c-modal__head">
+            <h2 class="c-modal__title" id="modal_alert__title"></h2>
+        </header>
+        <div class="c-modal__body">
+            <div class="c-modal__scroll">
+                <div class="c-modal__content">
+                    <p class="alert-msg"></p>
+                </div>
+            </div>
+        </div>
+        <div class="c-modal__foot o-cta-wrap">
+            <button type="button" data-dismiss="confirm" class="cta cta--modal c-modal__button cta--confirm"> 확인 </button>
+        </div>
+        <button type="button" class="c-modal__close" data-dismiss="cancel"><span class="screen--out">close</span></button>
+    </div>
+</section>
+
+
+<section id="modal_confirm" class="c-modal c-modal--alert c-modal--sizeM has-button" role="dialog" aria-labelledby="modal_alert__title">
+    <div class="c-modal__wrap" role="document" tabindex="-1">
+        <header class="c-modal__head">
+            <h2 class="c-modal__title" id="modal_confirm__title"></h2>
+        </header>
+        <div class="c-modal__body">
+            <div class="c-modal__scroll">
+                <div class="c-modal__content">
+                    <p class="alert-msg"></p>
+                </div>
+            </div>
+        </div>
+        <div class="c-modal__foot o-cta-wrap">
+            <button type="button" data-dismiss="confirm" class="cta cta--modal c-modal__button cta--confirm"> 확인 </button>
+            <button type="button" data-dismiss="cancel" class="cta cta--modal c-modal__button cta--cancel"> 취소 </button>
+        </div>
+        <button type="button" class="c-modal__close" data-dismiss="cancel"><span class="screen--out">close</span></button>
+    </div>
+</section>
+
+
+	
+</body></html><html class="no-handy"><head>
+		<title>코로나19 정보관리시스템</title>
+		
+
+
+
+
+
+
+
+
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="shortcut icon" type="image/x-icon" href="/static/assets/images/favicon.png">
+<link rel="stylesheet" href="/static/css/mCustomScrollbar.min.css">
+<link rel="stylesheet" href="/static/css/visitor.css">
+<script src="/static/libs/js/jquery.min.js"></script>
+<script src="/static/js/mCustomScrollbar.min.js"></script>
+<script src="/static/js/front/fes/fes.object.js"></script>
+<script src="/static/js/front/fes/fes.core.js"></script>
+<script src="/static/js/front/fes/fes.md.js"></script>
+<script src="/static/js/front/vendor/gsap.min.js"></script>
+<script src="/static/js/front/vendor/jquery.resize.js"></script>
+<script src="/static/js/front/vendor/lodash.2.4.1.js"></script>
+<script src="/static/js/front/vendor/toggle.js"></script>
+<script src="/static/js/front/vendor/selectstyle.js"></script>
+<script src="/static/js/front/vendor/modal.js?v=1644838981122"></script>
+<script src="/static/js/front/vendor/step-section.js"></script>
+<script src="/static/js/front/visitor.js"></script>
+<script src="/static/js/common.js?v=1644838981122"></script>
+	</head>
+	<body>
+	    
+
+
+
+
+
+
+
+
+
+
+<div class="wrapper">
+	<div class="container">
+		<main class="content">
+			<div class="step-header step-header--no-border">
+				<p>코로나19 정보 관리시스템</p>
+				<div class="step-lang" data-js="toggle__wrapper">
+					<button type="button" class="step-lang__anchor" data-js="toggle" aria-controls="uiToggle-0"><span class="screen--out">언어선택</span></button>
+					<div class="step-lang__panel" data-js="toggle__panel" id="uiToggle-0">
+						
+							
+								<button type="button" class="step-lang__btn" value="en"><span>English</span></button>
+								<!-- button type="button" class="step-lang__btn" value="cn"><span>中文</span></button -->
+								<button type="button" class="step-lang__btn step-lang__btn--selected" value="ko"><span>한국어</span></button>
+							
+							
+							
+						
+					</div>
+				</div>
+			</div>
+			<div class="step-intro">
+				<div class="step-intro__logo">
+				
+					<img src="/static/assets/images/visitor/ci.svg" alt="질병관리청">
+				
+				
+				</div>
+				<div class="step-intro__container">
+					<div class="step-intro__content">
+						<p class="step-intro__title">
+						
+							<strong>방문하실 선별진료소</strong> 입니다
+							
+						</p>
+						<div class="step-intro__info">
+							<div class="step-intro__box">
+								
+									<span>영등포구보건소</span>
+                                    <a class="step-intro__cta step-intro__cta--write">
+                                        <span>전자 문진표 작성하기</span>
+                                    </a>									
+								
+								
+							</div>
+						</div>
+						<div class="step-intro__warn">
+							<p class="warn-ico">전자 문진표 작성 후 24시간이내 선별진료소에 방문하지 않으시면 자동 삭제됩니다.</p>
+						</div>
+						
+							<div class="step-intro__tel">
+								<a class="step-intro__cta step-intro__cta--tel">
+									<span>대표전화 <em> 02-2670-4953~9</em></span>
+								</a>
+							</div>
+							<input type="hidden" id="instt" value="11700084A">
+						
+					</div>
+				</div>
+				<div class="copyright">
+				
+					<img src="/static/assets/images/visitor/footer-logo.svg" alt="질병관리청">
+				
+				
+					<p>© COPYRIGHT 2021 질병청. All RIGHTS RESERVED.</p>
+				</div>
+			</div>
+		</main>
+	</div>
+</div>
+<script>
+
+$(function(){
+	
+	localStorage.removeItem('imsmm.selfcheckInfo');
+	localStorage.removeItem('imsmm.address');
+	
+	$('.step-lang__btn').click(function(){
+		if ('ko' == this.value) {
+			$('.step-lang__anchor').data('plugin_uiToggle').close();
+		} else {
+			var instid = getInstId('L');
+			ComUtils.redirect('/KP/language.do', {instt: instid, lang: this.value});
+		}
+	});
+	
+    $('.step-intro__cta--write').click(function(){
+    	var instId = getInstId('P');
+    	if(instId){
+	    	ComUtils.redirect('/KP/epq/'+instId, {});
+    	} else {
+    		ComUtils.alert('선별진료소를 선택해주세요.', '알림');
+    		return false;
+    	}
+    });
+});
+function getInstId(type){
+	if( type === 'L'){
+	 	if(ComUtils.isEmpty(ComUtils.getValue('instt'))){
+	 		instt = $('.toggle-select__panel > input')[0].value.endsWith('A') ?  $('.toggle-select__panel > input')[0].value.substr(0,8) : $('.toggle-select__panel > input')[0].value; 
+	 	} else {
+	 		instt = ComUtils.getValue('instt').endsWith('A')  ? ComUtils.getValue('instt').substr(0,8) : ComUtils.getValue('instt');
+	 	}
+	} else {
+	 	if(ComUtils.isEmpty(ComUtils.getValue('instt'))){
+	 		instt = $('.toggle-select__panel > input')[0].value;
+	 	} else {
+	 		instt = ComUtils.getValue('instt');
+	 	}
+	}
+	return instt;
+} 
+</script>
+	    
+
+
+
+
+
+
+
+
+
+
+
+<section id="modal_alert" class="c-modal c-modal--alert c-modal--sizeM has-button" role="dialog" aria-labelledby="modal_alert__title">
+    <div class="c-modal__wrap" role="document" tabindex="-1">
+        <header class="c-modal__head">
+            <h2 class="c-modal__title" id="modal_alert__title"></h2>
+        </header>
+        <div class="c-modal__body">
+            <div class="c-modal__scroll">
+                <div class="c-modal__content">
+                    <p class="alert-msg"></p>
+                </div>
+            </div>
+        </div>
+        <div class="c-modal__foot o-cta-wrap">
+            <button type="button" data-dismiss="confirm" class="cta cta--modal c-modal__button cta--confirm"> 확인 </button>
+        </div>
+        <button type="button" class="c-modal__close" data-dismiss="cancel"><span class="screen--out">close</span></button>
+    </div>
+</section>
+
+
+<section id="modal_confirm" class="c-modal c-modal--alert c-modal--sizeM has-button" role="dialog" aria-labelledby="modal_alert__title">
+    <div class="c-modal__wrap" role="document" tabindex="-1">
+        <header class="c-modal__head">
+            <h2 class="c-modal__title" id="modal_confirm__title"></h2>
+        </header>
+        <div class="c-modal__body">
+            <div class="c-modal__scroll">
+                <div class="c-modal__content">
+                    <p class="alert-msg"></p>
+                </div>
+            </div>
+        </div>
+        <div class="c-modal__foot o-cta-wrap">
+            <button type="button" data-dismiss="confirm" class="cta cta--modal c-modal__button cta--confirm"> 확인 </button>
+            <button type="button" data-dismiss="cancel" class="cta cta--modal c-modal__button cta--cancel"> 취소 </button>
+        </div>
+        <button type="button" class="c-modal__close" data-dismiss="cancel"><span class="screen--out">close</span></button>
+    </div>
+</section>
+
+
+	
+</body></html>

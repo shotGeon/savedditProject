@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="member">
+ 	<select id="memberList" resultType="member">
+ 		SELECT * FROM MEMBER
+ 	</select>
+ 	
+ 	
+ 	
+ 	
+	<select id="memPagingList" parameterType="pagingVO" resultType="member">
+		SELECT AA.*
+		FROM
+		(SELECT ROWNUM AS RNUM, A.*
+		FROM
+		(SELECT ID,PWD,EMAIL,PICTURE,ENABLED
+	    	,TO_CHAR(REGDATE,'YYYY-MM-DD'),PHONE,
+	    	NAME,REGISTER,ADDRESS,AUTHORITY 
+	    	FROM MEMBER)A)AA
+	    	WHERE AA.RNUM BETWEEN #{firstRecNo} and #{lastRecNo}
+	    
+	    <if test='field.equals("name")'>
+	    	AND NAME LIKE '%' ||#{query}||'%'
+	    </if>
+	    
+	    <if test='field.equals("id")'>
+	    	AND ID LIKE '%' ||#{query}||'%'
+	    </if>
+	    
+	    <if test='field.equals("email")'>
+	    	AND EMAIL LIKE '%'||#{query}||'%'
+	    </if>
+	    
+	    <if test='field.equals("phone")'>
+	    	AND PHONE LIKE '%'||#{query}||'%'
+	    </if>
+	</select>
+	
+	
+	<select id="memFindTotalCount" parameterType="pagingVO" resultType="int">
+			SELECT COUNT(*) FROM MEMBER
+		
+		<if test='field.equals("name")'>
+	    	AND NAME LIKE '%' ||#{query}||'%'
+	    </if>
+	    
+	    <if test='field.equals("id")'>
+	    	AND ID LIKE '%' ||#{query}||'%'
+	    </if>
+	    
+	    <if test='field.equals("email")'>
+	    	AND EMAIL LIKE '%'||#{query}||'%'
+	    </if>
+	    
+	    <if test='field.equals("phone")'>
+	    	AND PHONE LIKE '%'||#{query}||'%'
+	    </if>
+		
+	</select>
+	
+	<select id="memTotalCount" resultType="int">
+		select count(*) from member
+	</select>
+ </mapper>

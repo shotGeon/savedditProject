@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+
+<script>
+$(function(){
+	$('#myPage').on('click', function(){
+		$.ajax({
+			url : '/boardpro/MemList.do',
+			type : 'get',
+			dataType : 'json',
+			success : function(res){
+				
+			} ,
+			error : function(xhr){
+				alert(xhr.status);
+			} 
+		})
+	})
+})
+
+
+</script>
+
+
+</head>
+<body>
+
+<input id="myPage" type="button" value="마이페이지">
+
+</body>
+</html>

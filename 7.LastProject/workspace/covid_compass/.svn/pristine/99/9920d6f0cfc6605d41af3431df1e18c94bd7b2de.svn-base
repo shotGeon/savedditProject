@@ -1,0 +1,56 @@
+package com.spring.compass.dao;
+
+import java.sql.SQLException;
+
+import org.apache.ibatis.session.SqlSession;
+
+import com.spring.compass.vo.HsptVO;
+
+public class HsptDAOImpl implements HsptDAO{
+	
+	private String nameSpace = "Hspt-Mapper.";
+	
+	private SqlSession sqlSession;
+	public void setSqlSession(SqlSession sqlSession) {
+		this.sqlSession = sqlSession; 
+	}
+	
+	@Override
+	public HsptVO selectHsptByInstNo(String instNo) throws SQLException {
+		HsptVO hspt = sqlSession.selectOne(nameSpace + "selectHsptByInstNo", instNo);
+		return hspt;
+	}
+
+	@Override
+	public String selectHsptCityNo(String city) throws SQLException {
+		String cityNo = sqlSession.selectOne(nameSpace+"selectHsptCityNo",city);
+		return cityNo;
+	}
+
+	@Override
+	public int selectHsptNextVal() throws SQLException {
+		int hsptSeq = sqlSession.selectOne(nameSpace+"selectHsptNextVal");
+		return hsptSeq;
+	}
+
+	@Override
+	public int selectInstNextval() throws SQLException {
+		int instSeq = sqlSession.selectOne(nameSpace+"selectInstNextval");
+		return instSeq;
+	}
+
+	@Override
+	public int insertHspt(HsptVO hspt) throws SQLException {
+		int result = sqlSession.update(nameSpace+"insertHspt", hspt);
+		
+		return result;
+	}
+
+	@Override
+	public int insertInst(HsptVO hspt) throws SQLException {
+		int result = sqlSession.update(nameSpace+"insertInst",hspt);
+		
+		return result;
+	}
+
+}

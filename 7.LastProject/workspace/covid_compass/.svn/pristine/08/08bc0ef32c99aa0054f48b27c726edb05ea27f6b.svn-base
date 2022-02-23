@@ -1,0 +1,68 @@
+package com.spring.compass.vo;
+
+public class InspVO {
+
+	@Override
+	public String toString() {
+		return "InspVO [instNo=" + instNo + ", pbhtNo=" + pbhtNo + ", inspNm=" + inspNm + ", inspTelno=" + inspTelno
+				+ ", empCnt=" + empCnt + ", inspNo=" + inspNo + ", rmndKitCnt=" + rmndKitCnt + ", inspAdres="
+				+ inspAdres + "]";
+	}
+	private String instNo;
+	private String pbhtNo;
+	private String inspNm;
+	private String inspTelno;
+	private int empCnt = 1;
+	private String inspNo;
+	private int rmndKitCnt = 0;
+	private String inspAdres;
+	public String getInstNo() {
+		return instNo;
+	}
+	public void setInstNo(String instNo) {
+		this.instNo = instNo;
+	}
+	public String getPbhtNo() {
+		return pbhtNo;
+	}
+	public void setPbhtNo(String pbhtNo) {
+		this.pbhtNo = pbhtNo;
+	}
+	public String getInspNm() {
+		return inspNm;
+	}
+	public void setInspNm(String inspNm) {
+		this.inspNm = inspNm;
+	}
+	public String getInspTelno() {
+		return inspTelno;
+	}
+	public void setInspTelno(String inspTelno) {
+		this.inspTelno = inspTelno;
+	}
+	public int getEmpCnt() {
+		return empCnt;
+	}
+	public void setEmpCnt(int empCnt) {
+		this.empCnt = empCnt;
+	}
+	public String getInspNo() {
+		return inspNo;
+	}
+	public void setInspNo(String inspNo) {
+		this.inspNo = inspNo;
+	}
+	public int getRmndKitCnt() {
+		return rmndKitCnt;
+	}
+	public void setRmndKitCnt(int rmndKitCnt) {
+		this.rmndKitCnt = rmndKitCnt;
+	}
+	public String getInspAdres() {
+		return inspAdres;
+	}
+	public void setInspAdres(String inspAdres) {
+		this.inspAdres = inspAdres;
+	}
+
+}

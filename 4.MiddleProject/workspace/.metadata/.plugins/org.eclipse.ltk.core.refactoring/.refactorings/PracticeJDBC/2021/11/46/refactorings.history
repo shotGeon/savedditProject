@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;JDBCTest&apos; to &apos;JDBCInsertTest&apos;&#x0D;&#x0A;- Original project: &apos;PracticeJDBC&apos;&#x0D;&#x0A;- Original element: &apos;JDBCTest&apos;&#x0D;&#x0A;- Renamed element: &apos;JDBCInsertTest&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;JDBCTest&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{JDBCTest.java[JDBCTest" matchStrategy="1" name="JDBCInsertTest" qualified="false" references="true" similarDeclarations="false" stamp="1636711844391" textual="false" version="1.0"/>
+</session>

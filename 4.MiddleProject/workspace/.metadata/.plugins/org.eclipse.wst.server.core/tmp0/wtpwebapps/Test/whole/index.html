@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+label{
+	width: 80px;
+	margin-bottom: 10px;
+}
+
+#mupdate{
+	width: 100px;
+}
+#jae{
+	margin-left: 10px;
+}
+</style>
+
+
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="/Test/js/jquery-3.6.0.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>	
+<script>
+$(function(){
+	findbutton();
+	/* $.ajax({
+		url : '/Test/MemList.do',
+		type : 'get',
+		dataType : 'html',
+		success : function(res){
+			$('#box').html(res);
+		},
+		error : function(xhr){
+			alert(xhr.status);
+		}
+	}) */
+	
+	$(document).on('click','#memInsert', function(){
+		$('#myModal').modal('show');
+		
+	})
+	
+	$(document).on('keyup', '#ID', function(){
+		idvalue =$(this).val();
+		
+		//정규식
+		idreg=/^[a-z][a-zA-Z0-9]{3,11}$/;
+		
+		if(!(idreg.test(idvalue))){
+			$(this).css('border', '5px solid red');
+			$('#idcheck').prop('disabled', true);
+		}else{
+			$(this).css('border', '5px solid green');
+			$('#idcheck').prop('disabled', false);
+		}	
+		
+	})
+	
+	$(document).on('click', '#idcheck', function(){
+		idvalue=$('#ID').val();
+		
+		if(idvalue.length<1){
+			alert("아이디를 입력하세요");
+			return false;
+		}
+		
+		if(idvalue.length<4 || idvalue.length>12){
+			alert("아이디는 4~12사이로 입력하세요");
+			return false;
+		}
+		
+		$.ajax({
+			url : '/Test/MemCheck.do',
+			data : {"ID" : idvalue},
+			dataType : 'json',
+			type : 'get',
+			success : function(res){
+				alert(res.flag);
+				
+			},
+			error : function(xhr){
+				alert(xhr.status);
+			}
+			
+		})
+		
+	})
+	
+	//비밀번호
+	$(document).on('keyup','#PWD', function(){
+		pwdvalue = $(this).val().trim();
+		pwdreg =/^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/;
+		
+		if(pwdreg.test(pwdvalue)){
+			$(this).css('border', '5px solid green');
+		}else{
+			$(this).css('border', '5px solid red');
+		}	
+		
+	})
+	
+	//이름
+	$(document).on('keyup','#NAME', function(){
+		namevalue = $(this).val().trim();
+		namereg =/^[가-힣]{2,4}$/;
+		
+		if(namereg.test(namevalue)){
+			$(this).css('border', '5px solid green');
+		}else{
+			$(this).css('border', '5px solid red');
+		}
+		
+	})
+	
+	//이메일
+	$(document).on('keyup','#EMAIL', function(){
+	emailvalue = $(this).val().trim();
+	emailreg =/^([a-zA-Z0-9]+)@([a-zA-Z0-9]+)(\.[a-z]+){1,2}$/;
+	
+	if(emailreg.test(emailvalue)){
+		$(this).css('border', '5px solid green');
+	}else{
+		$(this).css('border', '5px solid red');
+	}	
+	
+})
+
+	//전화번호
+	$(document).on('keyup','#PHONE', function(){
+		telvalue = $(this).val().trim();
+		telreg =/\d{3}\d{4}\d{4}/;
+		
+		if(telreg.test(telvalue)){
+			$(this).css('border', '5px solid green');
+		}else{
+			$(this).css('border', '5px solid red');
+		}	
+		
+	})
+
+	
+	
+	
+	$(document).on('click','.page', function(){
+		pageNo=$(this).html();
+		field_ = $('form option:selected').val();
+		query_ = $('#q').val();
+		$.ajax({
+			url : '/Test/MemList.do',
+			type : 'get',
+			data : {"pageNo" : pageNo,
+				    "f" : field_,
+				    "q" : query_},
+			dataType : 'html',
+			success : function(res){
+				$('#box').html(res);
+			},
+			error : function(xhr){
+				alert(xhr.status);
+			}
+		})
+	})
+	
+ 	$(document).on('click', '.mName', function(){
+		ID = $(this).attr('name');
+		location.href="/Test/MemSelect.do?ID="+ID+"";		
+	
+	}) 
+	
+	
+	
+	 //검색구현
+	 $(document).on('click', '#findbutton', function(){
+		field_ = $('form option:selected').val();
+		query_ = $('#q').val();
+		findbutton(field_, query_);
+		
+	})
+	
+	//체크박스삭제
+	$(document).on('click','#memChkDelete', function(){
+		chkList();
+		$.ajax({
+			url : '/Test/MemChkDelete.do',
+			type : 'get',
+			data : {"chk" : chk},
+			dataType : 'html',
+			success : function(res){
+				$('#box').html(res);
+			},
+			error : function(xhr){
+				alert("체크박스에러:"+xhr.status);
+			}
+		})
+		
+	})
+	
+})
+
+function sample6_execDaumPostcode() {
+	new daum.Postcode(
+			{
+				oncomplete : function(data) {
+
+					var addr = ''; // 주소 변수
+
+					//사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+					if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+						addr = data.roadAddress;
+					} else { // 사용자가 지번 주소를 선택했을 경우(J)
+						addr = data.jibunAddress;
+					}
+
+					// 우편번호와 주소 정보를 해당 필드에 넣는다.
+					//document.getElementById('sample6_postcode').value = data.zonecode;
+					document.getElementById("sample6_address").value = addr;
+					// 커서를 상세주소 필드로 이동한다.
+					//document.getElementById("sample6_detailAddress")
+					//		.focus();
+				}
+			}).open();
+}
+
+
+
+ chk='';
+ chkList = function(){
+	$("input[name=mem_chk]:checked").each(function(){
+		chk+=$(this).val()+",";
+	})
+}
+
+ findbutton = function(field_, query_){
+	 $.ajax({
+		 url: '/Test/MemList.do',
+			type: 'get',
+			data:{"f" : field_, "q" : query_},
+			dataType: 'html',
+			success: function(res){
+				$('#box').html(res);
+			},
+			error: function(xhr){
+				alert(xhr.status);
+			}
+	 })
+	 
+ } 
+
+</script>
+
+</head>
+
+
+<body>
+
+
+ <div id="box">
+ 
+ </div>
+ 
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">회원등록</h4>
+        </div>
+        <div class="modal-body">
+        
+          <form action="/Test/MemInsert.do" method="post" enctype="multipart/form-data">
+          
+          	<label>아이디</label><input type="text" id="ID" name="ID">
+          	<input id="idcheck" type="button" class="btn btn-success btn-sm" value="중복검사"><br>
+          	<label>패스워드</label><input type="password" id="PWD" name="PWD"><br>
+          	<label>이메일</label><input type="text" id="EMAIL" name="EMAIL"><br>
+          	<label>사진</label><input type="file" id="PICTURE" name="file"><br>
+          	       재직<input type="radio" value="1" id="ENABLED" name="ENABLED">
+          	       휴직<input type="radio" value="2" id="ENABLED" name="ENABLED">
+          	       퇴사<input type="radio" value="0" id="ENABLED" name="ENABLED"><br>
+          	<label>입사일</label><input type="date" id="REGDATE" name="REGDATE"><br>
+          	<label>전화번호</label><input type="text" id="PHONE" name="PHONE"><br>
+          	<label>이름</label><input type="text" id="NAME" name="NAME"><br>
+          	<label>등록자</label><input type="text" id="REGISTER" name="REGISTER"><br>
+          	<label>주소</label><input type="text" id="sample6_address" name="ADDRESS">
+          	                 <input type="button" onclick="sample6_execDaumPostcode()" value="주소찾기"><br>
+          	<label>권한</label><input type="text" id="AUTHORITY" name="AUTHORITY"><br>
+          	
+          	<p><input id="memInsert" type="submit" value="등록"></p>
+          </form>
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+
+<!-- Modal -->
+  <div class="modal fade" id="updateModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">회원수정</h4>
+        </div>
+        <div class="modal-body">
+          <form action="/Test/MemUpdate.do" method="post">
+          	<label>아이디</label><input type="text" class="ID" name="ID" readonly><br>
+          	<label>패스워드</label><input id="PWD" type="password" class="PWD" name="PWD"><br>
+          	<label>이메일</label><input id="EMAIL" type="EMAIL" class="EMAIL" name="EMAIL"><br>
+          	   <span id="jae">재직</span><input type="radio" value="1" id="ENABLED" name="ENABLED">
+          	       휴직<input type="radio" value="2" id="ENABLED" name="ENABLED">
+          	       퇴사<input type="radio" value="0" id="ENABLED" name="ENABLED"><br>
+          	<label>전화번호</label><input id="PHONE" type="text" class="PHONE" name="PHONE"><br>
+          	<label>이름</label><input type="text" id="NAME" class="NAME" name="NAME"><br>
+          	<label>주소</label><input type="text" class="ADDRESS" name="ADDRESS"><br>
+          	
+          	<p><input id="mupdate" type="submit" value="수정"></p>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+ 
+</body>
+</html>

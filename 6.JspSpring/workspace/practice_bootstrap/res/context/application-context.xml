@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans>
+	<bean id="sqlSessionFactory" class="util.MyBatisSqlSessionFactory"/>
+	<bean id="memberDAO" class="member.dao.MemberDaoImpl"/>
+	
+	<bean id="memberService" class="member.service.SearchMemberServiceImpl">
+		<property name="sqlSessionFactory" ref-value="sqlSessionFactory"/>
+		<property name="memberDAO" ref-value="memberDAO"/>
+	</bean>
+	
+	
+</beans>

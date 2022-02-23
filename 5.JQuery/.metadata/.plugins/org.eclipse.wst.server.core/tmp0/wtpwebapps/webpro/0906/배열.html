@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+
+<script>
+
+function print(result){
+	str="";
+	for(x in fruits){
+		str+=fruits[x]+"<br>";
+	}
+	//변수는 ''가 없어야 한다.
+	document.getElementById(result).innerHTML=str;
+}
+
+proc1 = function(){
+	fruits =["사과","복숭아","참외","수박","바나아"];
+	
+	//for문을 돌지 않고도 배열을 찍을 수 있다.
+	//document.querySelector('#result1').innerHTML=fruits;
+	print("result1");
+	 
+ }
+ 
+ proc2 =() =>{
+	 fruits = new Array("사과","파인애플","자두","배","수박");
+	 print("result2");
+	 
+ }
+ 
+ function proc3(){
+	   fruits = new Array();
+	   fruits[0]="사과";
+	   fruits[1]="복숭아";
+	   fruits[2]="참외";
+	   fruits[3]="수박";
+	   fruits[4]="바나나";
+	   
+	   print("result3");
+ }
+</script>
+</head>
+<body>
+<div class="box">
+  <h3>배열 -리터럴로 생성</h3>
+   -fruits =["사과","복숭아","참외","수박","바나아"]<br>
+   <br>
+  <input type="button" value="확인" onclick="proc1()"><br>
+  <div id="result1"></div>
+</div>
+
+<div class="box">
+  <h3>배열 -객체로 생성</h3>
+   -fruits = new Array("사과","파인애플","자두","배","수박")<br>
+   <br>
+  <input type="button" value="확인" onclick="proc2()"><br>
+  <div id="result2"></div>
+  
+  <div class="box">
+  <h3>배열 -객체로 생성</h3>
+   -fruits = new Array();
+   fruits[0]="사과";<br>
+   fruits[1]="복숭아";<br>
+   fruits[2]="참외";<br>
+   fruits[3]="수박";<br>
+   fruits[4]="바나나";<br>
+   <br>
+  <input type="button" value="확인" onclick="proc3()"><br>
+  <div id="result3"></div>
+</div>
+</div>
+</body>
+</html>

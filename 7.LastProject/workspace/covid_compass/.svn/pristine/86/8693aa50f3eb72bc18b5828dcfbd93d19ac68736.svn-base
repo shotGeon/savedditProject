@@ -1,0 +1,36 @@
+package com.spring.compass.service;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import com.spring.compass.dao.PstiDAO;
+import com.spring.compass.vo.PstiVO;
+
+public class PstiServiceImpl implements PstiService{
+
+	private PstiDAO pstiDAO;
+	public void setPstiDAO(PstiDAO pstiDAO) {
+		this.pstiDAO = pstiDAO;
+	}
+	
+	@Override
+	public PstiVO getPstiByPstiNo(String pstiNo) throws SQLException {
+		PstiVO psti = pstiDAO.selectPstiByPstiNo(pstiNo);
+		return psti;
+	}
+
+	@Override
+	public PstiVO getPstiByManageNo(String manageNo) throws SQLException {
+		PstiVO psti = pstiDAO.selectPstiByManageNo(manageNo);
+		return psti;
+	}
+
+	@Override
+	public List<PstiVO> getPstiListByInspNo(String inspNo) throws SQLException {
+		
+		List<PstiVO> pstiList = pstiDAO.selectPstiListByInspNo(inspNo);
+		
+		return pstiList;
+	}
+
+}

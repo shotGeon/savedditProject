@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+          PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+          "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="buyer">
+	
+	<resultMap class="buyerVO" id="buyerMap">
+	
+	<result property="buyer_id" column="buyer_id"/>
+	<result property="buyer_name" column="buyer_name"/>
+	<result property="buyer_lgu" column="buyer_lgu"/>
+	<result property="buyer_bank" column="buyer_bank"/>
+	<result property="buyer_bankno" column="buyer_bankno"/>
+	<result property="buyer_bankname" column="buyer_bankname"/>
+	<result property="buyer_zip" column="buyer_zip"/>
+	<result property="buyer_add1" column="buyer_add1"/>
+	<result property="buyer_add2" column="buyer_add2"/>
+	<result property="buyer_comtel" column="buyer_comtel"/>
+	<result property="buyer_fax" column="buyer_fax"/>
+	<result property="buyer_mail" column="buyer_mail"/>
+	<result property="buyer_charger" column="buyer_charger"/>
+	<result property="buyer_telext" column="buyer_telext"/>
+	
+	</resultMap>
+	
+	<insert id="insertBuyer" parameterClass="buyerVO">
+	
+		insert into buyer
+		(buyer_id,buyer_name,buyer_lgu,buyer_comtel,buyer_fax,buyer_mail,
+		  buyer_bank,buyer_add1,buyer_add2)
+		values(#buyer_id#,#buyer_name#,#buyer_lgu#,#buyer_comtel#,#buyer_fax#,
+		  #buyer_mail#,#buyer_bank#,#buyer_add1#,#buyer_add2#)
+	</insert>
+	
+	<select id="ListBuyer" resultMap="buyerMap">
+		select * from buyer
+	</select>
+	
+	<select id="selectBuyer" resultMap="buyerMap" parameterClass="string">
+		select * from buyer where buyer_id=#buyer_id#
+	</select>
+	
+	<delete id="deleteBuyer" parameterClass="string">
+		delete from buyer where buyer_id=#buyer_id#
+	</delete>
+	
+	<update id="updateBuyer" parameterClass="buyerVO">
+		update buyer
+		   set buyer_name =#buyer_name#, 
+		       buyer_comtel =#buyer_comtel#,
+		       buyer_fax =#buyer_fax#
+		  where buyer_id=#buyer_id#
+	</update>
+	
+</sqlMap>

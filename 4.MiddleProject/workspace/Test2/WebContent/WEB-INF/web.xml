@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<servlet>
+		<servlet-name>memberList</servlet-name>
+		<servlet-class>member.controller.test</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>memberList</servlet-name>
+		<url-pattern>/member/memberList.do</url-pattern>
+	</servlet-mapping>
+</web-app>
+

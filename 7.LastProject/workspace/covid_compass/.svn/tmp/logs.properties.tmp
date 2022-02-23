@@ -1,0 +1,6 @@
+<<<<<<< .mine
+login.user.log=c:/compasslog/loginUser
+loginFail.user.log=c:/compasslog/loginFailUser||||||| .r214524
+=======
+login.user.log=c:/compasslog/loginUser
+dgnss.result.log=c:/compasslog/dgnssResult>>>>>>> .r214642

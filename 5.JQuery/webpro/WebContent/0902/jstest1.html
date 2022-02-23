@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+	
+</script>
+
+</head>
+<body>
+<script>
+	var now = new Date();
+	document.write(now+"<br>");
+	
+	var now1=now.toLocaleString();
+	document.write(now1+"<br>");//한국식으로 나오게
+	
+	now2 = now.toLocaleDateString();//날짜만 나오게
+	now3 = now.toLocaleTimeString();//시간만 나오게
+	
+	document.write(now2+"<br>");
+	document.write(now3+"<br>");
+</script>
+
+</body>
+</html>

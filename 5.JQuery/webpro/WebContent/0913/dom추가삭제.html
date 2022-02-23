@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+
+<script>
+arr= ["무궁화 꽃이 피었습니다.","Hello Script","GoodBye Script","즐거운 하루","재밌는 수업","졸지말자"];
+
+function proc1(){
+	rand = Math.floor(Math.random()*arr.length);
+	
+	textarr=arr[rand];
+	//text노드생성
+	text = document.createTextNode(textarr);
+	
+	//p태그 생성 -createElement('p')
+	ptag=document.createElement('p');
+	//p태그에 text를 추가한다.
+	ptag.appendChild(text);
+	
+	
+	//result1번에 자식요소로 추가한다.
+	//result1번에 먼저 접근후
+	parent = document.getElementById('result1');
+	//appendChild사용
+	parent.appendChild(ptag);
+}
+
+proc2=()=>{
+	parent = document.getElementById('result1');
+	
+	child=parent.lastChild;
+	parent.removeChild(child);
+}
+
+function proc3(){
+	//랜덤
+	rand = Math.floor(Math.random()*arr.length);
+	//text생성
+	text = document.createTextNode(arr[rand]);
+	//button 생성-createElement로 생성('input')
+	input=document.createElement("input");
+	//input버튼에 속성 생성
+	input.type="button";
+	input.value="삭제";
+	//삭제기능 추가
+	input.onclick = function(){
+		//p태그 자신을 삭제하기 때문에 remove()를 사용한다.
+		this.parentNode.remove();
+	}
+	//p태그 생성
+	ptag=document.createElement('p');
+	
+	//p태그에 text와 input를 추가
+	ptag.appendChild(text);
+	ptag.appendChild(input);
+	
+	//result3 접근 
+	result3 = document.getElementById('result3');
+	
+	//result3에 p태그를 추가한다.
+	result3.appendChild(ptag);
+	
+}
+
+</script>
+
+
+</head>
+<body>
+
+<div class="box">
+  <h3>새로운 text생성과 삭제</h3>
+   <br>
+   <br>
+  <input type="button" value="추가" onclick="proc1()">
+  <input type="button" value="삭제" onclick="proc2()">
+  <br><br>
+  <div id="result1"></div>
+</div>
+
+<div class="box">
+  <h3>새로운 text생성과 삭제</h3>
+   <br>
+   <br>
+  <input type="button" value="추가" onclick="proc3()">
+  <br><br>
+  <div id="result3"></div>
+</div>
+
+</body>
+</html>

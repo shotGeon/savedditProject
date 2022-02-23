@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script src="../js/jquery-3.6.0.min.js"></script>
+
+<script>
+$(function(){
+	$('#html').on('click', function(){
+		alert($('body').html());	
+	})
+	
+	
+	$('#text').on('click', function(){
+		alert($('body').text());
+	})
+	
+	$('#phtml').on('click',function(){
+		//alert($('p').html());
+		vph=$('p').html();//span태그가 포함, 첫번째 p태그만 가져옴
+		//$('#result1').html(vph);//span태그가 실행
+		$('#result1').text(vph);//span태그가 글자로 인식
+	})
+	
+	$('#ptext').on('click',function(){
+		//alert($('p').text());
+		vpt=$('p').text();
+		$('#result1').text(vpt);
+	})
+	
+	$('#pallhtml').on('click',function(){
+		//반복문
+		//box3번안에있는 p태그
+		
+		str="";
+		//i와 v는 생략될 수 있다.
+		$('.box3 p').each(function(i, v){
+			//v=p[0] v=p[1] v=p[2]
+			//alert에서 찍을때는 \n이다. 브라우저에서는 <br>
+			str+=$(this).html()+"<br>";
+			
+		})
+		
+		//$('#result2').html(str);
+		$('#result2').text(str);
+		
+		
+		
+		
+	})
+	
+	
+	
+})
+
+</script>
+
+<style>
+   span{
+   	background: yellow;
+   
+   }
+
+</style>
+</head>
+<body>
+
+<div class="box box1">
+  <h3>html과 text</h3>
+  html: 태그를 포함한 모든 문장<br>
+  text: 태그를 포함하지 않는 문장<br>
+   <br>
+   <br>
+  <input id="html" type="button" value="html">
+  <input id="text" type="button" value="text">
+  <br><br>
+</div>
+
+<div class="box box2">
+  <h3>html과 text</h3>
+  html: 태그를 포함한 모든 문장<br>
+  text: 태그를 포함하지 않는 문장<br>
+  p태그를 지정하여 $(p).html(): 첫번째 p태그를 대상으로 한다.<br>
+  $('p').text():모든 p태그를 대상으로 한다.<br>
+   <br>
+   <br>
+  <input id="phtml" type="button" value="html">
+  <input id="ptext" type="button" value="text">
+  <br><br>
+   <p>1<span>홍길동</span></p>​
+   <p>2<span>개나리</span></p>​
+   <p>3<span>진달래</span></p>   
+  <div id="result1"></div>
+</div>
+
+<div class="box box3">
+  <h3>html과 text</h3>
+  html: 태그를 포함한 모든 문장<br>
+  text: 태그를 포함하지 않는 문장<br>
+  p태그를 지정하여 $(p).html(): 첫번째 p태그를 대상으로 한다.<br>
+  모든 p태그를 대상으로 하기 위해서는 반복문이 필요하다<br>
+   <br>
+   <br>
+  <input id="pallhtml" type="button" value="pallhtml">
+  <br><br>
+   <p>1<span>홍길동</span></p>​
+   <p>2<span>개나리</span></p>​
+   <p>3<span>진달래</span></p>   
+  <div id="result2"></div>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

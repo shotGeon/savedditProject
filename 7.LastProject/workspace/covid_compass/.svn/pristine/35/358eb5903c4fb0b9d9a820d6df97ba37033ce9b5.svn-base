@@ -1,0 +1,10 @@
+package com.spring.compass.service;
+
+import java.sql.SQLException;
+
+import com.spring.compass.vo.PbhtVO;
+
+public interface PbhtService {
+
+	public PbhtVO getPbhtByInstNo(String instNo) throws SQLException;
+}

@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<head></head>
+
+<title></title>
+
+<body>
+
+<h1>Test : ${loginUser.mberId}</h1>
+<br />
+${loginUser.mberPwd}
+
+
+<script>
+
+var instNo = '${loginUser.instNo}';
+var subNo = 
+
+
+// if()
+<%-- location.href = '<%=request.getContextPath() %>/pbht/main'; --%>
+
+</script>
+
+</body>

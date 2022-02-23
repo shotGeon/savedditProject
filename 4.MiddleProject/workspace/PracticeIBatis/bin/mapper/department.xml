@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+			PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+			"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="depart">
+
+	<select id="selectDepart" resultClass="departVO">
+		SELECT * FROM DEPARTMENT
+	</select>
+	
+	<insert id="insertDepart" parameterClass="departVO">
+		INSERT INTO DEPARTMENT(DEPTNO, DEPTNAME, FLOOR, DEDAY)
+		VALUES(#deptno#,#deptname#,#floor#,#deday#)
+		
+		<selectKey keyProperty="deptno" resultClass="int">
+			SELECT DEPTNO FROM DEPARTMENT WHERE DEPTNO=#deptno#
+		</selectKey>
+	
+	</insert>
+	
+	<update id="updateDepart" parameterClass="departVO">
+		UPDATE DEPARTMENT
+		   SET DEPTNAME=#deptname#,
+		       FLOOR=#floor#,
+		       DEDAY=SYSDATE
+		  WHERE DEPTNO=#deptno#
+	</update>
+	
+	<delete id="deleteDepart" parameterClass="int">
+		DELETE FROM DEPARTMENT WHERE DEPTNO=#data#
+		
+	</delete>
+	
+
+</sqlMap>

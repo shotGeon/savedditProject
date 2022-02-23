@@ -1,0 +1,21 @@
+package com.spring.compass.service;
+
+import java.sql.SQLException;
+
+import com.spring.compass.vo.LtctVO;
+
+public interface LtctService {
+
+	public LtctVO getLtctByInstNo(String instNo) throws SQLException;
+	
+	public String getLtctCityNo(String city) throws SQLException;
+	
+	public int getLtctSeqNo() throws SQLException;
+	
+	public int getInstSeqNo() throws SQLException;
+	
+	public void registLtct(LtctVO ltct) throws SQLException;
+	
+	public void registInst(LtctVO ltct) throws SQLException;
+	
+}

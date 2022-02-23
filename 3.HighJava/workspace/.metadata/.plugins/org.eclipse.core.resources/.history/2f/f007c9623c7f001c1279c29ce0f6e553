@@ -1,0 +1,12 @@
+package kr.or.ddit.util;
+
+public class TestString {
+	
+	public static void main(String[] args) {
+		String beforeDay="21-1월-2022";
+		String[] arrStr = beforeDay.split("-");
+		for(int i=0; i<arrStr.length; i++) {
+			System.out.println(arrStr[i]);
+		}
+	}
+}

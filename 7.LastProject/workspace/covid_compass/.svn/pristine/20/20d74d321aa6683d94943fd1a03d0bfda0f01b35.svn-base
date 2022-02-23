@@ -1,0 +1,31 @@
+package com.spring.compass.command;
+
+public class InptntListSearchCommand {
+	
+	private String searchKey = "";
+	private String keyword = "";
+	private String hsptNo = "";
+	public String getSearchKey() {
+		return searchKey;
+	}
+	public void setSearchKey(String searchKey) {
+		this.searchKey = searchKey;
+	}
+	public String getKeyword() {
+		return keyword;
+	}
+	public void setKeyword(String keyword) {
+		this.keyword = keyword;
+	}
+	public String getHsptNo() {
+		return hsptNo;
+	}
+	public void setHsptNo(String hsptNo) {
+		this.hsptNo = hsptNo;
+	}
+	@Override
+	public String toString() {
+		return "InptntListSearchCommand [searchKey=" + searchKey + ", keyword=" + keyword + ", hsptNo=" + hsptNo + "]";
+	}
+	
+}

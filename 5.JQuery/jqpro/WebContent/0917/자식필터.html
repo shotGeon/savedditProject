@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script src="../js/jquery-3.6.0.min.js"></script>
+
+<script>
+$(function(){
+	$('#btn1').on('click',function(){
+		$('li:first').css('border', '3px solid red').css('background', 'yellow');
+	})
+	
+	$('#btn2').on('click',function(){
+		$('li:first-child').css('border', '3px solid red');
+	})
+	
+	$('#btn3').on('click',function(){
+		//tr을 기준으로 td의 첫번째 자식 지정
+		$('#result2 td:nth-child(1)').css('background','	#0000FF')
+		
+		$('#result2 td:nth-child(2)').css('background','	#4169E1')
+		
+		$('#result2 td:nth-child(3)').css('background','#6495ED')
+	})
+	
+	$('#btn4').on('click',function(){
+       
+		
+		$('#result3 td:nth-child(1)').css('background','#0000FF')
+		
+		$('#result3 td:nth-child(2)').css('background','#4169E1')
+		
+		$('#result3 td:nth-child(3)').css('background','#6495ED')
+		
+		//위에서 td로 백그라운드를 지정했으면 아래에서도 td를 지정해줘야한다
+		$('#result3 tr:nth-child(1) td').css('background','black').css('color','white');
+	})
+	
+})
+
+
+
+</script>
+
+<style>
+  table{
+  	border: 1px solid blue;
+  	border-collapse: collapse;
+  	
+  }
+  td{
+  	width: 300px;
+  	height: 50px;
+  	text-align: center;
+  }
+  th{
+  	height: 50px;
+  }
+
+
+</style>
+
+</head>
+<body>
+
+<div class="box">
+  <h3></h3>
+   <br>
+   <br>
+  <input id="btn1" type="button" value="first">
+  <input id="btn2" type="button" value="first-child">
+  <br><br>
+  <div id="result1">
+    <h1>여자에게 인기많은 남자들</h1>
+    <ol>
+      <li>능력있는 남자</li>	
+      <li>돈많은남자</li>	
+      <li>잘생긴 남자</li>	
+      <li>돈 있고 잘생긴 남자</li>	    
+    </ol>
+  	
+  	<h1>남자에게 인기있는 여자들</h1>
+  	<ol>
+  	  <li>예쁜여자</li>
+  	  <li>귀여운 여자</li>
+  	  <li>섹시한 여자</li>
+  	  <li>똑똑한 여자</li>  	
+  	  <li>똑똑하고 귀여운 여자</li>  	
+  	</ol>
+  
+  </div>
+</div>
+
+<div id="box1" class="box">
+  <h3></h3>
+   <br>
+   <br>
+  <input id="btn3" type="button" value="td:nth-child">
+  <br><br>
+  <div id="result2">
+  <table border="1">
+  	  
+  	  <tr>
+  	    <td>홍길동</td>
+  	    <td>대전</td>
+  	    <td>010</td>
+  	  </tr>
+  	  
+  	  <tr>
+  	    <td>개나리</td>
+  	    <td>부산</td>
+  	    <td>011</td>  	  
+  	  </tr>
+  	  
+  	  <tr>
+  	    <td>진달래</td>
+  	    <td>서울</td>
+  	    <td>012</td>  	  
+  	  </tr>
+  
+  </table>
+    
+  
+  </div>
+</div>
+
+<div class="box">
+  <h3></h3>
+   <br>
+   <br>
+  <input id="btn4" type="button" value="제목부여">
+  <br><br>
+  <div id="result3">
+  
+  <table border="1">
+  	  <tr>
+  	    <td>이름</td>
+  	    <td>주소</td>
+  	    <td>전화번호</td>
+  	  </tr>
+  	  
+  	  <tr>
+  	    <td>홍길동</td>
+  	    <td>대전</td>
+  	    <td>010</td>
+  	  </tr>
+  	  
+  	  
+  	  
+  	  <tr>
+  	    <td>개나리</td>
+  	    <td>부산</td>
+  	    <td>011</td>  	  
+  	  </tr>
+  	  
+  	  <tr>
+  	    <td>진달래</td>
+  	    <td>서울</td>
+  	    <td>012</td>  	  
+  	  </tr>
+  
+  </table>
+  
+  </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+package kr.or.ddit.member.controller;
+
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.commons.beanutils.BeanUtils;
+
+import kr.or.ddit.member.service.IMemberService;
+import kr.or.ddit.member.service.MemberServiceImpl;
+import kr.or.ddit.member.vo.MemVO;
+
+/**
+ * Servlet implementation class IdCheck
+ */
+@WebServlet("/IdCheck.do")
+public class IdCheck extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	static int count =0;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public IdCheck() {
+        super();
+    }
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		MemVO mv = new MemVO();
+		
+		String mem_id=request.getParameter("id");
+		String mem_pass=request.getParameter("pw");
+		
+		System.out.println(mem_id);
+		System.out.println(mem_pass);
+		
+		mv.setMem_id(mem_id);
+		mv.setMem_pass(mem_pass);
+		
+		
+		IMemberService service = MemberServiceImpl.getInstance();
+		
+		MemVO mv2 = service.idCheck(mv);
+		
+		if(mv2 ==null) {
+			count++;
+			if(count>5) {
+				count=0;
+			}
+		}
+		
+		request.setAttribute("check", mv2);
+		request.setAttribute("count", count);
+		request.getRequestDispatcher("/WEB-INF/whole/member_jsp/logcheck.jsp")
+										.forward(request, response);
+		
+		
+	}
+
+}

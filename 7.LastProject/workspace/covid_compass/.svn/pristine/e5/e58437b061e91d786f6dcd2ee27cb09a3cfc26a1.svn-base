@@ -1,0 +1,21 @@
+package com.spring.compass.service;
+
+import java.sql.SQLException;
+
+import com.spring.compass.vo.InspVO;
+import com.spring.compass.vo.PstiVO;
+
+public interface InspService {
+
+	public InspVO getInspByInstNo(String instNo) throws Exception;
+	
+	public String getInspCityNo(String city) throws Exception;
+	
+	public String getInspSeqNo() throws Exception;
+	
+	public String getInstSeqNo() throws Exception;
+	
+	public int registInsp(InspVO insp) throws Exception;
+	
+	public int registInst(InspVO insp) throws Exception;
+}

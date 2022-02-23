@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+  div{
+    width:50%;
+    border: 1px solid green;
+    margin :20px;
+    padding: 20px;
+  }
+  #d1, #d2{
+    word-wrap: break-word; 
+  }
+</style>
+
+<script>
+var cnt = 0;
+   function proc1() {
+	//버튼을 클릭할 때 마다 id가 d2인 div에 Hello문자를 추가한다.
+	
+	//id가 d2인 요소 접근
+	var vd2=document.getElementById('d2');
+	
+	//vd2에 값 -Hello문자- 를 덮어쓰기한다.
+	
+    cnt ++;
+	//vd2.textContent ="Hello"+cnt;
+	//vd2.innerHTML ="<h1>hello"+cnt+"</h1>";
+	
+	//vd2에 값 -Hello문자- 를 추가한다.(부모요소.append('자식요소(객체)'))
+	var child=document.createTextNode('hello');
+	
+	vd2.append(child);
+	
+	
+}
+</script>
+</head>
+<body>
+  <div>
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+  </div>
+  
+  <div id="d1">
+  <h1>word-wrap: break-word</h1>
+  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+  </div>
+  
+  <div id="d2">
+  <h1>word-wrap: break-word</h1>
+  </div>
+  <input type="button" value="확인" onclick="proc1()">
+</body>
+</html>

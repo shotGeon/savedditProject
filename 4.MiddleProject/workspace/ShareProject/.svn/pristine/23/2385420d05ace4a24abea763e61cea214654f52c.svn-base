@@ -1,0 +1,9 @@
+package kr.or.ddit.cal.service;
+
+import java.util.ArrayList;
+
+import kr.or.ddit.cal.vo.CalVO;
+
+public interface ICalService {
+	public ArrayList<CalVO> calenList();
+}

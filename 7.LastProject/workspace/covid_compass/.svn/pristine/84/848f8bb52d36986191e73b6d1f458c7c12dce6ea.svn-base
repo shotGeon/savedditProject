@@ -1,0 +1,144 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ page trimDirectiveWhitespaces="true"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+<script type="text/x-handlebars-template"  id="inptnt-list-template" >
+{{#each .}}
+					<tr
+						ondblclick="OpenWindow('sckbd-request?manageNo={{manageNo}}', '진료 신청 정보', 1250, 800)"
+						onclick="showDetail('{{manageNo}}')"
+						class="each-inptnt-element">
+						<td><input type="checkbox" name="checkSmple"
+							onclick="cancleAll()"></td>
+						<td>하기재</td>
+						<td>27</td>
+						<td>남</td>
+						<td>010-7777-7777</td>
+						<td>2021/01/10</td>
+						<td>2</td>
+					</tr>
+{{/each}}
+</script>
+
+<script type="text/x-handlebars-template"  id="inptnt-pagination-template" >
+<li class="paginate_button page-item">
+   <a href="1" aria-controls="example2" data-dt-idx="1" tabindex="0" class="page-link">
+      <i class='fas fa-angle-double-left'></i>
+   </a>
+</li>
+<li class="paginate_button page-item">
+   <a href="{{#if prev}}{{prevPageNum}}{{/if}}" aria-controls="example2" data-dt-idx="1" tabindex="0" class="page-link">
+      <i class='fas fa-angle-left'></i>
+   </a>
+</li>
+{{#each pageNum}}
+<li class="paginate_button page-item {{signActive this}} ">
+   <a href="{{this}}" aria-controls="example2" data-dt-idx="1" tabindex="0" class="page-link">
+      {{this}}
+   </a>
+</li>
+{{/each}}
+
+<li class="paginate_button page-item ">
+   <a href="{{#if next}}{{nextPageNum}}{{/if}}" aria-controls="example2" data-dt-idx="1" tabindex="0" class="page-link">
+      <i class='fas fa-angle-right'></i>
+   </a>
+</li>
+<li class="paginate_button page-item">
+   <a href="{{realEndPage}}" aria-controls="example2" data-dt-idx="1" tabindex="0" class="page-link">
+      <i class='fas fa-angle-double-right'></i>
+   </a>
+</li>   
+</script>
+
+<%@ include file="../template/handlebars_js.jsp" %>
+
+<script>
+
+
+window.onload = function(){
+	var handelbarsProcessingURL = '<%=request.getContextPath() %>/hspt/test?pstiNo=' + 'PSTI202201108000001';
+	alert('included file!');
+	getPage(handelbarsProcessingURL);
+	$('ul.pagination').on('click','li a', function(event){
+// 		alert('ul click');
+		
+// 		return false;
+		if( $(this).attr('href') ){
+			replyPage=$(this).attr('href');
+			getPage("<%=request.getContextPath()%>/replies/${board.bno}/"+replyPage);
+		}
+		
+		return false;
+	});
+	
+}
+
+</script>
+
+
+<section class="content">
+	<div style="height: 640px;">
+		<div class="table-responsive">
+			<table class="table table-hover text-nowrap"
+				style="text-align: center;">
+				<thead>
+					<tr>
+						<th style="width: 10%;"><input id="all" type="checkbox"
+							onclick="checkAllBox()" name="all"></th>
+						<th style="width: 10%;">이름</th>
+						<th style="width: 10%;">나이</th>
+						<th style="width: 10%;">성별</th>
+						<th>연락처</th>
+						<th>입원일</th>
+						<th>누적 음성수</th>
+					</tr>
+				</thead>
+				<tbody id="inptnt-list-table-tbody">
+					<tr
+						ondblclick="OpenWindow('sckbd-request?manageNo=MANAGE20220110800003', '진료 신청 정보', 1250, 800)"
+						onclick="showDetail('MANAGE20220110800003')"
+						class="each-inptnt-element">
+						<td><input type="checkbox" name="checkSmple"
+							onclick="cancleAll()"></td>
+						<td>하기재${inptntNm }</td>
+						<td>27${inptntAge }</td>
+						<td>남${inptntGender }</td>
+						<td>010-7777-7777${inptntTelno }</td>
+						<td>2021/01/10{{prettifyDate regdate}}</td>
+						<td>2</td>
+						
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="card-footer clearfix" style="background-color: white;">
+		<%@ include file="../template/list-footer.jsp"%>
+	</div>
+</section>
+<script>
+		function checkAllBox(checkBox){
+			var length = document.getElementsByName("checkSmple").length;
+			if(document.getElementById('all').checked==true){
+				for(var i=0; i<length; i++) document.getElementsByName("checkSmple")[i].checked=true;
+			}
+			
+			if(document.getElementById('all').checked==false){
+				for(var i=0; i<length; i++) document.getElementsByName("checkSmple")[i].checked=false;
+			}
+			
+			
+		}
+		
+		function cancleAll(){
+			//alert("눌림");
+			if(document.getElementById('all').checked==true){
+				document.getElementById('all').checked=false;
+			}
+		}
+	</script>

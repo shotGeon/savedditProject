@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script>
+function proc1(){
+	names =new Array();
+	while(true){
+		//입력
+		name=prompt("이름을 입력하세요");
+		
+		
+		if(name==""||name==null) break;
+		
+		names.push(name.trim());
+		//공백문자나 취소버튼인지 비교
+		
+	}
+	
+	//출력
+	document.getElementById('result1').innerHTML=names;
+}
+
+function proc2(){
+	num = new Array();
+	
+	while(num.length<5){
+		su=prompt("수를 입력하세요");
+		//su=prompt("수를 입력하세요").trim();
+		
+		/* if(!(isNaN(input))||!(num.indexOf(su)==-1)){
+			num.push(su);
+		}else{
+			alert("중복된 수 입니다.")
+			continue;
+		} */
+		
+		 if(num.indexOf(su)==-1){
+			num.push(su);
+		}else{
+			alert("중복된 수 입니다.")
+			continue;
+		} 
+	}
+	document.getElementById('result2').innerHTML=num;
+}
+
+</script>
+
+</head>
+<body>
+
+<div class="box">
+  <h3>사람 이름을 계속 입력받아 배열에 저장하고
+      그 저장된 이름을 출력하는 프로그램을 작성
+    입력의 마지막은 공백문자를 입력하거나 "취소"버튼을 눌렀을 때로 한다.</h3>
+   <br>
+   <br>
+  <input type="button" value="확인" onclick="proc1()">
+  <br><br>
+  <div id="result1"></div>
+</div>
+
+<div class="box">
+  <h3>서로 중복되지 않은 정수 5개를 입력 받아 출력하는 프로그램을 작성하시오.</h3>
+   <br>
+   <br>
+  <input type="button" value="확인" onclick="proc2()">
+  <br><br>
+  <div id="result2"></div>
+</div>
+
+</body>
+</html>

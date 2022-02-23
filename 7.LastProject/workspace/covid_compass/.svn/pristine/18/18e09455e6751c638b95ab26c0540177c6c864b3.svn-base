@@ -1,0 +1,37 @@
+package com.spring.compass.service;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import com.spring.compass.vo.HsptVO;
+import com.spring.compass.vo.InspVO;
+import com.spring.compass.vo.LtctVO;
+import com.spring.compass.vo.PbhtVO;
+
+public class AdminServiceImpl implements AdminService{
+
+	@Override
+	public List<InspVO> getInspList() throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<PbhtVO> getPbhtList() throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<HsptVO> getHsptList() throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<LtctVO> getLtctList() throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Ltct-Mapper">
+
+<select id="selectLtctByInstNo" parameterType="java.lang.String" resultType="com.spring.compass.vo.LtctVO">
+SELECT
+    ltct_no
+   ,inst_no
+   ,ltct_nm
+   ,ltct_adres
+   ,ltct_telno
+   ,emp_cnt
+   ,rmnd_sckbd_cnt
+   ,sckbd_cnt
+FROM
+    ltct
+WHERE
+    inst_no = #{instNo}
+</select>
+</mapper>
+
+

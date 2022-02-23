@@ -1,0 +1,8 @@
+package kr.or.ddit.util;
+
+public class TestString {
+	
+	public static void main(String[] args) {
+		String beforeDay="21-1월-2022";
+	}
+}

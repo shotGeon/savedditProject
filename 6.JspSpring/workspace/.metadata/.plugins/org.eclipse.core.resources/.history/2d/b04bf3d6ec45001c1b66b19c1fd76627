@@ -1,0 +1,20 @@
+package com.jsp.dataSource;
+
+import static org.junit.Assert.*;
+
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.junit.Test;
+
+public class TestOracleMyBatisSessionFactory {
+
+	private SqlSessionFactory sqlSessionFactory =
+									new OracleMyBatisSqlSessionFactory();
+	private SqlSession session;
+	
+	@Before
+	
+	@Test
+	
+	@After
+}

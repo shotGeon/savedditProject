@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script src="../js/jquery-3.6.0.min.js"></script>
+
+<script>
+$(function(){
+	$('#text').on('click', function(){
+		
+		$.ajax({
+			url : 'text.jsp',
+			type : 'get',
+			dataType : 'text',
+			success : function(res){
+				//res=홍길동/개나리/진달래/수선화/라일락/코스모스
+				
+				vdatas = res.split("/");
+				
+				code="<ul>";
+				
+				$(vdatas).each(function(i, v){
+					//code+="<li>"+vdatas[i]+"</li>";
+					code+="<li>"+ v +"</li>";
+				})
+				//반복문 끝나고...
+				code+="</ul>";
+				
+				$('#result1').html(code);
+			},
+			error : function(xhr){
+				alert(xhr.status); //404, 500
+			}
+		})
+	})
+	
+	$('#jarr').on('click', function(){
+		
+		$.ajax({
+			url : 'jsonArr.jsp',
+			//입력하는 데이터가 없을때는 기본적으로 get이다.
+			type : 'get',
+			dataType : 'json',
+			success : function(res){
+				
+				code="<ol>";
+				$.each(res, function(i, v){
+					
+					code+="<li>"+v+"</li>";
+					
+				})
+				
+				code+="</ol>";
+				
+				$('#result2').html(code);
+			},
+			error : function(xhr){
+				alert(xhr.status);
+			}
+		})
+	})
+	
+	$('#jobj').on('click', function(){
+		
+		$.ajax({
+			url : 'jsonObj.jsp',
+			type : 'get',
+			dataType : 'json',
+			success : function(res){
+				
+				code="";
+				code+="이름: "+res.name+"<br>";
+				code+="전화번호: "+res.tel+"<br>";
+				code+="주소: "+res.addr+"<br>";
+				
+				$('#result3').html(code);
+				
+			},
+			error : function(xhr){
+				alert(xhr.status);
+			}
+		})
+	})
+	
+	$('#objarr').on('click', function(){
+		
+		$.ajax({
+			url : 'jsonObjArr.jsp',
+			type : 'get',
+			dataType : 'json',
+			success : function(res){
+				
+				code="";
+				$.each(res, function(i, v){
+					code+=i+1+"번째 회원 자료<br>"
+					      +"이름:"+v.name+"<br>"
+					      +"전화:"+v.tel+"<br>"
+					      +"주소:"+v.addr+"<br><br>";
+				})
+				
+				$('#result4').html(code);
+				
+			},
+			error : function(xhr){
+				alert(xhr.status);
+			}
+		})
+	})
+	
+})
+</script>
+<style>
+.box{
+	height: 600px;
+}
+.box div{
+	width: 300px;
+	height: auto;
+	margin: 3px;
+	padding: 10px;
+	float: left;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+  <h3></h3>
+   <br>
+   <br>
+  <input type="button" id="text" value="text">
+  <input type="button" id="jarr" value="jArr">
+  <input type="button" id="jobj" value="jObj">
+  <input type="button" id="objarr" value="objArr">
+  <br><br>
+  <div id="result1"></div>
+  <div id="result2"></div>
+  <div id="result3"></div>
+  <div id="result4"></div>
+</div>
+
+</body>
+</html>

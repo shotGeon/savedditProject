@@ -1,0 +1,6 @@
+
+login.user.log=c:/compasslog/loginUser
+loginFail.user.log=c:/compasslog/loginFailUser
+
+login.user.log=c:/compasslog/loginUser
+dgnss.result.log=c:/compasslog/dgnssResult

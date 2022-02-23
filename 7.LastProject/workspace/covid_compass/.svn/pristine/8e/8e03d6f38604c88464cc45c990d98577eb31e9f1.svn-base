@@ -1,0 +1,44 @@
+package com.spring.compass.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.spring.compass.command.instRegistCommand;
+
+@RequestMapping("/admin")
+@Controller
+public class AdminController {
+
+
+	@RequestMapping("/inst-list")
+	public String insttList() {
+		String url="admin/instt-list";
+
+		return url;
+	}
+
+	@RequestMapping("/instt-registForm")
+	public String insttRegistForm() {
+		String url="admin/instt-registForm";
+
+		return url;
+	}
+	@RequestMapping("/instt-regist")
+	public String insttRegist(instRegistCommand registCommand) {
+		System.out.println("안녕");
+		String url="";
+		String writer=registCommand.getWriter();
+		String inst = registCommand.getInst();
+		String fileName =registCommand.getFileName();
+
+		System.out.println("writer:"+writer);
+		System.out.println("inst:"+inst);
+		System.out.println("fileName:"+fileName);
+
+		return url;
+	}
+
+	
+	
+	
+}

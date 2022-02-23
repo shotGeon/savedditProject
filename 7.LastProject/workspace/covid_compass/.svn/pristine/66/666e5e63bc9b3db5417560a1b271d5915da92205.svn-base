@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Hspt-Mapper">
+
+<select id="selectHsptByInstNo" parameterType="java.lang.String" resultType="com.spring.compass.vo.HsptVO">
+    SELECT
+    hspt_no
+   ,inst_no
+   ,inst_nm
+   ,inst_adres
+   ,inst_telno
+   ,emp_cnt
+   ,sckbd_cnt
+   ,rmnd_sckbd_cnt
+FROM
+    hspt
+WHERE
+    inst_no = #{instNo}
+</select>
+</mapper>
+
+

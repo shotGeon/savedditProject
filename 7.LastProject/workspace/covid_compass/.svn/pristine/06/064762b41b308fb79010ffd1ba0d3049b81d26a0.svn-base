@@ -1,0 +1,5 @@
+package com.spring.compass.dao;
+
+public class MberDAOImpl {
+
+}

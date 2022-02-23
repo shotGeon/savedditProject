@@ -1,0 +1,18 @@
+package com.spring.compass.dao;
+
+import java.sql.SQLException;
+
+import com.spring.compass.vo.PstiVO;
+
+public interface PstiDAO {
+	
+	/**
+	 * 인풋 : 피검자번호
+	 * 아웃풋 : pstiVO
+	 * @param pstiNo
+	 * @return
+	 * @throws SQLException
+	 */
+	public PstiVO selectPstiByPstiNo(String pstiNo) throws SQLException;
+
+}

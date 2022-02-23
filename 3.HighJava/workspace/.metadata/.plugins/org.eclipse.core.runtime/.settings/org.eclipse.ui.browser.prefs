@@ -1,0 +1,4 @@
+browser-choice=1
+browsers=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<web-browsers current\="2">\r\n<system/>\r\n<external location\="C\:\\Program Files\\Internet Explorer\\iexplore.exe" name\="Internet Explorer"/>\r\n<external location\="C\:\\Program Files\\Google\\Chrome\\Application\\chrome.exe" name\="Chrome"/>\r\n</web-browsers>
+eclipse.preferences.version=1
+internalWebBrowserHistory=http\://localhost/ServletTest/prod.html|*|http\://localhost/ServletTest/WEB-INF/views/prod/prod.html|*|http\://localhost/ServletTest/WEB-INF/views/prod/prodlist.jsp|*|http\://localhost/ServletTest/WEB-INF/views/buyer/insertForm.jsp|*|http\://localhost/ServletTest/WEB-INF/views/buyer/list.jsp|*|http\://localhost/ServletTest/upload.jsp|*|http\://localhost/ServletTest/formdata.html|*|

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script src="../js/jquery-3.6.0.min.js"></script>
+
+<script>
+$(function(){
+	$('p').on('click', function(){
+		if($(this).parent().is('.result1')){
+			//clone(true)-이벤트도 같이 복사.
+			$(this).clone(true).appendTo($(this).parent()).css('color', 'red');
+		}else{
+			alert("작업대상이 아닙니다.");
+		}
+	})
+})
+
+</script>
+</head>
+<body>
+
+<div class="box">
+  <h3></h3>
+   <br>
+   <br>
+  <br><br>
+  <p>무궁화 꽃이 피었습니다.</p>
+  <div class="result1">
+     <p>무궁화 꽃이 피었습니다.</p>
+  </div>
+  <div class="result1">
+  	 <p>무궁화 꽃이 피었습니다.</p>
+  </div>
+</div>
+
+</body>
+</html>

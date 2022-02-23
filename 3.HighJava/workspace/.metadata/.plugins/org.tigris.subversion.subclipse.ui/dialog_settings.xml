@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="149" key="CommitDialog.location.y"/>
+	<item value="506" key="CommitDialog.location.x"/>
+	<item value="500" key="CommitDialog.weights.0"/>
+	<item value="" key="DirectorySelectionPage.lastParent_http://112.220.114.130:10001/svn/projects/202107M/team1/source"/>
+	<item value="500" key="CommitDialog.weights.1"/>
+	<item value="http://112.220.114.130:10001/svn/projects/202107M/team1/source" key="RepositorySelectionPage.lastRepository"/>
+	<item value="535" key="CommitDialog.size.y"/>
+	<item value="1174" key="CommitDialog.size.x"/>
+	<section name="CommitWizard">
+		<item value="500" key="VWeight2"/>
+		<item value="500" key="VWeight1"/>
+		<item value="false" key="ShowCompare"/>
+	</section>
+	<section name="NewLocationWizard">
+	</section>
+</section>

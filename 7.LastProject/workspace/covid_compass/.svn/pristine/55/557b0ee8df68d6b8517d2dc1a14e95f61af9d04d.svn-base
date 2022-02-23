@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Mber-Mapper">
+
+	<select id="selectMberById" resultType="com.spring.compass.vo.MberVO">
+		SELECT MBER_NO
+			   ,INST_NO
+			   ,MBER_CODE
+			   ,MBER_ID
+			   ,MBER_PWD
+			   ,MBER_TELNO
+			   ,MBER_EMAIL
+			   ,USE_YN
+			   ,MBER_REGDATE
+			   ,MBER_NM
+			   ,MBER_ADRES
+			   ,MBER_BIR
+		  FROM MBER
+		 WHERE MBER_ID = #{mberId}
+	</select>
+	
+	
+<select id="selectVMberById" parameterType="java.lang.String"
+		resultType="com.spring.compass.vo.VMberVO">
+SELECT
+    mber_no
+   ,inst_no
+   ,mber_code
+   ,mber_id
+   ,mber_pwd
+   ,mber_telno
+   ,mber_email
+   ,use_yn
+   ,mber_regdate
+   ,mber_nm
+   ,mber_adres
+   ,mber_bir
+   ,INST_CODE
+   ,CHILD_NO
+FROM
+    V_MBER
+WHERE
+    MBER_ID = #{mberId}
+</select>
+<select id="selectVMberByMberNo" parameterType="java.lang.String"
+		resultType="com.spring.compass.vo.VMberVO">
+SELECT
+    mber_no
+   ,inst_no
+   ,mber_code
+   ,mber_id
+   ,mber_pwd
+   ,mber_telno
+   ,mber_email
+   ,use_yn
+   ,mber_regdate
+   ,mber_nm
+   ,mber_adres
+   ,mber_bir
+   ,INST_CODE
+   ,CHILD_NO
+FROM
+    V_MBER
+WHERE
+    MBER_ID = #{mberNo}
+</select>
+<select id="selectVMberListByInstNo">
+SELECT
+    mber_no
+   ,inst_no
+   ,mber_code
+   ,mber_id
+   ,mber_pwd
+   ,mber_telno
+   ,mber_email
+   ,use_yn
+   ,mber_regdate
+   ,mber_nm
+   ,mber_adres
+   ,mber_bir
+   ,INST_CODE
+   ,CHILD_NO
+FROM
+    V_MBER
+WHERE
+    INST_NO = #{instNo}
+</select>
+<select id="selectVMberListCountByInstNo">
+SELECT
+    count(MBER_NO)
+FROM
+    V_MBER
+WHERE
+    INST_NO = #{instNo}
+</select>
+</mapper>

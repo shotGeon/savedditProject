@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script>
+  str="우리 나라 좋은 나라 대한 민국 만세";
+  
+  proc1 =()=>{
+	  a = str.charAt(4);
+	  
+	  res = "str.charAt(4) :"+a;
+	  document.getElementById('result1').innerHTML =res;
+  }
+  
+  function proc2(){
+	  a=str.charCodeAt(4);
+	  
+	  
+	  res="str.charCodeAt(4) :"+a+"<br>";
+	  
+	  
+	  document.getElementById('result2').innerHTML =res;
+  }
+  
+  function proc3(){
+	  //찾는 글자를 입력하세요
+	  cha=prompt("찾는 글자를 입력하세요");
+	  
+	  //입력한 글자의 위치를 리턴하여
+	  b=str.indexOf(cha);
+	  if(b<0){
+		  alert("없는 글자 입니다.");
+	  }else{
+	  res="입력한 글자는"+b+"번째 있습니다.";
+	  //출력한다.
+	  document.getElementById('result3').innerHTML=res;		  
+	  }
+  }
+
+  function proc4(){
+	  //찾는 글자를 입력하세요
+	  cha=prompt("찾는 글자를 입력하세요");
+	  
+	  //입력한 글자의 위치를 리턴하여
+	  b=str.lastIndexOf(cha);
+	  if(b<0){
+		  alert("없는 글자 입니다.");
+	  }else{
+	  res="입력한 글자는"+b+"번째 있습니다.";
+	  //출력한다.
+	  document.getElementById('result3').innerHTML=res;		  
+	  }
+  }
+  
+  proc5=()=>{
+	  textvalue = document.getElementById('area').value;
+	  
+	  //엔터기호를 <br> 태그로 변경
+	  //정규식 사용(//g(global=전체)사이에 쓴다.)
+	  textvalue = textvalue.replace(/\r/g, "").replace(/\n/g,"<br>");
+	  
+	  document.getElementById('result5').innerHTML = textvalue;
+  }
+  
+  function proc6(){
+	  str="우리 korea 나라 좋은 나라 대한 korea 민국 만세 korea";
+	  
+	  //정규식
+	  //reg=/[a-z]+/;
+	  
+	  kk=str.match(/korea/g);
+	  
+	  //정규식사용
+	  //kk=str.match(/[a-z]+/g);
+	  
+	  alert(kk);
+	  res=str+"<br>";
+	  res+="str.match(/korea/g) :"+kk+"<br>";
+	  
+	  document.getElementById('result6').innerHTML=res;
+  }
+  
+  proc7 =()=>{
+	  strvalue=str.substring(3,8);
+	  
+	  res=+str+"<br>";
+	  res+="str.substring(3,8): "+strvalue+"<br>";
+	  
+	  document.getElementById('result7').innerHTML=res;
+  }
+  
+  function proc9(){
+     
+	  res="";
+	  
+	  for(i=0; i<str.length; i++){
+		  
+		  //res+=str.charAt(i)+"<br>";
+		  res+=str.substr(i,1)+"<br>";
+	  }
+	  
+	  document.getElementById('result9').innerHTML=res;
+  }
+  
+  function proc10(){
+	  
+	  arr=str.split(" ",4);
+	  
+	  res="";
+	  for(i=0; i<arr.length; i++){
+		  res+=i+"번째 문자 : "+arr[i]+"<br>";
+	  }
+	  
+	  document.getElementById('result10').innerHTML=res;
+  }
+</script>
+</head>
+<body>
+
+<div class="box">
+  <h3>String객체</h3>
+   str="우리 나라 좋은 나라 대한 민국 만세";<br>
+   charAt(index) : index위치의 문자를 리턴 <br>
+   charCodeAt(index) : index위치의 문자에 대한 유니코드를 리턴<br>
+  <input type="button" value="charAt" onclick="proc1()">
+  <input type="button" value="charCodeAt" onclick="proc2()">
+  <br><br>
+  <div id="result1"></div>
+  <div id="result2"></div>
+</div>
+
+<div class="box">
+  <h3>String객체</h3>
+   str="우리 나라 좋은 나라 대한 민국 만세";<br>
+   indexOf(item, start) : start위치에서부터 시작하여 item의 위치를 리턴한다.<br>
+   lastIndexOf(item, start) : 뒤에서부터 시작하여 item의 위치를 리턴한다.<br>
+  <input type="button" value="indexOf" onclick="proc3()">
+  <input type="button" value="lastIndexOf" onclick="proc4()">
+  <br><br>
+  <div id="result3"></div>
+  <div id="result4"></div>
+</div>
+
+<div class="box">
+  <h3>String객체</h3>
+  <br>
+  
+  <textarea rows="10" cols=50 id="area"></textarea>
+  <br><br>
+  <input type="button" value="replace-br" onclick="proc5()">
+  <input type="button" value="match-alpha" onclick="proc6()">
+  <br><br>
+  <div id="result5"></div>
+  <div id="result6"></div>
+</div>
+
+<div class="box">
+  <h3>String객체</h3>
+  <br>
+   substring(start,end) : start~end 사이에 문자를 추출, end는 포함되지 않는다.
+   slice(start,end) : start~end 사이에 문자를 추출, end는 포함되지 않는다.
+   substr(start,length): start에서부터 length갯수 만큼 추출	 
+  <br><br>
+  <input type="button" value="substring" onclick="proc7()">
+  <input type="button" value="slice" onclick="proc8()">
+  <input type="button" value="substr" onclick="proc9()">
+  <br><br>
+  <div id="result7"></div>
+  <div id="result8"></div>
+  <div id="result9"></div>
+</div>
+
+<div class="box">
+  <h3>String객체</h3>
+  <br>
+   split(separator(구분자),limit(갯수)) :구분자를 기준으로 문자열을 잘라서 갯수만큼만 배열로 저장한다.
+                                           갯수가 생략되어 있으면 전체 문자열을 대상으로..
+   join(배열을 문자열로 바꾸는 메소드)의 반대개념                                           
+  <br><br>
+  <input type="button" value="split" onclick="proc10()">
+  <br><br>
+  <div id="result10"></div>
+</div>
+</body>
+</html>

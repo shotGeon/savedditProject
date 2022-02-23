@@ -1,0 +1,22 @@
+package com.spring.compass.dao;
+
+import java.sql.SQLException;
+
+import org.apache.ibatis.session.SqlSession;
+
+import com.spring.compass.vo.MberVO;
+
+public class MberDAOImpl implements MberDAO {
+
+	private SqlSession session;
+	
+	public void setSqlSession(SqlSession session) {
+		this.session = session;
+	}
+	
+	@Override
+	public MberVO selectMberById(String id) throws SQLException {
+		return session.selectOne("Mber-Mapper.selectMberById", id);
+	}
+
+}

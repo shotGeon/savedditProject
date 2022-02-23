@@ -1,0 +1,10 @@
+package kr.or.ddit.cal.dao;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import kr.or.ddit.cal.vo.CalVO;
+
+public interface ICalDao {
+	public ArrayList<CalVO> calenList() throws SQLException;
+}

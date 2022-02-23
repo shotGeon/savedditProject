@@ -1,0 +1,28 @@
+package com.spring.compass.dao;
+
+import java.sql.SQLException;
+
+import com.spring.compass.vo.HsptVO;
+import com.spring.compass.vo.PbhtVO;
+
+public interface HsptDAO {
+	
+	/**
+	 * 인풋 : 기관번호
+	 * 아웃풋 : 해당기관번호를 가지는 병원 vo
+	 * @param instNo
+	 * @return
+	 * @throws SQLException
+	 */
+	public HsptVO selectHsptByInstNo(String instNo) throws SQLException;
+	
+	public String selectHsptCityNo(String city) throws SQLException;
+	
+	public int selectHsptNextVal() throws SQLException;
+	
+	public int selectInstNextval() throws SQLException;
+	
+	public int insertHspt(HsptVO hspt) throws SQLException;
+	
+	public int insertInst(HsptVO hspt) throws SQLException;
+}

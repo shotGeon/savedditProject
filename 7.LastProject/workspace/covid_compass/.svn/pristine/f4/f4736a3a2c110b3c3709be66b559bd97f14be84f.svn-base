@@ -1,0 +1,53 @@
+package com.spring.compass.vo;
+
+public class PbhtVO {
+
+	@Override
+	public String toString() {
+		return "PbhtVO [instNo=" + instNo + ", pbhtNm=" + pbhtNm + ", pbhtNo=" + pbhtNo + ", pbhtAdres=" + pbhtAdres
+				+ ", empCnt=" + empCnt + ", pbhtTelno=" + pbhtTelno + "]";
+	}
+	private String instNo;
+	private String pbhtNm;
+	private String pbhtNo;
+	private String pbhtAdres;
+	private int empCnt = 1;
+	private String pbhtTelno;
+	public int getEmpCnt() {
+		return empCnt;
+	}
+	public void setEmpCnt(int empCnt) {
+		this.empCnt = empCnt;
+	}
+	public void setInstNo(String instNo) {
+		this.instNo = instNo; 
+	}
+	public String getInstNo() {
+		return instNo; 
+	}
+	public void setPbhtNm(String pbhtNm) {
+		this.pbhtNm = pbhtNm; 
+	}
+	public String getPbhtNm() {
+		return pbhtNm; 
+	}
+	public void setPbhtNo(String pbhtNo) {
+		this.pbhtNo = pbhtNo; 
+	}
+	public String getPbhtNo() {
+		return pbhtNo; 
+	}
+	public void setPbhtAdres(String pbhtAdres) {
+		this.pbhtAdres = pbhtAdres; 
+	}
+	public String getPbhtAdres() {
+		return pbhtAdres; 
+	}
+	public void setPbhtTelno(String pbhtTelno) {
+		this.pbhtTelno = pbhtTelno; 
+	}
+	public String getPbhtTelno() {
+		return pbhtTelno; 
+	}
+
+}

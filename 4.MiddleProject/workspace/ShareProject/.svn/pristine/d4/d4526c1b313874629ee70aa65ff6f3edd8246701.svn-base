@@ -1,0 +1,8 @@
+package kr.or.ddit.admin.service;
+
+import kr.or.ddit.admin.vo.AdminVO;
+
+public interface IAdminService {
+
+	public AdminVO adCheck(AdminVO av);
+}

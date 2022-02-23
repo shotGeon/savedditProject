@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script src="../js/jquery-3.6.0.min.js"></script>
+
+<script>
+$(function(){
+	
+	$('#enabled').on('click',function(){
+		$('#result1 form *:enabled').css('border', '2px solid red');
+		
+		str="";
+		$('#result1 form *:enabled').each(function(i,v){
+			
+			//this=$('form *:enabled')[i]
+			//this를 사용하면 위에 선언한 i,v가 생략가능하다.
+			vname= $(this).attr('name');
+			if(vname != undefined){
+				
+			str+=`name=${vname} \n`;
+			}
+			
+		})
+		alert(str);
+	})
+	
+	$('#disabled').on('click',function(){
+		$('#result1 form *:disabled').css('border', '2px solid lime');
+		
+		//속성정보를 가져올때는 attr('속성명')메소드를 사용한다.		
+		vtype= $('#result1 form *:disabled').attr('type');
+		vname= $('#result1 form *:disabled').attr('name');
+		
+		alert(vtype+" "+vname);
+	})
+	
+	$('#btn2').on('click', function(){
+		str="";
+		
+		$('#result2 input:checkbox:checked').each(function(){
+		//jQuery에서 value값에 접근하기 위해서는 val()을 사용한다.
+		str+=$(this).val();			
+		})
+		alert(str);
+	})
+	
+	$('#btn3').on('click', function(){
+		
+		str=$('#result3 input:radio:checked').val();	
+		
+		alert(str);
+	})
+	
+	//값이 바뀌면실행됨=change
+	$('#spring').on('change', function(){
+		str="";
+		$('option:selected', this).each(function(){
+			str+=$(this).val()+"\n";
+		})
+		
+		//str+= $('option:selected', this).val()+"\n";
+		
+		alert(str);
+	})
+	
+	
+	
+})
+
+</script>
+</head>
+<body>
+
+<div class="box">
+  <h3>상태필터</h3>
+   사용불가능 $('form *:disabled')<br>
+   사용가능 $('form :enabled')<br>
+   요소의 속성을 가져오거나 설정할 수 있다.<br>
+   attr('속성명')<br>
+   attr('속성명', '값') attr('type', 'button')=type을 button으로 설정하라<br>
+  <input id="enabled" type="button" value="enabled" >
+  <input id="disabled" type="button" value="disabled">
+  <br><br>
+  <div id="result1">
+  <form> ​
+
+    <input type="text" name="id" disabled><br>​
+    <input type="password" name="pass"><br>​
+
+     <select name="disSelect">
+        <option>Option1</option>
+        <option>Option2</option>
+        <option>Option3</option>
+        <option>Option4</option>
+     </select>
+      <br>
+      <br>​
+      <textarea name="enTextarea" rows=10 cols=20 >text</textarea><br>​
+      <input name="btn" type="button" value="확인" onclick="alert('hello')"> <br>​
+
+</form>​  
+  </div>
+</div>
+
+<div class="box">
+  <h3>상태필터</h3>
+   :checked->checkedbox, radio<br>
+  <br>	
+  <input id="btn2" type="button" value="확인" >
+  <div id="result2">
+  <form>​
+          취 미 :​
+     <input type="checkbox" name="hobby" value="여행" checked >여행​
+     <input type="checkbox" name="hobby" value="장기">장기​
+     <input type="checkbox" name="hobby" value="바둑">바둑​
+     <input type="checkbox" name="hobby" value="독서" >독서​
+     <input type="checkbox" name="hobby" value="낚시">낚시<br><br>​
+   </form>​
+  </div>	
+</div>
+
+
+<div class="box">
+  <h3>상태필터</h3>
+   :checked->checkedbox, radio<br>
+  <br>	
+  <input id="btn3" type="button" value="확인" >
+  <div id="result3">
+  <form>​
+          취 미 :​
+     <input type="radio" name="rhobby" value="여행">여행​
+     <input type="radio" name="rhobby" value="장기">장기​
+     <input type="radio" name="rhobby" value="바둑">바둑​
+     <input type="radio" name="rhobby" value="독서">독서​
+     <input type="radio" name="rhobby" value="낚시" checked>낚시<br><br>​
+   </form>​
+  </div>	
+</div>
+
+
+<div class="box">
+  <h3>상태필터</h3>
+   :selected->select  option을 대상으로<br>
+  <br>	
+  <div id="result4">
+  <form>​
+         봄소식 : 
+ 	<!-- multiple을 주어야 여러개가 선택가능하다. -->
+    <select name="spring" id="spring" multiple size="6">
+ 
+       <option value="개나리">개나리</option>
+       <option value="진달래" selected>진달래</option>
+       <option value="민들레">민들레</option>
+       <option value="벚꽃" selected>벚꽃</option>
+       <option value="목련">목련</option>
+       <option value="철쭉">철쭉</option>
+ 
+    </select>​​
+  </form>​
+  
+  </div>	
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

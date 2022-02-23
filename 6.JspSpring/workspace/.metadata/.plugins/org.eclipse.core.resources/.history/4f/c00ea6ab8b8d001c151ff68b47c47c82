@@ -1,0 +1,31 @@
+<div class="step-intro__container">
+					<div class="step-intro__content">
+						<p class="step-intro__title">
+						
+							<strong>방문하실 선별진료소</strong> 입니다
+							
+						</p>
+						<div class="step-intro__info">
+							<div class="step-intro__box">
+								
+									<span>영등포구보건소</span>
+                                    <a class="step-intro__cta step-intro__cta--write">
+                                        <span>전자 문진표 작성하기</span>
+                                    </a>									
+								
+								
+							</div>
+						</div>
+						<div class="step-intro__warn">
+							<p class="warn-ico">전자 문진표 작성 후 24시간이내 선별진료소에 방문하지 않으시면 자동 삭제됩니다.</p>
+						</div>
+						
+							<div class="step-intro__tel">
+								<a class="step-intro__cta step-intro__cta--tel">
+									<span>대표전화 <em> 02-2670-4953~9</em></span>
+								</a>
+							</div>
+							<input type="hidden" id="instt" value="11700084A">
+						
+					</div>
+				</div>

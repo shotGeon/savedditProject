@@ -1,0 +1,21 @@
+package com.spring.compass.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+@RequestMapping("/ltct")
+public class LtctrController {
+
+	@RequestMapping("main")
+	public void main() {
+		
+	}
+	@RequestMapping(value="/isoptnt-list")
+	public String isopntList() {
+		String url="ltct/isoptnt-list";
+		System.out.println("옵니다. 여기로");
+		return url;
+	}
+}

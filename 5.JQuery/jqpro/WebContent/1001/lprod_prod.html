@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+<link rel="stylesheet" href="../css/mystyle.css">
+
+<script>
+$(function(){
+	$('input:button').on('click', function(){
+		//lprod의 gu, nm 가져오기
+		$.ajax({
+			url : '/jqpro/LprodList.do' ,
+			type : 'get',
+			dataType : 'json',
+			success : function(res){
+				
+				code="";
+				
+				$.each(res, function(i, v){
+					code +="<option value='" + v.gu + "'>" + v.nm + "</option>";	
+				})
+				
+				$('#lprod').html(code);
+				$('#lprod').trigger('change');
+			},
+			error : function(xhr){
+				alert("상태: "+xhr.status);
+			} 
+			
+		})
+	})
+	
+	$('#lprod').on('change', function(){
+		
+		//lprod_gu값을 파라미터로 하여 prod의 id와 name을 출력
+		lprod_gu=$(this).val();
+		
+		$.ajax({
+			url : '/jqpro/ProdServlet.do',
+			type : 'get',
+			//서블릿에서 준 파라미터가 들어가야한다('lprod_gu')
+			data : {'lprod_gu' : lprod_gu},
+			dataType : 'json',
+			success : function(res){
+				code="";
+				
+				if(res.flag =="ok"){
+    				
+					$.each(res.datas, function(i, v){
+					code+="<option value='" + v.id + "'>" + v.nm + "</option>";
+				   })
+					
+				}else{
+					code+="<option value='0'>데이터 없음</option>";
+					noData=$("<img src='../images/코알라.jpg' alt='코알라.jpg' width='200px' height='200px'>")
+					$('#detail').html(noData);
+					
+				}
+				$('#prod').html(code);
+				$('#prod').trigger('change');
+				
+				
+			},
+			error : function(xhr){
+				alert(xhr.status);
+			}
+		})
+	})
+	
+	$('#prod').on('change', function(){
+		
+		//prod_d를 파라미터로 하여 prod의 상세보기를 출력
+		
+		//선택한 prod option의 value값을 가져온다.
+		prod_id=$(this).val();
+		console.log(prod_id);
+		
+		if(prod_id!=0){
+		$.ajax({
+			url : '/jqpro/ProdServlet.do',
+			type : 'post',
+			data : {'prod_id' : prod_id},
+			dataType : 'json',
+			success : function(res2){
+				code="<table class='table table-hover' border='1'>";
+				code+="<tr><td>PROD_ID"+res2.id+"</td>";
+				code+="<td>"+res2.id+"</td></tr>";
+				
+				code+="<tr><td>PROD_NAME"+res2.name+"</td>";
+				code+="<td>"+res2.name+"</td></tr>";
+				
+				code+="<tr><td>PROD_LGU"+res2.lgu+"</td>";
+				code+="<td>"+res2.lgu+"</td></tr>";
+				
+				code+="<tr><td>PROD_BUYER"+res2.buyer+"</td>";
+				code+="<td>"+res2.buyer+"</td></tr>";
+				
+				code+="<tr><td>PROD_COST"+res2.cost+"</td>";
+				code+="<td>"+res2.cost+"</td></tr>";
+				
+				code+="<tr><td>PROD_PRICE"+res2.price+"</td>";
+				code+="<td>"+res2.price+"</td></tr>";
+				
+				code+="<tr><td>PROD_SALE"+res2.sale+"</td>";
+				code+="<td>"+res2.sale+"</td></tr></table>";
+									
+				
+				$('#detail').html(code);
+				
+			},
+			error : function(xhr){
+				alert(xhr.status);
+			}
+		}) //ajax
+			
+		}
+			
+		
+	})//change이벤트
+	
+})//$(function)
+</script>
+</head>
+<body>
+
+<div class="box">
+  <h3></h3>
+   <br>
+   <br>
+  <input type="button" value="확인">
+  <br><br>
+  <div id="result1">
+   	
+  <div class="container">
+  
+  <form>  
+    <div class="form-group">
+      <label for="lprod">LPROD 리스트:</label>
+      <select class="form-control" id="lprod">
+        
+      </select>
+      <br>
+      
+      <label for="prod">PROD 리스트:</label>
+      <select class="form-control" id="prod">
+        
+      </select>  
+    </div>  
+   </form>
+
+  </div>
+
+  <div id="detail">
+	
+	
+  </div>
+  	
+  	
+  	
+  </div>
+</div>
+
+</body>
+</html>

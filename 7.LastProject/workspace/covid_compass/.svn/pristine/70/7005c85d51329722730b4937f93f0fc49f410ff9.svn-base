@@ -1,0 +1,193 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ page trimDirectiveWhitespaces="true"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+<head></head>
+<title></title>
+
+<body>
+
+	<div class="row" style="height: 70px; margin-top: 7px;">
+		<div class="col-lg-6">
+		<section class="content">
+			<div class="card" style="margin: 1px; margin-top: 13px;">
+				<div class="card-header d-flex p-0">
+				  <button type="button" class="btn btn-primary" style="margin-left:10px; margin-top:10px; background:#1a4f72;border:0px;width: 90px; height: 36px;">재검신청</button>
+					<ul class="nav nav-pills ml-auto p-2" role="tablist">
+						<li class="nav-item">
+				<div class="input-group float-right" style="max-width: 600px; width:300px;">
+					<!-- search bar -->
+							<select class="form-control " name="searchType" id="searchType">
+								<option value="" ${pageMaker.cri.searchType eq '' ? 'selected':''}>검색구분</option>
+								<option value="n"
+									${pageMaker.cri.searchType eq 'n' ? 'selected':''}>성 명</option>
+								<option value="p"
+									${pageMaker.cri.searchType eq 'p' ? 'selected':''}>전화번호</option>
+							</select>
+
+					<!-- keyword -->
+							<input class="form-control" type="text" name="keyword"
+								value="${pageMaker.cri.keyword }"
+								style="width: 18%; display: inline-block;" /> 
+							<span class="input-group-append">
+								<button class="btn btn-primary" type="button" id="searchBtn"
+									style="background: #5b6f90; color: #ffffff; border-color: #5b6f90; display: inline-block; margin-bottom: 4px; margin-left: -7px;"
+									data-card-widget="search" onclick="">
+									<i class="fa fa-fw fa-search"></i>
+								</button>
+							</span>
+					<!-- end : search bar -->
+				</div>
+				</li>
+			</ul>
+			</div>
+					<div class="input-group float-right" style="max-width: 600px; margin-left: 10px; margin-top: 10px;">
+						<!-- end : search bar -->
+
+						<div class="table-responsive">
+							<table class="table table-hover text-nowrap"
+								style="text-align: center;">
+								<thead>
+									<tr role="row">
+										<th style="width: 10%;"><input id="all" type="checkbox" onclick="checkAllBox()" name="all"></th>
+										<th tabindex="0" aria-controls="example2" rowspan="1" 
+											colspan="1" aria-label="">체온</th>
+										<th tabindex="0" aria-controls="example2" rowspan="1" 
+											colspan="1" aria-sort="ascending" aria-label="">성명</th>
+										<th tabindex="0" aria-controls="example2" rowspan="1" 
+										colspan="1" aria-sort="ascending" aria-label="">나이</th>
+										<th tabindex="0" aria-controls="example2" rowspan="1" 
+											colspan="1" aria-label="">성별</th>
+										<th tabindex="0" aria-controls="example2" rowspan="1"
+											colspan="1" aria-sort="ascending" aria-label="">연락처</th>
+										
+											
+									</tr>
+								</thead>
+								<tbody>
+									<tr data-psti="${pstiNo }">
+										<td><input type="checkbox" name="checkSmple" onclick="cancleAll()"></td>
+					                    <td><span class="badge badge-primary">37.5</span></td>
+					                    <td>하기재</td>
+										<td>27</td>
+										<td>남</td>
+										<td>010-7777-7777</td>
+									</tr>
+									<tr data-psti="${pstiNo }">
+										<td><input type="checkbox" name="checkSmple" onclick="cancleAll()"></td>
+					                    <td><span class="badge badge-danger">37.5</span></td>
+					                    <td>하기재</td>
+										<td>27</td>
+										<td>여</td>
+										<td>010-7777-7777</td>
+									</tr>
+									<tr data-psti="${pstiNo }">
+										<td><input type="checkbox" name="checkSmple" onclick="cancleAll()"></td>
+					                    <td><span class="badge badge-danger">37.5</span></td>
+					                    <td>하기재</td>
+										<td>27</td>
+										<td>여</td>
+										<td>010-7777-7777</td>
+									</tr>
+									<tr data-psti="${pstiNo }">
+										<td><input type="checkbox" name="checkSmple" onclick="cancleAll()"></td>
+					                    <td><span class="badge badge-danger">37.5</span></td>
+					                    <td>하기재</td>
+										<td>27</td>
+										<td>여</td>
+										<td>010-7777-7777</td>
+									</tr>
+									<tr data-psti="${pstiNo }">
+										<td><input type="checkbox" name="checkSmple" onclick="cancleAll()"></td>
+					                    <td><span class="badge badge-danger">37.5</span></td>
+					                    <td>하기재</td>
+										<td>27</td>
+										<td>여</td>
+										<td>010-7777-7777</td>
+									</tr>
+									<tr data-psti="${pstiNo }">
+										<td><input type="checkbox" name="checkSmple" onclick="cancleAll()"></td>
+					                    <td><span class="badge badge-danger">37.5</span></td>
+					                    <td>하기재</td>
+										<td>27</td>
+										<td>여</td>
+										<td>010-7777-7777</td>
+									</tr>
+									<tr data-psti="${pstiNo }">
+										<td><input type="checkbox" name="checkSmple" onclick="cancleAll()"></td>
+					                    <td><span class="badge badge-danger">37.5</span></td>
+					                    <td>하기재</td>
+										<td>27</td>
+										<td>여</td>
+										<td>010-7777-7777</td>
+									</tr>
+									<tr data-psti="${pstiNo }">
+										<td><input type="checkbox" name="checkSmple" onclick="cancleAll()"></td>
+					                    <td><span class="badge badge-danger">37.5</span></td>
+					                    <td>하기재</td>
+										<td>27</td>
+										<td>여</td>
+										<td>010-7777-7777</td>
+									</tr>
+									<tr data-psti="${pstiNo }">
+										<td><input type="checkbox" name="checkSmple" onclick="cancleAll()"></td>
+					                    <td><span class="badge badge-danger">37.5</span></td>
+					                    <td>하기재</td>
+										<td>27</td>
+										<td>여</td>
+										<td>010-7777-7777</td>
+									</tr>
+									<tr data-psti="${pstiNo }">
+										<td><input type="checkbox" name="checkSmple" onclick="cancleAll()"></td>
+					                    <td><span class="badge badge-danger">37.5</span></td>
+					                    <td>하기재</td>
+										<td>27</td>
+										<td>여</td>
+										<td>010-7777-7777</td>
+									</tr>
+								</tbody>
+							</table>
+
+						</div>
+						<div class="card-footer clearfix" style="background: white; margin-left: 28px;">
+							<%@ include file="../template/list-footer.jsp"%>
+						</div>
+					</div>
+			</div>
+			</section>
+		</div>
+		<div class="col-lg-6" >
+			<div class="card" style="margin: 1px; margin-top: 13px; height: 685px;">
+				<div class="card-header d-flex p-0">
+					<ul class="nav nav-pills ml-auto p-2" role="tablist">
+					   <li class="nav-item">
+					      <div class="input-group float-right" style="max-width: 600px; width:300px;">
+								<ul class="nav nav-pills " role="tablist">
+									<li class="nav-item" ><a class="nav-link active"
+										id="psti-detail-tab" style="margin-left:183px;  background: #1a4f72" data-toggle="pill"
+										href="#custom-psti-detail" role="tab"
+										aria-controls="custom-tabs-three-home" aria-selected="true">입소자상세</a></li>
+								</ul>						
+					      </div>
+					   </li>
+				     </ul>
+				</div>
+				<div class="card-body">
+					<div class="tab-content" style="height: 648px;" id="custom-tabs-three-tabContent">
+						<div class="tab-pane fade show active" id="custom-psti-detail"
+							role="tabpanel" aria-labelledby="custom-tabs-three-home-tab">
+							<%@ include file="./isoptnt-detail-module.jsp"%>
+						</div>
+					</div>
+				</div>
+				<!-- /.card -->
+			</div>
+			<!-- search bar -->
+		</div>
+
+
+	</div>
+	<!-- /.card-body -->
+</body>

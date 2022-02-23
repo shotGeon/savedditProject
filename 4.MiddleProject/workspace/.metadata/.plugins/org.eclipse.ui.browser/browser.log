@@ -1,0 +1,295 @@
+
+10월 19, 2021 09:01:06.04 NEW SESSION
+10월 19, 2021 09:01:06.04 [12544:12112:1019/090106.039:ERROR:chrome_browser_main_extra_parts_metrics.cc(228)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+10월 19, 2021 09:01:06.04 [12544:12112:1019/090106.039:ERROR:chrome_browser_main_extra_parts_metrics.cc(231)] crbug.com/1216328: Checking Bluetooth availability ended.
+10월 19, 2021 09:01:06.04 [12544:12112:1019/090106.039:ERROR:chrome_browser_main_extra_parts_metrics.cc(234)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+10월 19, 2021 09:01:06.04 [12544:12112:1019/090106.040:ERROR:chrome_browser_main_extra_parts_metrics.cc(238)] crbug.com/1216328: Checking default browser status ended.
+10월 19, 2021 09:01:06.05 [12544:14656:1019/090106.056:ERROR:device_event_log_impl.cc(214)] [09:01:06.057] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+10월 19, 2021 12:42:31.53 [12544:14656:1019/124231.532:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 12:42:31.53 [12544:14656:1019/124231.532:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 12:42:51.30 [12544:14656:1019/124251.304:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 12:42:51.30 [12544:14656:1019/124251.304:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 12:43:49.43 [12544:14656:1019/124349.430:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 12:43:49.43 [12544:14656:1019/124349.430:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 12:44:48.85 [12544:14656:1019/124448.850:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 12:44:48.85 [12544:14656:1019/124448.851:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 12:44:59.56 [12544:14656:1019/124459.564:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 12:44:59.56 [12544:14656:1019/124459.564:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 12:51:28.44 [12544:14656:1019/125128.440:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 12:51:28.44 [12544:14656:1019/125128.440:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 13:32:21.97 [12544:14656:1019/133221.972:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 13:32:21.97 [12544:14656:1019/133221.972:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 13:45:16.52 [12544:14656:1019/134516.528:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 13:45:16.52 [12544:14656:1019/134516.528:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'sourceURL')", source:  (0)
+10월 19, 2021 13:49:13.15 [12544:14656:1019/134913.154:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 13:49:13.15 [12544:14656:1019/134913.154:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 13:51:19.14 [12544:14656:1019/135119.147:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 13:51:19.14 [12544:14656:1019/135119.147:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'sourceURL')", source:  (0)
+10월 19, 2021 13:54:26.27 [12544:14656:1019/135426.277:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 13:54:26.27 [12544:14656:1019/135426.277:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 13:56:12.93 [12544:14656:1019/135612.935:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 13:56:12.93 [12544:14656:1019/135612.935:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'sourceURL')", source:  (0)
+10월 19, 2021 13:56:13.69 [12544:14656:1019/135613.699:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 13:56:13.69 [12544:14656:1019/135613.699:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 13:56:52.99 [12544:14656:1019/135652.996:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 13:56:52.99 [12544:14656:1019/135652.997:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'sourceURL')", source:  (0)
+10월 19, 2021 13:56:53.76 [12544:14656:1019/135653.761:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 13:56:53.76 [12544:14656:1019/135653.761:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 14:07:11.06 [12544:14656:1019/140711.064:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 14:07:11.06 [12544:14656:1019/140711.065:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 14:14:13.16 [12544:14656:1019/141413.168:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 14:14:13.16 [12544:14656:1019/141413.168:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 14:14:37.04 [12544:14656:1019/141437.049:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 14:14:37.05 [12544:14656:1019/141437.049:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 14:15:09.59 [12544:14656:1019/141509.596:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 14:15:09.59 [12544:14656:1019/141509.597:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 14:16:31.99 [12544:14656:1019/141631.993:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 14:16:31.99 [12544:14656:1019/141631.993:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 14:41:29.02 [12544:14656:1019/144129.021:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 14:41:29.02 [12544:14656:1019/144129.021:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 14:43:04.69 [12544:14656:1019/144304.690:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 14:43:04.69 [12544:14656:1019/144304.690:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 15:15:47.38 [12544:14656:1019/151547.385:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 15:15:47.38 [12544:14656:1019/151547.385:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 15:17:19.23 [12544:14656:1019/151719.238:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 15:17:19.23 [12544:14656:1019/151719.239:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 15:41:50.77 [12544:14656:1019/154150.772:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 15:46:04.55 [12544:14656:1019/154604.558:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 18:55:44.33 [12544:14656:1019/185544.336:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 18:55:44.33 [12544:14656:1019/185544.336:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 18:55:44.33 [12544:14656:1019/185544.336:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 18:55:44.33 [12544:14656:1019/185544.336:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 18:55:44.33 [12544:14656:1019/185544.336:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 18:55:44.33 [12544:14656:1019/185544.336:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 18:55:44.33 [12544:14656:1019/185544.336:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 18:55:44.33 [12544:14656:1019/185544.336:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 18:55:44.33 [12544:14656:1019/185544.336:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 18:55:44.33 [12544:14656:1019/185544.336:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 18:55:44.33 [12544:14656:1019/185544.336:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 18:55:44.33 [12544:14656:1019/185544.336:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 19, 2021 18:55:45.63 [12544:14656:1019/185545.630:ERROR:CONSOLE(1)] "TypeError: Cannot read properties of undefined (reading 'indexOf') TypeError: Cannot read properties of undefined (reading 'indexOf')
+10월 19, 2021 18:55:45.63     at Li.contentType (devtools://devtools/bundled/core/sdk/sdk.js:1:299255)
+10월 19, 2021 18:55:45.63     at new vt (devtools://devtools/bundled/models/bindings/bindings.js:1:60331)
+10월 19, 2021 18:55:45.63     at St.resourceAdded (devtools://devtools/bundled/models/bindings/bindings.js:1:59503)
+10월 19, 2021 18:55:45.63     at qi.dispatchEventToListeners (devtools://devtools/bundled/core/common/common.js:1:18359)
+10월 19, 2021 18:55:45.63     at _i.addRequest (devtools://devtools/bundled/core/sdk/sdk.js:1:316386)
+10월 19, 2021 18:55:45.63     at qi.onRequestFinished (devtools://devtools/bundled/core/sdk/sdk.js:1:306845)
+10월 19, 2021 18:55:45.63     at et.dispatchEventToListeners (devtools://devtools/bundled/core/common/common.js:1:18359)
+10월 19, 2021 18:55:45.63     at lt.finishNetworkRequest (devtools://devtools/bundled/core/sdk/sdk.js:1:107631)
+10월 19, 2021 18:55:45.63     at lt.loadingFinished (devtools://devtools/bundled/core/sdk/sdk.js:1:102594)
+10월 19, 2021 18:55:45.63     at m.dispatch (devtools://devtools/bundled/core/protocol_client/protocol_client.js:1:7977)", source: devtools://devtools/bundled/core/host/host.js (1)
+10월 19, 2021 18:55:45.64 [12544:14656:1019/185545.642:ERROR:CONSOLE(1)] "TypeError: Cannot read properties of undefined (reading 'indexOf') TypeError: Cannot read properties of undefined (reading 'indexOf')
+10월 19, 2021 18:55:45.64     at Li.contentType (devtools://devtools/bundled/core/sdk/sdk.js:1:299255)
+10월 19, 2021 18:55:45.64     at new vt (devtools://devtools/bundled/models/bindings/bindings.js:1:60331)
+10월 19, 2021 18:55:45.64     at St.resourceAdded (devtools://devtools/bundled/models/bindings/bindings.js:1:59503)
+10월 19, 2021 18:55:45.64     at qi.dispatchEventToListeners (devtools://devtools/bundled/core/common/common.js:1:18359)
+10월 19, 2021 18:55:45.64     at _i.addRequest (devtools://devtools/bundled/core/sdk/sdk.js:1:316386)
+10월 19, 2021 18:55:45.64     at qi.onRequestFinished (devtools://devtools/bundled/core/sdk/sdk.js:1:306845)
+10월 19, 2021 18:55:45.64     at et.dispatchEventToListeners (devtools://devtools/bundled/core/common/common.js:1:18359)
+10월 19, 2021 18:55:45.64     at lt.finishNetworkRequest (devtools://devtools/bundled/core/sdk/sdk.js:1:107631)
+10월 19, 2021 18:55:45.64     at lt.loadingFinished (devtools://devtools/bundled/core/sdk/sdk.js:1:102594)
+10월 19, 2021 18:55:45.64     at m.dispatch (devtools://devtools/bundled/core/protocol_client/protocol_client.js:1:7977)", source: devtools://devtools/bundled/core/host/host.js (1)
+
+10월 21, 2021 08:59:31.69 NEW SESSION
+10월 21, 2021 08:59:31.69 [14572:15280:1021/085931.689:ERROR:chrome_browser_main_extra_parts_metrics.cc(228)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+10월 21, 2021 08:59:31.70 [14572:15280:1021/085931.689:ERROR:chrome_browser_main_extra_parts_metrics.cc(231)] crbug.com/1216328: Checking Bluetooth availability ended.
+10월 21, 2021 08:59:31.70 [14572:15280:1021/085931.689:ERROR:chrome_browser_main_extra_parts_metrics.cc(234)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+10월 21, 2021 08:59:31.70 [14572:15280:1021/085931.690:ERROR:chrome_browser_main_extra_parts_metrics.cc(238)] crbug.com/1216328: Checking default browser status ended.
+10월 21, 2021 08:59:31.70 [14572:5512:1021/085931.706:ERROR:device_event_log_impl.cc(214)] [08:59:31.706] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+10월 21, 2021 08:59:51.09 [14572:7768:1021/085951.098:ERROR:database.cc(1761)] Passwords SQLite error: code 2067 errno 0: UNIQUE constraint failed: logins.origin_url, logins.username_element, logins.username_value, logins.password_element, logins.signon_realm sql: INSERT INTO logins (origin_url, action_url, username_element, username_value, password_element, password_value, submit_element, signon_realm, date_created, blacklisted_by_user, scheme, password_type, times_used, form_data, display_name, icon_url, federation_url, skip_zero_click, generation_upload_status, possible_username_pairs, id, date_last_used, moving_blocked_for, date_password_modified) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+10월 21, 2021 09:17:03.85 [14572:5832:1021/091703.859:ERROR:database.cc(1761)] Passwords SQLite error: code 2067 errno 0: UNIQUE constraint failed: logins.origin_url, logins.username_element, logins.username_value, logins.password_element, logins.signon_realm sql: INSERT INTO logins (origin_url, action_url, username_element, username_value, password_element, password_value, submit_element, signon_realm, date_created, blacklisted_by_user, scheme, password_type, times_used, form_data, display_name, icon_url, federation_url, skip_zero_click, generation_upload_status, possible_username_pairs, id, date_last_used, moving_blocked_for, date_password_modified) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+10월 21, 2021 09:20:33.41 [14572:1584:1021/092033.411:ERROR:database.cc(1761)] Passwords SQLite error: code 2067 errno 0: UNIQUE constraint failed: logins.origin_url, logins.username_element, logins.username_value, logins.password_element, logins.signon_realm sql: INSERT INTO logins (origin_url, action_url, username_element, username_value, password_element, password_value, submit_element, signon_realm, date_created, blacklisted_by_user, scheme, password_type, times_used, form_data, display_name, icon_url, federation_url, skip_zero_click, generation_upload_status, possible_username_pairs, id, date_last_used, moving_blocked_for, date_password_modified) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+10월 21, 2021 09:21:29.82 [14572:5512:1021/092129.827:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 21, 2021 09:27:13.99 [14572:13484:1021/092713.994:ERROR:database.cc(1761)] Passwords SQLite error: code 2067 errno 0: UNIQUE constraint failed: logins.origin_url, logins.username_element, logins.username_value, logins.password_element, logins.signon_realm sql: INSERT INTO logins (origin_url, action_url, username_element, username_value, password_element, password_value, submit_element, signon_realm, date_created, blacklisted_by_user, scheme, password_type, times_used, form_data, display_name, icon_url, federation_url, skip_zero_click, generation_upload_status, possible_username_pairs, id, date_last_used, moving_blocked_for, date_password_modified) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+10월 21, 2021 10:12:29.05 [14572:11540:1021/101229.057:ERROR:database.cc(1761)] Passwords SQLite error: code 2067 errno 0: UNIQUE constraint failed: logins.origin_url, logins.username_element, logins.username_value, logins.password_element, logins.signon_realm sql: INSERT INTO logins (origin_url, action_url, username_element, username_value, password_element, password_value, submit_element, signon_realm, date_created, blacklisted_by_user, scheme, password_type, times_used, form_data, display_name, icon_url, federation_url, skip_zero_click, generation_upload_status, possible_username_pairs, id, date_last_used, moving_blocked_for, date_password_modified) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+10월 21, 2021 10:36:25.48 [14572:5512:1021/103625.480:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 21, 2021 10:36:25.48 [14572:5512:1021/103625.480:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'sourceURL')", source:  (0)
+10월 21, 2021 11:10:58.96 [14572:13928:1021/111058.968:ERROR:database.cc(1761)] Passwords SQLite error: code 2067 errno 0: UNIQUE constraint failed: logins.origin_url, logins.username_element, logins.username_value, logins.password_element, logins.signon_realm sql: INSERT INTO logins (origin_url, action_url, username_element, username_value, password_element, password_value, submit_element, signon_realm, date_created, blacklisted_by_user, scheme, password_type, times_used, form_data, display_name, icon_url, federation_url, skip_zero_click, generation_upload_status, possible_username_pairs, id, date_last_used, moving_blocked_for, date_password_modified) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+10월 21, 2021 11:34:57.71 [14572:10212:1021/113457.713:ERROR:database.cc(1761)] Passwords SQLite error: code 2067 errno 0: UNIQUE constraint failed: logins.origin_url, logins.username_element, logins.username_value, logins.password_element, logins.signon_realm sql: INSERT INTO logins (origin_url, action_url, username_element, username_value, password_element, password_value, submit_element, signon_realm, date_created, blacklisted_by_user, scheme, password_type, times_used, form_data, display_name, icon_url, federation_url, skip_zero_click, generation_upload_status, possible_username_pairs, id, date_last_used, moving_blocked_for, date_password_modified) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+10월 21, 2021 11:49:43.97 [14572:8164:1021/114943.976:ERROR:database.cc(1761)] Passwords SQLite error: code 2067 errno 0: UNIQUE constraint failed: logins.origin_url, logins.username_element, logins.username_value, logins.password_element, logins.signon_realm sql: INSERT INTO logins (origin_url, action_url, username_element, username_value, password_element, password_value, submit_element, signon_realm, date_created, blacklisted_by_user, scheme, password_type, times_used, form_data, display_name, icon_url, federation_url, skip_zero_click, generation_upload_status, possible_username_pairs, id, date_last_used, moving_blocked_for, date_password_modified) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+10월 21, 2021 11:51:13.50 [14572:5512:1021/115113.506:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 21, 2021 12:05:13.93 [14572:7956:1021/120513.936:ERROR:database.cc(1761)] Passwords SQLite error: code 2067 errno 0: UNIQUE constraint failed: logins.origin_url, logins.username_element, logins.username_value, logins.password_element, logins.signon_realm sql: INSERT INTO logins (origin_url, action_url, username_element, username_value, password_element, password_value, submit_element, signon_realm, date_created, blacklisted_by_user, scheme, password_type, times_used, form_data, display_name, icon_url, federation_url, skip_zero_click, generation_upload_status, possible_username_pairs, id, date_last_used, moving_blocked_for, date_password_modified) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+10월 21, 2021 12:07:29.44 [14572:8884:1021/120729.447:ERROR:database.cc(1761)] Passwords SQLite error: code 2067 errno 0: UNIQUE constraint failed: logins.origin_url, logins.username_element, logins.username_value, logins.password_element, logins.signon_realm sql: INSERT INTO logins (origin_url, action_url, username_element, username_value, password_element, password_value, submit_element, signon_realm, date_created, blacklisted_by_user, scheme, password_type, times_used, form_data, display_name, icon_url, federation_url, skip_zero_click, generation_upload_status, possible_username_pairs, id, date_last_used, moving_blocked_for, date_password_modified) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+10월 21, 2021 12:22:30.12 [14572:8884:1021/122230.126:ERROR:database.cc(1761)] Passwords SQLite error: code 2067 errno 0: UNIQUE constraint failed: logins.origin_url, logins.username_element, logins.username_value, logins.password_element, logins.signon_realm sql: INSERT INTO logins (origin_url, action_url, username_element, username_value, password_element, password_value, submit_element, signon_realm, date_created, blacklisted_by_user, scheme, password_type, times_used, form_data, display_name, icon_url, federation_url, skip_zero_click, generation_upload_status, possible_username_pairs, id, date_last_used, moving_blocked_for, date_password_modified) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+10월 21, 2021 12:29:41.80 [14572:7956:1021/122941.806:ERROR:database.cc(1761)] Passwords SQLite error: code 2067 errno 0: UNIQUE constraint failed: logins.origin_url, logins.username_element, logins.username_value, logins.password_element, logins.signon_realm sql: INSERT INTO logins (origin_url, action_url, username_element, username_value, password_element, password_value, submit_element, signon_realm, date_created, blacklisted_by_user, scheme, password_type, times_used, form_data, display_name, icon_url, federation_url, skip_zero_click, generation_upload_status, possible_username_pairs, id, date_last_used, moving_blocked_for, date_password_modified) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+10월 21, 2021 12:34:39.73 [14572:7704:1021/123439.734:ERROR:database.cc(1761)] Passwords SQLite error: code 2067 errno 0: UNIQUE constraint failed: logins.origin_url, logins.username_element, logins.username_value, logins.password_element, logins.signon_realm sql: INSERT INTO logins (origin_url, action_url, username_element, username_value, password_element, password_value, submit_element, signon_realm, date_created, blacklisted_by_user, scheme, password_type, times_used, form_data, display_name, icon_url, federation_url, skip_zero_click, generation_upload_status, possible_username_pairs, id, date_last_used, moving_blocked_for, date_password_modified) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+10월 21, 2021 12:45:19.20 [14572:7704:1021/124519.206:ERROR:database.cc(1761)] Passwords SQLite error: code 2067 errno 0: UNIQUE constraint failed: logins.origin_url, logins.username_element, logins.username_value, logins.password_element, logins.signon_realm sql: INSERT INTO logins (origin_url, action_url, username_element, username_value, password_element, password_value, submit_element, signon_realm, date_created, blacklisted_by_user, scheme, password_type, times_used, form_data, display_name, icon_url, federation_url, skip_zero_click, generation_upload_status, possible_username_pairs, id, date_last_used, moving_blocked_for, date_password_modified) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+10월 21, 2021 13:23:30.54 [14572:14868:1021/132330.549:ERROR:database.cc(1761)] Passwords SQLite error: code 2067 errno 0: UNIQUE constraint failed: logins.origin_url, logins.username_element, logins.username_value, logins.password_element, logins.signon_realm sql: INSERT INTO logins (origin_url, action_url, username_element, username_value, password_element, password_value, submit_element, signon_realm, date_created, blacklisted_by_user, scheme, password_type, times_used, form_data, display_name, icon_url, federation_url, skip_zero_click, generation_upload_status, possible_username_pairs, id, date_last_used, moving_blocked_for, date_password_modified) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+10월 21, 2021 13:41:50.10 [14572:6852:1021/134150.100:ERROR:database.cc(1761)] Passwords SQLite error: code 2067 errno 0: UNIQUE constraint failed: logins.origin_url, logins.username_element, logins.username_value, logins.password_element, logins.signon_realm sql: INSERT INTO logins (origin_url, action_url, username_element, username_value, password_element, password_value, submit_element, signon_realm, date_created, blacklisted_by_user, scheme, password_type, times_used, form_data, display_name, icon_url, federation_url, skip_zero_click, generation_upload_status, possible_username_pairs, id, date_last_used, moving_blocked_for, date_password_modified) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+10월 21, 2021 13:55:52.83 [14572:6852:1021/135552.836:ERROR:database.cc(1761)] Passwords SQLite error: code 2067 errno 0: UNIQUE constraint failed: logins.origin_url, logins.username_element, logins.username_value, logins.password_element, logins.signon_realm sql: INSERT INTO logins (origin_url, action_url, username_element, username_value, password_element, password_value, submit_element, signon_realm, date_created, blacklisted_by_user, scheme, password_type, times_used, form_data, display_name, icon_url, federation_url, skip_zero_click, generation_upload_status, possible_username_pairs, id, date_last_used, moving_blocked_for, date_password_modified) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+10월 21, 2021 14:00:52.98 [14572:14900:1021/140052.988:ERROR:database.cc(1761)] Passwords SQLite error: code 2067 errno 0: UNIQUE constraint failed: logins.origin_url, logins.username_element, logins.username_value, logins.password_element, logins.signon_realm sql: INSERT INTO logins (origin_url, action_url, username_element, username_value, password_element, password_value, submit_element, signon_realm, date_created, blacklisted_by_user, scheme, password_type, times_used, form_data, display_name, icon_url, federation_url, skip_zero_click, generation_upload_status, possible_username_pairs, id, date_last_used, moving_blocked_for, date_password_modified) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+10월 21, 2021 14:02:14.66 [14572:14928:1021/140214.660:ERROR:database.cc(1761)] Passwords SQLite error: code 2067 errno 0: UNIQUE constraint failed: logins.origin_url, logins.username_element, logins.username_value, logins.password_element, logins.signon_realm sql: INSERT INTO logins (origin_url, action_url, username_element, username_value, password_element, password_value, submit_element, signon_realm, date_created, blacklisted_by_user, scheme, password_type, times_used, form_data, display_name, icon_url, federation_url, skip_zero_click, generation_upload_status, possible_username_pairs, id, date_last_used, moving_blocked_for, date_password_modified) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+10월 21, 2021 14:51:23.79 [14572:4720:1021/145123.795:ERROR:database.cc(1761)] Passwords SQLite error: code 2067 errno 0: UNIQUE constraint failed: logins.origin_url, logins.username_element, logins.username_value, logins.password_element, logins.signon_realm sql: INSERT INTO logins (origin_url, action_url, username_element, username_value, password_element, password_value, submit_element, signon_realm, date_created, blacklisted_by_user, scheme, password_type, times_used, form_data, display_name, icon_url, federation_url, skip_zero_click, generation_upload_status, possible_username_pairs, id, date_last_used, moving_blocked_for, date_password_modified) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+10월 21, 2021 14:54:18.07 [14572:5512:1021/145418.072:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+10월 21, 2021 15:08:33.17 [14572:9772:1021/150833.170:ERROR:database.cc(1761)] Passwords SQLite error: code 2067 errno 0: UNIQUE constraint failed: logins.origin_url, logins.username_element, logins.username_value, logins.password_element, logins.signon_realm sql: INSERT INTO logins (origin_url, action_url, username_element, username_value, password_element, password_value, submit_element, signon_realm, date_created, blacklisted_by_user, scheme, password_type, times_used, form_data, display_name, icon_url, federation_url, skip_zero_click, generation_upload_status, possible_username_pairs, id, date_last_used, moving_blocked_for, date_password_modified) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+10월 21, 2021 15:14:57.98 [14572:12700:1021/151457.986:ERROR:database.cc(1761)] Passwords SQLite error: code 2067 errno 0: UNIQUE constraint failed: logins.origin_url, logins.username_element, logins.username_value, logins.password_element, logins.signon_realm sql: INSERT INTO logins (origin_url, action_url, username_element, username_value, password_element, password_value, submit_element, signon_realm, date_created, blacklisted_by_user, scheme, password_type, times_used, form_data, display_name, icon_url, federation_url, skip_zero_click, generation_upload_status, possible_username_pairs, id, date_last_used, moving_blocked_for, date_password_modified) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+
+10월 22, 2021 09:01:43.47 NEW SESSION
+10월 22, 2021 09:01:43.47 [11360:2488:1022/090143.465:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+10월 22, 2021 09:01:43.48 [11360:2488:1022/090143.466:ERROR:chrome_browser_main_extra_parts_metrics.cc(233)] crbug.com/1216328: Checking Bluetooth availability ended.
+10월 22, 2021 09:01:43.48 [11360:2488:1022/090143.466:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+10월 22, 2021 09:01:43.48 [11360:2488:1022/090143.468:ERROR:chrome_browser_main_extra_parts_metrics.cc(240)] crbug.com/1216328: Checking default browser status ended.
+10월 22, 2021 09:01:43.48 [11360:8348:1022/090143.482:ERROR:device_event_log_impl.cc(214)] [09:01:43.481] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+
+10월 23, 2021 10:07:56.51 NEW SESSION
+10월 23, 2021 10:07:56.51 [7040:10352:1023/100756.502:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+10월 23, 2021 10:07:56.53 [7040:10352:1023/100756.502:ERROR:chrome_browser_main_extra_parts_metrics.cc(233)] crbug.com/1216328: Checking Bluetooth availability ended.
+10월 23, 2021 10:07:56.53 [7040:10352:1023/100756.502:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+10월 23, 2021 10:07:56.53 [7040:10352:1023/100756.503:ERROR:chrome_browser_main_extra_parts_metrics.cc(240)] crbug.com/1216328: Checking default browser status ended.
+10월 23, 2021 10:07:56.53 [7040:13160:1023/100756.509:ERROR:device_event_log_impl.cc(214)] [10:07:56.509] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+
+10월 25, 2021 08:56:55.53 NEW SESSION
+10월 25, 2021 08:56:55.53 [12888:8412:1025/085655.530:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+10월 25, 2021 08:56:55.55 [12888:8412:1025/085655.530:ERROR:chrome_browser_main_extra_parts_metrics.cc(233)] crbug.com/1216328: Checking Bluetooth availability ended.
+10월 25, 2021 08:56:55.55 [12888:8412:1025/085655.530:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+10월 25, 2021 08:56:55.55 [12888:8412:1025/085655.531:ERROR:chrome_browser_main_extra_parts_metrics.cc(240)] crbug.com/1216328: Checking default browser status ended.
+10월 25, 2021 08:56:55.55 [12888:11300:1025/085655.536:ERROR:device_event_log_impl.cc(214)] [08:56:55.536] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+
+10월 26, 2021 08:54:41.75 NEW SESSION
+10월 26, 2021 08:54:41.75 [6248:10216:1026/085441.738:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+10월 26, 2021 08:54:41.78 [6248:10216:1026/085441.738:ERROR:chrome_browser_main_extra_parts_metrics.cc(233)] crbug.com/1216328: Checking Bluetooth availability ended.
+10월 26, 2021 08:54:41.78 [6248:10216:1026/085441.738:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+10월 26, 2021 08:54:41.78 [6248:10216:1026/085441.739:ERROR:chrome_browser_main_extra_parts_metrics.cc(240)] crbug.com/1216328: Checking default browser status ended.
+10월 26, 2021 08:54:41.78 [6248:4132:1026/085441.746:ERROR:device_event_log_impl.cc(214)] [08:54:41.745] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+10월 26, 2021 08:55:25.46 [8864:12836:1026/085525.466:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+10월 26, 2021 08:55:25.46 [8864:12836:1026/085525.466:ERROR:chrome_browser_main_extra_parts_metrics.cc(233)] crbug.com/1216328: Checking Bluetooth availability ended.
+10월 26, 2021 08:55:25.46 [8864:12836:1026/085525.466:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+10월 26, 2021 08:55:25.46 [8864:12836:1026/085525.467:ERROR:chrome_browser_main_extra_parts_metrics.cc(240)] crbug.com/1216328: Checking default browser status ended.
+10월 26, 2021 08:55:25.47 [8864:15240:1026/085525.471:ERROR:device_event_log_impl.cc(214)] [08:55:25.471] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+
+11월 01, 2021 14:39:54.30 NEW SESSION
+11월 01, 2021 14:39:54.30 [11196:8104:1101/143954.296:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+11월 01, 2021 14:39:54.30 [11196:8104:1101/143954.296:ERROR:chrome_browser_main_extra_parts_metrics.cc(233)] crbug.com/1216328: Checking Bluetooth availability ended.
+11월 01, 2021 14:39:54.30 [11196:8104:1101/143954.296:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+11월 01, 2021 14:39:54.30 [11196:8104:1101/143954.298:ERROR:chrome_browser_main_extra_parts_metrics.cc(240)] crbug.com/1216328: Checking default browser status ended.
+11월 01, 2021 14:39:54.30 [11196:1716:1101/143954.303:ERROR:device_event_log_impl.cc(214)] [14:39:54.302] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+
+11월 02, 2021 13:31:06.01 NEW SESSION
+11월 02, 2021 13:31:06.01 [2736:9848:1102/133106.001:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+11월 02, 2021 13:31:06.01 [2736:9848:1102/133106.001:ERROR:chrome_browser_main_extra_parts_metrics.cc(233)] crbug.com/1216328: Checking Bluetooth availability ended.
+11월 02, 2021 13:31:06.01 [2736:9848:1102/133106.001:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+11월 02, 2021 13:31:06.01 [2736:9848:1102/133106.002:ERROR:chrome_browser_main_extra_parts_metrics.cc(240)] crbug.com/1216328: Checking default browser status ended.
+11월 02, 2021 13:31:06.01 [2736:10980:1102/133106.008:ERROR:device_event_log_impl.cc(214)] [13:31:06.009] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+
+11월 02, 2021 16:21:36.26 NEW SESSION
+11월 02, 2021 16:21:36.26 [6380:10708:1102/162136.263:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+11월 02, 2021 16:21:36.26 [6380:10708:1102/162136.263:ERROR:chrome_browser_main_extra_parts_metrics.cc(233)] crbug.com/1216328: Checking Bluetooth availability ended.
+11월 02, 2021 16:21:36.26 [6380:10708:1102/162136.264:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+11월 02, 2021 16:21:36.26 [6380:10708:1102/162136.264:ERROR:chrome_browser_main_extra_parts_metrics.cc(240)] crbug.com/1216328: Checking default browser status ended.
+11월 02, 2021 16:21:36.26 [6380:11480:1102/162136.269:ERROR:device_event_log_impl.cc(214)] [16:21:36.269] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+11월 02, 2021 16:35:36.15 [7228:4016:1102/163536.154:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+11월 02, 2021 16:35:36.15 [7228:4016:1102/163536.154:ERROR:chrome_browser_main_extra_parts_metrics.cc(233)] crbug.com/1216328: Checking Bluetooth availability ended.
+11월 02, 2021 16:35:36.15 [7228:4016:1102/163536.154:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+11월 02, 2021 16:35:36.15 [7228:4016:1102/163536.154:ERROR:chrome_browser_main_extra_parts_metrics.cc(240)] crbug.com/1216328: Checking default browser status ended.
+11월 02, 2021 16:35:36.15 [7228:15120:1102/163536.159:ERROR:device_event_log_impl.cc(214)] [16:35:36.159] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+
+11월 02, 2021 19:03:53.58 NEW SESSION
+11월 02, 2021 19:03:53.58 [3084:13060:1102/190353.585:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+11월 02, 2021 19:03:53.58 [3084:13060:1102/190353.585:ERROR:chrome_browser_main_extra_parts_metrics.cc(233)] crbug.com/1216328: Checking Bluetooth availability ended.
+11월 02, 2021 19:03:53.58 [3084:13060:1102/190353.585:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+11월 02, 2021 19:03:53.58 [3084:13060:1102/190353.585:ERROR:chrome_browser_main_extra_parts_metrics.cc(240)] crbug.com/1216328: Checking default browser status ended.
+11월 02, 2021 19:03:53.59 [3084:10436:1102/190353.590:ERROR:device_event_log_impl.cc(214)] [19:03:53.590] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+
+11월 02, 2021 21:05:31.15 NEW SESSION
+11월 02, 2021 21:05:31.15 [13324:3008:1102/210531.151:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+11월 02, 2021 21:05:31.15 [13324:3008:1102/210531.151:ERROR:chrome_browser_main_extra_parts_metrics.cc(233)] crbug.com/1216328: Checking Bluetooth availability ended.
+11월 02, 2021 21:05:31.15 [13324:3008:1102/210531.151:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+11월 02, 2021 21:05:31.15 [13324:3008:1102/210531.152:ERROR:chrome_browser_main_extra_parts_metrics.cc(240)] crbug.com/1216328: Checking default browser status ended.
+11월 02, 2021 21:05:31.15 [13324:9184:1102/210531.157:ERROR:device_event_log_impl.cc(214)] [21:05:31.157] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+
+11월 03, 2021 18:13:10.37 NEW SESSION
+11월 03, 2021 18:13:10.37 [380:7372:1103/181310.365:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+11월 03, 2021 18:13:10.38 [380:7372:1103/181310.365:ERROR:chrome_browser_main_extra_parts_metrics.cc(233)] crbug.com/1216328: Checking Bluetooth availability ended.
+11월 03, 2021 18:13:10.38 [380:7372:1103/181310.365:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+11월 03, 2021 18:13:10.38 [380:7372:1103/181310.366:ERROR:chrome_browser_main_extra_parts_metrics.cc(240)] crbug.com/1216328: Checking default browser status ended.
+11월 03, 2021 18:13:10.38 [380:15036:1103/181310.371:ERROR:device_event_log_impl.cc(214)] [18:13:10.370] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+
+11월 04, 2021 13:27:09.60 NEW SESSION
+11월 04, 2021 13:27:09.60 [6420:11612:1104/132709.595:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+11월 04, 2021 13:27:09.61 [6420:11612:1104/132709.595:ERROR:chrome_browser_main_extra_parts_metrics.cc(233)] crbug.com/1216328: Checking Bluetooth availability ended.
+11월 04, 2021 13:27:09.61 [6420:11612:1104/132709.595:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+11월 04, 2021 13:27:09.61 [6420:11612:1104/132709.598:ERROR:chrome_browser_main_extra_parts_metrics.cc(240)] crbug.com/1216328: Checking default browser status ended.
+11월 04, 2021 13:27:09.61 [6420:7196:1104/132709.604:ERROR:device_event_log_impl.cc(214)] [13:27:09.604] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+
+11월 04, 2021 15:23:17.77 NEW SESSION
+11월 04, 2021 15:23:17.78 [5612:8688:1104/152317.778:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+11월 04, 2021 15:23:17.78 [5612:8688:1104/152317.778:ERROR:chrome_browser_main_extra_parts_metrics.cc(233)] crbug.com/1216328: Checking Bluetooth availability ended.
+11월 04, 2021 15:23:17.78 [5612:8688:1104/152317.778:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+11월 04, 2021 15:23:17.78 [5612:8688:1104/152317.779:ERROR:chrome_browser_main_extra_parts_metrics.cc(240)] crbug.com/1216328: Checking default browser status ended.
+11월 04, 2021 15:23:17.78 [5612:10616:1104/152317.784:ERROR:device_event_log_impl.cc(214)] [15:23:17.784] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+11월 04, 2021 15:31:13.81 [12632:11020:1104/153113.810:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+11월 04, 2021 15:31:13.81 [12632:11020:1104/153113.810:ERROR:chrome_browser_main_extra_parts_metrics.cc(233)] crbug.com/1216328: Checking Bluetooth availability ended.
+11월 04, 2021 15:31:13.81 [12632:11020:1104/153113.810:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+11월 04, 2021 15:31:13.81 [12632:11020:1104/153113.811:ERROR:chrome_browser_main_extra_parts_metrics.cc(240)] crbug.com/1216328: Checking default browser status ended.
+11월 04, 2021 15:31:13.81 [12632:11864:1104/153113.816:ERROR:device_event_log_impl.cc(214)] [15:31:13.816] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+11월 04, 2021 15:32:49.82 [12528:932:1104/153249.827:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+11월 04, 2021 15:32:49.82 [12528:932:1104/153249.827:ERROR:chrome_browser_main_extra_parts_metrics.cc(233)] crbug.com/1216328: Checking Bluetooth availability ended.
+11월 04, 2021 15:32:49.82 [12528:932:1104/153249.827:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+11월 04, 2021 15:32:49.82 [12528:932:1104/153249.828:ERROR:chrome_browser_main_extra_parts_metrics.cc(240)] crbug.com/1216328: Checking default browser status ended.
+11월 04, 2021 15:32:49.83 [12528:7188:1104/153249.833:ERROR:device_event_log_impl.cc(214)] [15:32:49.833] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+11월 04, 2021 15:43:21.20 [8228:6572:1104/154321.203:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+11월 04, 2021 15:43:21.20 [8228:6572:1104/154321.203:ERROR:chrome_browser_main_extra_parts_metrics.cc(233)] crbug.com/1216328: Checking Bluetooth availability ended.
+11월 04, 2021 15:43:21.20 [8228:6572:1104/154321.203:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+11월 04, 2021 15:43:21.20 [8228:6572:1104/154321.204:ERROR:chrome_browser_main_extra_parts_metrics.cc(240)] crbug.com/1216328: Checking default browser status ended.
+11월 04, 2021 15:43:21.20 [8228:10176:1104/154321.209:ERROR:device_event_log_impl.cc(214)] [15:43:21.208] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+11월 04, 2021 16:27:26.95 [1368:12884:1104/162726.956:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+11월 04, 2021 16:27:26.95 [1368:12884:1104/162726.956:ERROR:chrome_browser_main_extra_parts_metrics.cc(233)] crbug.com/1216328: Checking Bluetooth availability ended.
+11월 04, 2021 16:27:26.95 [1368:12884:1104/162726.956:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+11월 04, 2021 16:27:26.95 [1368:12884:1104/162726.957:ERROR:chrome_browser_main_extra_parts_metrics.cc(240)] crbug.com/1216328: Checking default browser status ended.
+11월 04, 2021 16:27:26.96 [1368:8944:1104/162726.961:ERROR:device_event_log_impl.cc(214)] [16:27:26.961] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+11월 04, 2021 16:28:57.26 [4460:12632:1104/162857.268:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+11월 04, 2021 16:28:57.26 [4460:12632:1104/162857.268:ERROR:chrome_browser_main_extra_parts_metrics.cc(233)] crbug.com/1216328: Checking Bluetooth availability ended.
+11월 04, 2021 16:28:57.26 [4460:12632:1104/162857.268:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+11월 04, 2021 16:28:57.26 [4460:12632:1104/162857.269:ERROR:chrome_browser_main_extra_parts_metrics.cc(240)] crbug.com/1216328: Checking default browser status ended.
+11월 04, 2021 16:28:57.27 [4460:11084:1104/162857.274:ERROR:device_event_log_impl.cc(214)] [16:28:57.274] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+11월 04, 2021 16:57:08.68 [9908:1716:1104/165708.689:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+11월 04, 2021 16:57:08.69 [9908:1716:1104/165708.689:ERROR:chrome_browser_main_extra_parts_metrics.cc(233)] crbug.com/1216328: Checking Bluetooth availability ended.
+11월 04, 2021 16:57:08.69 [9908:1716:1104/165708.689:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+11월 04, 2021 16:57:08.69 [9908:1716:1104/165708.690:ERROR:chrome_browser_main_extra_parts_metrics.cc(240)] crbug.com/1216328: Checking default browser status ended.
+11월 04, 2021 16:57:08.69 [9908:2080:1104/165708.695:ERROR:device_event_log_impl.cc(214)] [16:57:08.695] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+
+11월 11, 2021 13:22:05.91 NEW SESSION
+11월 11, 2021 13:22:05.91 [808:12424:1111/132205.914:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+11월 11, 2021 13:22:05.91 [808:12424:1111/132205.914:ERROR:chrome_browser_main_extra_parts_metrics.cc(233)] crbug.com/1216328: Checking Bluetooth availability ended.
+11월 11, 2021 13:22:05.91 [808:12424:1111/132205.914:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+11월 11, 2021 13:22:05.91 [808:12424:1111/132205.915:ERROR:chrome_browser_main_extra_parts_metrics.cc(240)] crbug.com/1216328: Checking default browser status ended.
+11월 11, 2021 13:22:05.91 [808:13336:1111/132205.919:ERROR:device_event_log_impl.cc(214)] [13:22:05.919] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+11월 11, 2021 13:39:03.95 [3556:2892:1111/133903.952:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+11월 11, 2021 13:39:03.95 [3556:2892:1111/133903.952:ERROR:chrome_browser_main_extra_parts_metrics.cc(233)] crbug.com/1216328: Checking Bluetooth availability ended.
+11월 11, 2021 13:39:03.95 [3556:2892:1111/133903.952:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+11월 11, 2021 13:39:03.95 [3556:2892:1111/133903.953:ERROR:chrome_browser_main_extra_parts_metrics.cc(240)] crbug.com/1216328: Checking default browser status ended.
+11월 11, 2021 13:39:03.95 [3556:4628:1111/133903.958:ERROR:device_event_log_impl.cc(214)] [13:39:03.958] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+11월 11, 2021 13:58:37.49 [9952:5156:1111/135837.492:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+11월 11, 2021 13:58:37.49 [9952:5156:1111/135837.492:ERROR:chrome_browser_main_extra_parts_metrics.cc(233)] crbug.com/1216328: Checking Bluetooth availability ended.
+11월 11, 2021 13:58:37.49 [9952:5156:1111/135837.492:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+11월 11, 2021 13:58:37.49 [9952:5156:1111/135837.493:ERROR:chrome_browser_main_extra_parts_metrics.cc(240)] crbug.com/1216328: Checking default browser status ended.
+11월 11, 2021 13:58:37.49 [9952:9036:1111/135837.497:ERROR:device_event_log_impl.cc(214)] [13:58:37.497] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+11월 11, 2021 14:18:16.69 [7988:6796:1111/141816.689:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+11월 11, 2021 14:18:16.69 [7988:6796:1111/141816.689:ERROR:chrome_browser_main_extra_parts_metrics.cc(233)] crbug.com/1216328: Checking Bluetooth availability ended.
+11월 11, 2021 14:18:16.69 [7988:6796:1111/141816.689:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+11월 11, 2021 14:18:16.69 [7988:6796:1111/141816.690:ERROR:chrome_browser_main_extra_parts_metrics.cc(240)] crbug.com/1216328: Checking default browser status ended.
+11월 11, 2021 14:18:16.69 [7988:15004:1111/141816.694:ERROR:device_event_log_impl.cc(214)] [14:18:16.694] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+
+11월 13, 2021 15:16:16.37 NEW SESSION
+11월 13, 2021 15:16:16.37 [372:6272:1113/151616.377:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+11월 13, 2021 15:16:16.38 [372:6272:1113/151616.377:ERROR:chrome_browser_main_extra_parts_metrics.cc(233)] crbug.com/1216328: Checking Bluetooth availability ended.
+11월 13, 2021 15:16:16.38 [372:6272:1113/151616.377:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+11월 13, 2021 15:16:16.38 [372:6272:1113/151616.378:ERROR:chrome_browser_main_extra_parts_metrics.cc(240)] crbug.com/1216328: Checking default browser status ended.
+11월 13, 2021 15:16:16.38 [372:11592:1113/151616.382:ERROR:device_event_log_impl.cc(214)] [15:16:16.383] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+11월 13, 2021 15:40:10.90 [10064:15516:1113/154010.899:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+11월 13, 2021 15:40:10.90 [10064:15516:1113/154010.899:ERROR:chrome_browser_main_extra_parts_metrics.cc(233)] crbug.com/1216328: Checking Bluetooth availability ended.
+11월 13, 2021 15:40:10.90 [10064:15516:1113/154010.900:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+11월 13, 2021 15:40:10.90 [10064:15516:1113/154010.901:ERROR:chrome_browser_main_extra_parts_metrics.cc(240)] crbug.com/1216328: Checking default browser status ended.
+11월 13, 2021 15:40:10.90 [10064:12112:1113/154010.905:ERROR:device_event_log_impl.cc(214)] [15:40:10.906] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+11월 13, 2021 15:42:26.28 [11296:2188:1113/154226.286:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+11월 13, 2021 15:42:26.28 [11296:2188:1113/154226.286:ERROR:chrome_browser_main_extra_parts_metrics.cc(233)] crbug.com/1216328: Checking Bluetooth availability ended.
+11월 13, 2021 15:42:26.28 [11296:2188:1113/154226.286:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+11월 13, 2021 15:42:26.28 [11296:2188:1113/154226.287:ERROR:chrome_browser_main_extra_parts_metrics.cc(240)] crbug.com/1216328: Checking default browser status ended.
+11월 13, 2021 15:42:26.29 [11296:7728:1113/154226.291:ERROR:device_event_log_impl.cc(214)] [15:42:26.291] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+
+11월 18, 2021 18:08:48.61 NEW SESSION
+11월 18, 2021 18:08:48.61 [11096:13248:1118/180848.614:ERROR:chrome_browser_main_extra_parts_metrics.cc(226)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+11월 18, 2021 18:08:48.62 [11096:13248:1118/180848.614:ERROR:chrome_browser_main_extra_parts_metrics.cc(229)] crbug.com/1216328: Checking Bluetooth availability ended.
+11월 18, 2021 18:08:48.62 [11096:13248:1118/180848.614:ERROR:chrome_browser_main_extra_parts_metrics.cc(232)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+11월 18, 2021 18:08:48.62 [11096:13248:1118/180848.615:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status ended.
+11월 18, 2021 18:08:48.62 [11096:9936:1118/180848.619:ERROR:device_event_log_impl.cc(214)] [18:08:48.619] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.

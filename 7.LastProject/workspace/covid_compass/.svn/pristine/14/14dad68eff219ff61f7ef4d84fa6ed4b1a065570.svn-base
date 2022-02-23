@@ -1,0 +1,72 @@
+package com.spring.compass.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.spring.compass.service.HsptService;
+import com.spring.compass.service.InspService;
+import com.spring.compass.service.LtctService;
+import com.spring.compass.service.MberService;
+import com.spring.compass.service.PbhtService;
+import com.spring.compass.vo.VMberVO;
+
+@Controller
+public class TestWorkController {
+	
+	@Autowired
+	private MberService mberService;
+	
+	@Autowired
+	private InspService inspService;
+	
+	@Autowired
+	private PbhtService pbhtService;
+	
+	@Autowired
+	private HsptService hsptService;
+	
+	@Autowired
+	private LtctService LtctService;
+	
+	@RequestMapping("/test/mberTest")
+	public String mberTest(@RequestParam(defaultValue="inspe")String mberId) throws Exception{
+//		MberVO member = mberService.getMember(id);
+		
+		String url = "test/success";
+		
+		VMberVO member = mberService.getVMemberById(mberId);
+		System.out.println(member);
+		
+		if(member.getMberCode().equals("B101")) {
+			System.out.println("검사소 직원 회원");
+		}
+		if(member.getMberCode().equals("B102")) {
+			System.out.println("보건소 직원 회원");
+		}
+		if(member.getMberCode().equals("B103")) {
+			System.out.println("병원 직원 회원");
+		}
+		if(member.getMberCode().equals("B104")) {
+			System.out.println("생활치료센터 직원 회원");
+		}
+		if(member.getMberCode().equals("B121")) {
+			System.out.println("검사소 대표 회원");
+		}
+		if(member.getMberCode().equals("B122")) {
+			System.out.println("보건소 대표 회원");
+		}
+		if(member.getMberCode().equals("B123")) {
+			System.out.println("병원 대표 회원");
+		}
+		if(member.getMberCode().equals("B124")) {
+			System.out.println("생활치료센터 대표 회원");
+		}
+		if(member.getMberCode().equals("B125")) {
+			System.out.println("시스템관리자 회원");
+		}
+		return url;
+	}
+
+}

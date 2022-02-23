@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/check.png"/>
+
+<style>
+   div{
+    width:80%;
+    height : auto;
+    border :1px solid blue;
+    padding :20px;
+   }
+</style>
+
+<script>
+//실행이됬을때 작동한다.(실행순서가 바뀜)
+window.onload=function(){
+now= new Date();
+
+
+//div인 요소로 접근
+//div가 여러개가 생길수 있기때문에 element에 s를 붙인다. 반환은 배열로 된다.
+var vdiv=document.getElementsByTagName('div');
+
+//접근된 요송에 출력
+vdiv[0].innerHTML = now +"<br>";
+	
+}
+</script>
+</head>
+<body>
+<div>
+</div>
+</body>
+</html>

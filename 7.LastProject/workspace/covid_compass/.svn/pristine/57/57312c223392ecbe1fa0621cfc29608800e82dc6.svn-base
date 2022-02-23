@@ -1,0 +1,24 @@
+package com.spring.compass.dao;
+
+import java.sql.SQLException;
+
+import org.apache.ibatis.session.SqlSession;
+
+import com.spring.compass.vo.PbhtVO;
+
+public class PbhtDAOImpl implements PbhtDAO{
+	
+	private String nameSpace = "Pbht-Mapper.";
+	
+	private SqlSession sqlSession;
+	public void setSqlSession(SqlSession sqlSession) {
+		this.sqlSession = sqlSession; 
+	}
+	
+	@Override
+	public PbhtVO selectPbhtByInstNo(String instNo) throws SQLException {
+		PbhtVO pbht = sqlSession.selectOne(nameSpace + "selectPbhtByInstNo", instNo);
+		return pbht;
+	}
+
+}

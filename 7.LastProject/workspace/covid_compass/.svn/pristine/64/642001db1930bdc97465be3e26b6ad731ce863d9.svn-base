@@ -1,0 +1,12 @@
+
+login.user.log=c:/compasslog/loginUser
+loginFail.user.log=c:/compasslog/loginFailUser
+dgnss.result.log=c:/compasslog/dgnssResult
+
+inspstats.log=c:/inspstatistics/inspstatistics
+hsptstats.dgnss.log = c:/hsptStatisticsDgnss/hsptDgnss
+hsptstats.reqsckbd.log = c:/hsptStatisticsReqSckbd/hsptReqSckbd
+hsptstats.inptnt.log = c:/hsptStatisticsInptnt/hsptInptnt
+hsptstats.goltct.log = c:/hsptStatisticsGoltct/hsptGoltct
+hsptstats.goself.log = c:/hsptStatisticsGoSelf/hsptGoself
+

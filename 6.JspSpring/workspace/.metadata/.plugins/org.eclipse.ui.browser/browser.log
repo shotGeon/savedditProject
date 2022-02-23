@@ -1,0 +1,47 @@
+
+11월 12, 2021 14:23:50.55 NEW SESSION
+11월 12, 2021 14:23:50.55 [3020:880:1112/142350.549:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+11월 12, 2021 14:23:50.55 [3020:880:1112/142350.549:ERROR:chrome_browser_main_extra_parts_metrics.cc(233)] crbug.com/1216328: Checking Bluetooth availability ended.
+11월 12, 2021 14:23:50.55 [3020:880:1112/142350.549:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+11월 12, 2021 14:23:50.55 [3020:880:1112/142350.550:ERROR:chrome_browser_main_extra_parts_metrics.cc(240)] crbug.com/1216328: Checking default browser status ended.
+11월 12, 2021 14:23:50.55 [3020:14620:1112/142350.554:ERROR:device_event_log_impl.cc(214)] [14:23:50.554] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+
+1월 05, 2022 08:39:33.89 NEW SESSION
+1월 05, 2022 08:39:33.89 [2340:5024:0105/083933.870:ERROR:chrome_browser_main_extra_parts_metrics.cc(226)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+1월 05, 2022 08:39:33.89 [2340:5024:0105/083933.870:ERROR:chrome_browser_main_extra_parts_metrics.cc(229)] crbug.com/1216328: Checking Bluetooth availability ended.
+1월 05, 2022 08:39:33.89 [2340:5024:0105/083933.870:ERROR:chrome_browser_main_extra_parts_metrics.cc(232)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+1월 05, 2022 08:39:33.89 [2340:5024:0105/083933.871:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status ended.
+1월 05, 2022 08:39:33.89 [2340:992:0105/083933.894:ERROR:device_event_log_impl.cc(214)] [08:39:33.893] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+1월 05, 2022 08:43:01.66 [1856:7300:0105/084301.669:ERROR:chrome_browser_main_extra_parts_metrics.cc(226)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+1월 05, 2022 08:43:01.66 [1856:7300:0105/084301.669:ERROR:chrome_browser_main_extra_parts_metrics.cc(229)] crbug.com/1216328: Checking Bluetooth availability ended.
+1월 05, 2022 08:43:01.66 [1856:7300:0105/084301.669:ERROR:chrome_browser_main_extra_parts_metrics.cc(232)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+1월 05, 2022 08:43:01.66 [1856:7300:0105/084301.669:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status ended.
+1월 05, 2022 08:43:01.68 [1856:15052:0105/084301.682:ERROR:device_event_log_impl.cc(214)] [08:43:01.681] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+1월 05, 2022 09:51:52.64 [1856:13912:0105/095152.641:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+1월 05, 2022 09:52:19.09 [1856:13912:0105/095219.099:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+1월 05, 2022 09:53:15.42 [1856:13912:0105/095315.420:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+1월 05, 2022 10:03:33.12 [1856:13912:0105/100333.126:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+1월 05, 2022 10:03:58.23 [1856:13912:0105/100358.233:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+1월 05, 2022 10:06:46.25 [1856:15052:0105/100646.256:ERROR:interface_endpoint_client.cc(658)] Message 0 rejected by interface blink.mojom.WidgetHost
+1월 05, 2022 10:18:57.78 [1856:15052:0105/101857.784:ERROR:interface_endpoint_client.cc(658)] Message 0 rejected by interface blink.mojom.WidgetHost
+1월 05, 2022 10:19:04.99 [1856:15052:0105/101904.998:ERROR:interface_endpoint_client.cc(658)] Message 0 rejected by interface blink.mojom.WidgetHost
+1월 05, 2022 10:25:54.14 [1856:15052:0105/102554.147:ERROR:interface_endpoint_client.cc(658)] Message 0 rejected by interface blink.mojom.WidgetHost
+1월 05, 2022 10:26:51.64 [1856:15052:0105/102651.640:ERROR:interface_endpoint_client.cc(658)] Message 0 rejected by interface blink.mojom.WidgetHost
+1월 05, 2022 12:23:36.96 [1856:15052:0105/122336.962:ERROR:sharing_service.cc(252)] Device un-registration failed with fatal error
+1월 05, 2022 13:38:39.91 [1856:15052:0105/133839.916:ERROR:device_event_log_impl.cc(214)] [13:38:39.916] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+1월 05, 2022 17:06:48.03 [1856:13912:0105/170648.033:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+1월 05, 2022 17:31:09.63 [1856:15052:0105/173109.636:ERROR:interface_endpoint_client.cc(658)] Message 1 rejected by interface blink.mojom.WidgetHost
+1월 05, 2022 18:08:10.90 [1856:13912:0105/180810.901:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+1월 05, 2022 18:08:51.88 [1856:13912:0105/180851.888:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+1월 05, 2022 18:09:45.24 [1856:13912:0105/180945.239:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+1월 05, 2022 18:27:01.71 [1856:13912:0105/182701.719:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+1월 05, 2022 18:27:25.61 [1856:13912:0105/182725.609:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+1월 05, 2022 18:40:05.93 [1856:14708:0105/184005.934:ERROR:database.cc(1773)] Passwords SQLite error: code 2067 errno 0: UNIQUE constraint failed: logins.origin_url, logins.username_element, logins.username_value, logins.password_element, logins.signon_realm sql: INSERT INTO logins (origin_url, action_url, username_element, username_value, password_element, password_value, submit_element, signon_realm, date_created, blacklisted_by_user, scheme, password_type, times_used, form_data, display_name, icon_url, federation_url, skip_zero_click, generation_upload_status, possible_username_pairs, id, date_last_used, moving_blocked_for, date_password_modified) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+1월 05, 2022 18:52:28.41 [1856:15052:0105/185228.415:ERROR:interface_endpoint_client.cc(658)] Message 1 rejected by interface blink.mojom.WidgetHost
+1월 05, 2022 18:52:28.41 [1856:15052:0105/185228.415:ERROR:interface_endpoint_client.cc(658)] Message 1 rejected by interface blink.mojom.WidgetHost
+1월 05, 2022 19:57:09.43 [1856:15052:0105/195709.431:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+1월 05, 2022 19:57:09.43 [1856:15052:0105/195709.431:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'sourceURL')", source:  (0)
+1월 05, 2022 19:58:02.68 [1856:15052:0105/195802.680:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+1월 05, 2022 19:58:02.68 [1856:15052:0105/195802.680:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+1월 05, 2022 19:58:02.68 [1856:15052:0105/195802.680:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+1월 05, 2022 19:58:02.68 [1856:15052:0105/195802.681:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)

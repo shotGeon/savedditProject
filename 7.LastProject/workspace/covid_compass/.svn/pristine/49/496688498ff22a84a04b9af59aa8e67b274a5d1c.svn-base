@@ -1,0 +1,68 @@
+package com.spring.compass.vo;
+
+public class HsptVO {
+
+	private String hsptNo;
+	private String instNo;
+	private String hsptlNm;
+	private int empCnt = 1;
+	private String hsptlTelno;
+	private int rmndSckbdCnt = 0;
+	private String hsptlAdres;
+	private int sckbdCnt = 0;
+	public String getHsptNo() {
+		return hsptNo;
+	}
+	public void setHsptNo(String hsptNo) {
+		this.hsptNo = hsptNo;
+	}
+	public String getInstNo() {
+		return instNo;
+	}
+	public void setInstNo(String instNo) {
+		this.instNo = instNo;
+	}
+	public String getHsptlNm() {
+		return hsptlNm;
+	}
+	public void setHsptlNm(String hsptlNm) {
+		this.hsptlNm = hsptlNm;
+	}
+	public int getEmpCnt() {
+		return empCnt;
+	}
+	public void setEmpCnt(int empCnt) {
+		this.empCnt = empCnt;
+	}
+	public String getHsptlTelno() {
+		return hsptlTelno;
+	}
+	@Override
+	public String toString() {
+		return "HsptVO [hsptNo=" + hsptNo + ", instNo=" + instNo + ", hsptlNm=" + hsptlNm + ", empCnt=" + empCnt
+				+ ", hsptlTelno=" + hsptlTelno + ", rmndSckbdCnt=" + rmndSckbdCnt + ", hsptlAdres=" + hsptlAdres
+				+ ", sckbdCnt=" + sckbdCnt + "]";
+	}
+	public void setHsptlTelno(String hsptlTelno) {
+		this.hsptlTelno = hsptlTelno;
+	}
+	public int getRmndSckbdCnt() {
+		return rmndSckbdCnt;
+	}
+	public void setRmndSckbdCnt(int rmndSckbdCnt) {
+		this.rmndSckbdCnt = rmndSckbdCnt;
+	}
+	public String getHsptlAdres() {
+		return hsptlAdres;
+	}
+	public void setHsptlAdres(String hsptlAdres) {
+		this.hsptlAdres = hsptlAdres;
+	}
+	public int getSckbdCnt() {
+		return sckbdCnt;
+	}
+	public void setSckbdCnt(int sckbdCnt) {
+		this.sckbdCnt = sckbdCnt;
+	}
+
+}

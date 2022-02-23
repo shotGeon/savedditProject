@@ -1,0 +1,150 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ page trimDirectiveWhitespaces="true"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+<script type="text/x-handlebars-template"  id="inptnt-list-template" >
+{{#each .}}
+					<tr
+						ondblclick="OpenWindow('sckbd-request?manageNo=manageNo={{manageNo}}', '진료 신청 정보', 1250, 800)"
+						onclick="showDetail('{{manageNo}}')"
+						class="each-inptnt-element">
+						<td><input type="checkbox" name="checkSmple"
+							onclick="cancleAll()"></td>
+						<td>하기재</td>
+						<td>27</td>
+						<td>남</td>
+						<td>010-7777-7777</td>
+						<td>2021/01/10</td>
+						<td>2</td>
+					</tr>
+{{/each}}
+</script>
+
+<script>
+
+window.onload = function(){
+	getPage('');
+}
+
+function getPage(pstiNo){
+	/* 	$.getJSON(pageInfo, function(data){
+			printData(data.replyList, $('#repliesDiv'), $('#reply-list-template'));
+			printPagination(data.pageMaker, $('ul#pagination'), $('#reply-pagination-template'));
+		});
+	 */
+	 alert('getPage!!');
+	 	$.ajax({
+	 		url : '<%=request.getContextPath() %>/hspt/test?pstiNo=' + 'PSTI202201108000001',
+	 		type : 'get',
+	 		dataType : 'json',
+	 		success : function(data){
+				alert('asdf!');
+				printData(data, $('#inptnt-list-table-tbody'), $('#inptnt-list-template'), '.each-inptnt-element');
+	 		},
+	 		error : function(error){
+	 			alert('error' + error.status);
+	 		}
+	 	})
+	 }
+	 
+function printData(inptntArr, target, templateObject, removeClass){
+	
+	var template = Handlebars.compile(templateObject.html());
+	var html = template(inptntArr);
+	
+	alert(html);
+	console.log($(removeClass));
+	
+	$(removeClass).remove();
+	
+	target.append(html);
+}
+
+
+
+Handlebars.registerHelper({
+	"prettifyDate" : function(timeValue){
+		var dateObj = new Date(timeValue);
+		var year = dateObj.getFullYear();
+		var month = dateObj.getMonth() + 1;
+		var date = dateObj.getDate();
+		return year + "/" + month + "/" + date;
+	},
+	"VisibleByLoginCheck" : function(replyer){
+		var result = "none";
+		if(replyer) result = "visible";
+		return result;
+	},
+	"signActive" : function(pageNum){
+		if(pageNum == replyPage) return 'active';
+	}
+});
+
+</script>
+
+
+<section class="content">
+	<div style="height: 533px;">
+		<div class="table-responsive">
+			<table class="table table-hover text-nowrap"
+				style="text-align: center;">
+				<thead>
+					<tr>
+						<th style="width: 10%;"><input id="all" type="checkbox"
+							onclick="checkAllBox()" name="all"></th>
+						<th style="width: 10%;">이름</th>
+						<th style="width: 10%;">나이</th>
+						<th style="width: 10%;">성별</th>
+						<th>연락처</th>
+						<th>입원일</th>
+						<th>누적 음성수</th>
+					</tr>
+				</thead>
+				<tbody id="inptnt-list-table-tbody">
+					<tr
+						ondblclick="OpenWindow('sckbd-request?manageNo=MANAGE20220110800003', '진료 신청 정보', 1250, 800)"
+						onclick="showDetail('MANAGE20220110800003')"
+						class="each-inptnt-element">
+						<td><input type="checkbox" name="checkSmple"
+							onclick="cancleAll()"></td>
+						<td>하기재${inptntNm }</td>
+						<td>27${inptntAge }</td>
+						<td>남${inptntGender }</td>
+						<td>010-7777-7777${inptntTelno }</td>
+						<td>2021/01/10{{prettifyDate regdate}}</td>
+						<td>2</td>
+						
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="card-footer clearfix" style="background-color: white;">
+		<%@ include file="../template/list-footer.jsp"%>
+	</div>
+</section>
+<script>
+		function checkAllBox(checkBox){
+			var length = document.getElementsByName("checkSmple").length;
+			if(document.getElementById('all').checked==true){
+				for(var i=0; i<length; i++) document.getElementsByName("checkSmple")[i].checked=true;
+			}
+			
+			if(document.getElementById('all').checked==false){
+				for(var i=0; i<length; i++) document.getElementsByName("checkSmple")[i].checked=false;
+			}
+			
+			
+		}
+		
+		function cancleAll(){
+			//alert("눌림");
+			if(document.getElementById('all').checked==true){
+				document.getElementById('all').checked=false;
+			}
+		}
+	</script>

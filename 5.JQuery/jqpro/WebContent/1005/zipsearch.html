@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script src="http://localhost/jqpro/js/jquery-3.6.0.min.js"></script>
+
+<style>
+	p:hover{
+		background: yellow;
+	}
+</style>
+
+
+<script>
+$(function(){
+	$('#dongbtn').on('click', function(){
+		dongvalue=$('#dong').val().trim();
+		
+		if(dongvalue.length<1){
+			alert("동을 입력하세요");
+			return false;
+		}
+		
+		//$.post(url, data, success, dataType)
+		//자바에 슈퍼(자식에서 부모를 사용할때)와 같은의미(opener)
+		$.ajax({
+			url : '/jqpro/SearchDong.do',
+			type : 'post',
+			data : {"dong" : dongvalue},
+			success : function(res){
+				code="";
+				$.each(res, function(i, v){
+					code+="<p id='"+v.zip+"'>"+"<span class='s1'>"+v.zip+"</span>"
+					       +"<span class='s2'>"+v.addr+"</span>"+v.bungi+"</p>"+"<br>";
+				})
+				
+				$('#result1').html(code);
+				
+			},
+			error : function(xhr){
+				alert(xhr.status);
+			},
+			dataType : 'json'
+		})
+	})
+	
+	$('#result1').on('click', 'p', function(){
+		zip=$('.s1', this).text();
+		addr=$('.s2', this).text();
+		
+		$('#zip', opener.document).val(zip);
+		$('#add1', opener.document).val(addr);
+		
+		window.close();
+	})
+	
+	
+	
+})
+
+
+</script>
+</head>
+<body>
+
+<div class="box">
+  <h3>우편번호찾기</h3>
+   <br>
+   <br>
+   찾는 동 이름을 입력하세요<br>
+   <input type="text" id="dong">
+  <input id="dongbtn" type="button" value="확인">
+  <br><br>
+  <div id="result1">
+  </div>
+</div>
+
+</body>
+</html>

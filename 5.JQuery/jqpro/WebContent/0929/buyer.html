@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script src="../js/jquery-3.6.0.min.js"></script>
+
+<style>
+	table{
+		border : 2px solid blue;
+		
+	}
+	td{
+		width: 200px;
+		height: 40px;
+		text-align: center;
+	}
+	#detail{
+		width: 500px;
+	}
+	
+	p:hover{
+		background: red;
+	}
+	
+	
+</style>
+
+
+<script>
+$(function(){
+	$('#buyer').on('click', function(){
+		
+		$.ajax({
+			
+			url : 'buyerNames.jsp',
+			//반드시 앞에 /와 프로젝트 이름 앞에 붙이기
+			type : 'get',
+			success : function(res){
+				code="";
+				$.each(res, function(i, v){
+					code+="<p id='"+v.id+"'>"+v.name+"</p>";
+					
+				})
+				$('#names').html(code);
+				
+			},
+			error : function(xhr){
+				alert(xhr.status);
+			},
+			dataType : 'json'
+		})
+	})
+	
+	$(document).on('click','p', function(){
+		//alert($(this).attr('id'));
+		vser=$(this).attr('id');
+		
+		$.ajax({
+			url : 'buyerSelect.jsp',
+			type : 'get',
+			data : {"id" : vser},
+			success :function(res2){
+				code="<table border='1'>";
+				code+="<tr><td>BUYER_ID"+res2.id+"</td>";
+				code+="<td>"+res2.name+"</td></tr>";
+				
+				code+="<tr><td>BUYER_LGU"+res2.id+"</td>";
+				code+="<td>"+res2.lgu+"</td></tr>";
+				
+				code+="<tr><td>BUYER_BANK"+res2.id+"</td>";
+				code+="<td>"+res2.bank+"</td></tr>";
+				
+				code+="<tr><td>BUYER_BANKNO"+res2.id+"</td>";
+				code+="<td>"+res2.bankno+"</td></tr>";
+				
+				code+="<tr><td>BUYER_BANKNAME"+res2.id+"</td>";
+				code+="<td>"+res2.bankname+"</td></tr>";
+				
+				code+="<tr><td>BUYER_ZIP"+res2.id+"</td>";
+				code+="<td>"+res2.zip+"</td></tr>";
+				
+				code+="<tr><td>BUYER_ADD1"+res2.id+"</td>";
+				code+="<td>"+res2.add1+"</td></tr>";
+				
+				code+="<tr><td>BUYER_ADD2"+res2.id+"</td>";
+				code+="<td>"+res2.add2+"</td></tr></table>";
+									
+				
+				$('#detail').html(code);
+				
+			},
+			error :function(xhr){
+				alert(xhr.status);
+			},
+			dataType : 'json'
+			
+		})
+	})
+	
+	
+})
+</script>
+</head>
+<body>
+
+<div class="box">
+  <h3></h3>
+   <br>
+   <br>
+  <input id="buyer" type="button" value="확인">
+  <br><br>
+  <div id="result1">
+  	<table border="1">
+  		<tr>
+  		  <td>거래처이름</td>	
+  		  <td>거래처상세정보</td>	
+  		</tr>
+  		
+  		<tr>
+  		  <td id="names"></td>	
+  		  <td id="detail"></td>	
+  		</tr>
+  	</table>
+  </div>
+</div>
+
+</body>
+</html>

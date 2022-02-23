@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>window open</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+
+<script>
+proc1=()=>{
+	a=window.open("../0909/Math객체.html", "korea", "width=500 height=400");
+	//절대위치
+	a.moveTo(200,200);
+	
+}
+	
+proc2=()=>{
+	//상대위치
+	a.moveBy(100,100);
+}
+
+proc3=()=>{
+	a.moveTo(100,100);
+}
+
+proc4=()=>{
+	a.resizeBy(1000,1000);
+}
+
+proc5=()=>{
+	a.resizeTo(500,500);
+}
+proc6=()=>{
+	a.scrollTo(1000,1000);
+}
+
+proc7=()=>{
+	a.scrollBy(500,500);
+}
+
+proc8=()=>{
+	window.open("winsub.html","","width=500 height=400");
+}
+</script>
+</head>
+<body>
+
+<div class="box">
+  <h3>Window객체</h3>
+   open("실행window", "name/target", "specs")<br>
+   target :_blank, _self<br>
+   name : 논리적으로 표현되는 이름, 물리적 표현이 아니기 때문에 표시되지 않는다.<br>
+   specs : 여러가지의 속성을 설정 width, height, top, left<br>
+   
+   close()<br>
+  <input type="button" value="확인" onclick="proc1()">
+  <input type="button" value="moveBy" onclick="proc2()">
+  <input type="button" value="moveTo" onclick="proc3()">
+  <input type="button" value="resizeBy" onclick="proc4()">
+  <input type="button" value="resizeTo" onclick="proc5()">
+  <input type="button" value="scrollTo" onclick="proc6()">
+  <input type="button" value="scrollBy" onclick="proc7()">
+  <br><br>
+  <div id="result1"></div>
+</div>
+
+<div class="box">
+  <h3>Window객체</h3>
+   open("실행window", "name/target", "specs")<br>
+   <br>
+   opener : 새로운 창인 자식창에서 현재창인 부모창으로 접근하고자 할때 부모창을 나타내는 속성<br><br>
+  <input type="button" value="확인" onclick="proc8()">
+  <br><br>
+  <div id="result8"></div>
+</div>
+
+</body>
+</html>

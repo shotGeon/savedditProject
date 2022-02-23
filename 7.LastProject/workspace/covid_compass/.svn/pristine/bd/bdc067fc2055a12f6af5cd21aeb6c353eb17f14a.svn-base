@@ -1,0 +1,68 @@
+package com.spring.compass.vo;
+
+public class LtctVO {
+
+	private String instNo;
+	private int empCnt = 1;
+	private int rmndSckbdCnt = 0;
+	private String ltctAdres;
+	private int sckbdCnt = 0;
+	private String ltctNm;
+	private String ltctTelno;
+	@Override
+	public String toString() {
+		return "LtctVO [instNo=" + instNo + ", empCnt=" + empCnt + ", rmndSckbdCnt=" + rmndSckbdCnt + ", ltctAdres="
+				+ ltctAdres + ", sckbdCnt=" + sckbdCnt + ", ltctNm=" + ltctNm + ", ltctTelno=" + ltctTelno + ", ltctNo="
+				+ ltctNo + "]";
+	}
+	public String getInstNo() {
+		return instNo;
+	}
+	public void setInstNo(String instNo) {
+		this.instNo = instNo;
+	}
+	public int getEmpCnt() {
+		return empCnt;
+	}
+	public void setEmpCnt(int empCnt) {
+		this.empCnt = empCnt;
+	}
+	public int getRmndSckbdCnt() {
+		return rmndSckbdCnt;
+	}
+	public void setRmndSckbdCnt(int rmndSckbdCnt) {
+		this.rmndSckbdCnt = rmndSckbdCnt;
+	}
+	public String getLtctAdres() {
+		return ltctAdres;
+	}
+	public void setLtctAdres(String ltctAdres) {
+		this.ltctAdres = ltctAdres;
+	}
+	public int getSckbdCnt() {
+		return sckbdCnt;
+	}
+	public void setSckbdCnt(int sckbdCnt) {
+		this.sckbdCnt = sckbdCnt;
+	}
+	public String getLtctNm() {
+		return ltctNm;
+	}
+	public void setLtctNm(String ltctNm) {
+		this.ltctNm = ltctNm;
+	}
+	public String getLtctTelno() {
+		return ltctTelno;
+	}
+	public void setLtctTelno(String ltctTelno) {
+		this.ltctTelno = ltctTelno;
+	}
+	public String getLtctNo() {
+		return ltctNo;
+	}
+	public void setLtctNo(String ltctNo) {
+		this.ltctNo = ltctNo;
+	}
+	private String ltctNo;
+
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<style>
+ pre{
+  background :pink;
+ }
+ input{
+   background :green;
+   //border :3px solid red;
+ }
+ <!-- 속성선택자-->
+ input[type=text]{ 
+   background :blue;
+ }
+ button{ 
+   background :red;
+ }
+ #form1 input[name=email]{
+  border :3px solid red;
+ }
+ label{
+    display :inline -block;
+    width :80px;
+    height :25px;
+    padding :10px;
+    
+ }
+ form{
+   border :3px solid blue;
+   width: 40%;
+   margin: 10px;
+   padding :10px;
+ }
+   
+</style>
+</head>
+<body>
+<pre style="background:yellow;"><!-- 인라인 스타일은 권장하지 않는다. -->
+  폼연습
+</pre>
+ <h2>연습1</h2>
+    <h3><strong>이메일 전송화면</strong></h3>
+   <form id="fom1" action="">
+    <label>이름</label><input type="text" name="name"><br>
+    <label>이메일</label><input type="text" name="email"><br>
+       내용<br>
+    <textarea rows="10" cols="60" name="area"><</textarea>
+    <br>
+    <button type="submit">전송</button>
+    <button type="reset">재설정</button>
+    
+   </form>
+ 
+ <h2>연습2</h2>
+ <h3><strong>회원 가입 화면</strong></h3>
+   <form id="fom2"  action="">
+   <label>이름</label><input type="text" name="name"><br>
+   <label>주소</label><input type="text" name="addr"><br>
+   <label>이메일</label><input type="text" name="email"><br>
+   
+   <input type="radio" name="gender" value="Male">Male<br>
+   <input type="radio" name="gender" value="Female">Female<br>
+   
+   <button type="submit">send</button>
+   <button type="reset">원래대로</button>
+   </form>
+ 	
+ 
+</body>
+</html>

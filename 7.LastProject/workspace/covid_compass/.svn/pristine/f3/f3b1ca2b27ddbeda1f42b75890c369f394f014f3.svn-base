@@ -1,0 +1,202 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ page trimDirectiveWhitespaces="true"%>
+<!-- 진료 신청 목록 -->
+<div class="row">
+<div class="col-md-6">
+  <div class="card">
+			<div class="card-header d-flex p-0">
+				<ul class="nav nav-pills ml-auto p-2" role="tablist">
+					<li class="nav-item">
+					<div class="input-group float-right" style="max-width: 600px; width:300px;">
+					<!-- search bar -->
+					<select class="form-control " name="searchType" id="searchType">
+						<option value="" ${pageMaker.cri.searchType eq '' ? 'selected':''}>검색구분</option>
+						<option value="n"
+							${pageMaker.cri.searchType eq 'n' ? 'selected':''}>성 명</option>
+						<option value="p"
+							${pageMaker.cri.searchType eq 'p' ? 'selected':''}>전화번호</option>
+					</select>
+
+					<!-- keyword -->
+					<input class="form-control" type="text" name="keyword"
+						value="${pageMaker.cri.keyword }"
+						style="width: 18%; display: inline-block;" /> <span
+						class="input-group-append">
+						<button class="btn btn-primary" type="button" id="searchBtn"
+							style="background: #1a4f72; color: #ffffff; border-color: #1a4f72; display: inline-block; margin-bottom: 4px; margin-left: -7px;"
+							data-card-widget="search" onclick="">
+							<i class="fa fa-fw fa-search"></i>
+						</button>
+					</span>
+					<!-- end : search bar -->
+				  </div>
+				 </li>
+				</ul>
+			</div>
+
+		<div class="table-responsive">
+			<table class="table table-hover text-nowrap"
+				style="text-align: center;">
+				<thead>
+					<tr role="row">
+						<th tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+							aria-label="Browser: activate to sort column ascending">확진자 코드</th>
+						<th tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+							aria-label="Browser: activate to sort column ascending">이름</th>
+						<th tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+							aria-sort="ascending"
+							aria-label="Rendering engine: activate to sort column descending">진료 기관</th>
+						<th tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+							aria-label="Platform(s): activate to sort column ascending">진료 신청시간</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>CNFM202201061000005</td>
+						<td>강건</td>
+						<td>을지대학병원</td>
+						<td>2022-01-01 13:57:21</td>
+					</tr>
+					<tr>
+						<td>CNFM202201061000005</td>
+						<td>강건</td>
+						<td>을지대학병원</td>
+						<td>2022-01-01 13:57:21</td>
+					</tr>
+					<tr>
+						<td>CNFM202201061000005</td>
+						<td>강건</td>
+						<td>을지대학병원</td>
+						<td>2022-01-01 13:57:21</td>
+					</tr>
+					<tr>
+						<td>CNFM202201061000005</td>
+						<td>강건</td>
+						<td>을지대학병원</td>
+						<td>2022-01-01 13:57:21</td>
+					</tr>
+					<tr>
+						<td>CNFM202201061000005</td>
+						<td>강건</td>
+						<td>을지대학병원</td>
+						<td>2022-01-01 13:57:21</td>
+					</tr>
+					<tr>
+						<td>CNFM202201061000005</td>
+						<td>강건</td>
+						<td>을지대학병원</td>
+						<td>2022-01-01 13:57:21</td>
+					</tr>
+					<tr>
+						<td>CNFM202201061000005</td>
+						<td>강건</td>
+						<td>을지대학병원</td>
+						<td>2022-01-01 13:57:21</td>
+					</tr>
+					<tr>
+						<td>CNFM202201061000005</td>
+						<td>강건</td>
+						<td>을지대학병원</td>
+						<td>2022-01-01 13:57:21</td>
+					</tr>
+					<tr>
+						<td>CNFM202201061000005</td>
+						<td>강건</td>
+						<td>을지대학병원</td>
+						<td>2022-01-01 13:57:21</td>
+					</tr>
+					<tr>
+						<td>CNFM202201061000005</td>
+						<td>강건</td>
+						<td>을지대학병원</td>
+						<td>2022-01-01 13:57:21</td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+		<!-- /.table-responsive -->
+		<div style="margin-bottom: 48px;">
+		<%@ include file="../template/list-footer.jsp"%>
+		</div>
+  </div>
+</div>
+<div class="col-md-6">
+	<!-- /.card-body -->
+	<div class="card" style="margin-left: 10px;">
+				<div class="card-body" style="margin-bottom: 51px;">
+				<div class="row">
+				<table class="table table-bordered">
+                  <thead>
+                  	<tr>
+                  		<th colspan="4">확진자 진료 요청 정보</th>
+                  	</tr>
+                    <tr style="text-align: center;">
+                      <th>성명</th>
+                      <td>홍길동</td>
+                      <th>백신접종</th>
+                      <td>3차 이상</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="shittr"  style="text-align: center;">
+                      <th>성별</th>
+                      <td>남</td>
+                      <th>나이</th>
+                      <td>27</td>
+                    </tr>
+                    <tr class="shittr"  style="text-align: center;">
+                      <th>발열여부</th>
+                      <td>Y</td>
+                      <th>임신여부</th>
+                      <td>N</td>
+                    </tr>
+                    <tr class="shittr"  style="text-align: center;">
+                      <th>확정일자</th>
+                      <td>2021-01-01</td>
+                      <th>결과</th>
+                      <td>양성</td>
+                    </tr>
+                    <tr class="shittr"  style="text-align: center;">
+                      <th>주민/외국인등록번호</th>
+                      <td colspan="3">960101-1111111</td>
+                    </tr>
+                    <tr class="shittr"  style="text-align: center;">
+                      <th>주소</th>
+                      <td colspan="3">대전광역시 서구 둔산동 1032 708호</td>
+                    </tr>
+                    <tr class="shittr"  style="text-align: center;">
+                      <th>연락처</th>
+                      <td colspan="3">010-5678-1234</td>
+                    </tr>
+                    <tr class="shittr"  style="text-align: center;">
+                      <th>증상</th>
+                      <td colspan="3">기침, 두통, 복통, 어지러움</td>
+                    </tr>
+                    <tr class="shittr"  style="text-align: center;">
+                      <th>확진자 코드</th>
+                      <td colspan="3">CNFM202201061000005</td>
+                    </tr>
+                    <tr class="shittr"  style="text-align: center;">
+                      <th>진료기관</th>
+                      <td colspan=>을지대학병원</td>
+                      <th>요청 상태</th>
+                      <td colspan=>대기</td>
+                    </tr>
+                    <tr class="shittr"  style="text-align: center;">
+                      <th>연락처</th>
+                      <td>042-222-4568</td>
+                      <th>요청시간</th>
+                      <td>2022-01-01 13:57:21</td>
+                    </tr>
+                    <tr class="shittr"  style="text-align: center;">
+                      <td colspan="4"><button class="btn btn-success btn-sm" style="width: 50%; background: #1a4f72; border: #1a4f72;">진료 요청 취소</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+                 </div>
+              </div>  
+			</div>
+</div>
+</div>

@@ -1,0 +1,43 @@
+package com.spring.compass.vo;
+
+public class InstVO {
+	
+	private String division;
+	private String instNm;
+	private String instAres;
+	private String instTelno;
+	private int empCount;
+	
+	public String getDivision() {
+		return division;
+	}
+	public void setDivision(String division) {
+		this.division = division;
+	}
+	public String getInstNm() {
+		return instNm;
+	}
+	public void setInstNm(String instNm) {
+		this.instNm = instNm;
+	}
+	public String getInstAres() {
+		return instAres;
+	}
+	public void setInstAres(String instAres) {
+		this.instAres = instAres;
+	}
+	public String getInstTelno() {
+		return instTelno;
+	}
+	public void setInstTelno(String instTelno) {
+		this.instTelno = instTelno;
+	}
+	public int getEmpCount() {
+		return empCount;
+	}
+	public void setEmpCount(int empCount) {
+		this.empCount = empCount;
+	}
+	
+	                         
+}

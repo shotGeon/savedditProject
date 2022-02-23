@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+  table#t1{
+    border : 2px solid blue;
+    margin : 20px auto;
+  }
+  table#t1 td{
+    width : 150px;
+    height : 50px;
+  }
+  
+  table#t1 td:nth-child(1){
+    background : lightgray;
+  }
+  table#t1 td:nth-child(2n){
+ 	background : #12f9ef; 
+  }
+  table#t1 td:nth-child(2n+1){
+  	background :#f4d9f5;
+  }
+  
+  table#t2{
+    border : 2px solid blue;
+    margin : 20px auto;
+  }
+   table#t2 td{
+    width : 150px;
+    height : 50px;
+  }
+  
+   table#t2 tr:nth-child(2n+1) {
+    background : red;
+  }
+  
+   table#t3{
+    border : 2px solid blue;
+    margin : 20px auto;
+  }
+   table#t3 td{
+    width : 150px;
+    height : 50px;
+  }
+ .odd{
+ 	background : rgba(231,100,189, 0.2);
+ }
+ .even{
+ 	background : rgb(98%,80%,67%)
+ } 
+  
+</style>
+</head>
+<body>
+  <table id="t1" border="1">
+     <tr>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+     
+     <tr>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+     
+     <tr>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+     
+     <tr>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+  </table>
+  
+   <table id="t2" border="1">
+     <tr>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+     
+     <tr>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+     
+     <tr>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+     
+     <tr>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+  </table>
+  
+   <table id="t3" border="1">
+     <tr class="odd">
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+     
+     <tr class="even">
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+     
+     <tr class="odd">
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+     
+     <tr class="even">
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+  </table>
+</body>
+</html>

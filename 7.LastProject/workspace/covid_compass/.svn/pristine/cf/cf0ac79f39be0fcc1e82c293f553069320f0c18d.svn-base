@@ -1,0 +1,20 @@
+package com.spring.compass.service;
+
+import java.sql.SQLException;
+
+import com.spring.compass.dao.PbhtDAO;
+import com.spring.compass.vo.PbhtVO;
+
+public class PbhtServiceImpl implements PbhtService{
+	
+	private PbhtDAO pbhtDAO;
+	public void setPbhtDAO(PbhtDAO pbhtDAO) {
+		this.pbhtDAO = pbhtDAO;
+	}
+	@Override
+	public PbhtVO getPbhtByInstNo(String instNo) throws SQLException {
+		PbhtVO pbht = pbhtDAO.selectPbhtByInstNo(instNo);
+		return pbht;
+	}
+
+}

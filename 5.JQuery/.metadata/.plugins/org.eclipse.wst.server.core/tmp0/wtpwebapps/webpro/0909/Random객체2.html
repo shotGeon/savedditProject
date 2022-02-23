@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script>
+//한번 수행한 후 값이 변하지 않게 하기 위해서는 const를 붙인다.
+
+const rand =Math.floor(Math.random()*100+1);
+count=0;
+
+proc1=()=>{
+	
+	res="";
+	
+	//입력한 값을 가져오기
+	suvalue=document.getElementById('su').value;
+	
+	alert(rand);
+	
+	//입력값과 난수 값을 비교,같으면 끝 ,다르면 힌트 작성 
+	if(rand==parseInt(suvalue)){//같을때
+		count++;
+	res="정답입니다.<br>시도횟수는: "+count+"번 입니다.<br>발생된 난수:"+rand;
+	}else if(rand<parseInt(suvalue)){//클때(더 작은 수를 입력하시오)
+		count++;
+	res="더 작은 수를 입력하세요";
+	}else{//작을때(저 큰 수를 입력하시오)
+		count++;
+	res="더 큰 수를 입력하세요";
+	}
+	
+	document.getElementById('result1').innerHTML=res;
+	
+	
+	
+}
+
+function proc2(){
+	arr=["가위","바위","보"];
+	
+	//computer의 값 결정
+	com = arr[parseInt(Math.random()*3)];
+	
+	//유저 값 입력
+	user = prompt("가위 바위 보를 입력해주세요");
+	
+	/* //정규식 설정
+	reg= ;
+	
+	//입력값이 정규식에 맞는 값인가?
+	
+	if(!(reg.test(user))){
+		alert("입력오류입니다.");
+		return;
+	} */
+	
+	//출력내용
+	res="computer :"+com+"<br>";
+	res+="user :"+user+"<br>"
+	
+	
+	if(com==user){
+		res+="비겼습니다."
+	}else if(com=="가위"&&user=="바위")
+			||com=="바위"&&user=="보")
+			||com=="보"&&user=="가위")){
+				
+		res+="user가 이김"
+	}else{
+		res+="com이 이김"
+	}
+	
+	document.getElementById('result2').innerHTML=res;
+}
+
+
+</script>
+
+</head>
+<body>
+
+<div class="box">
+  <h3>Random객체</h3>
+   1부터 100 사이의 난수 발생<br>
+      발생된 난수 맞추기<br>
+     입력된 수의 힌트 부여하기<br>
+   입력횟수 구하기, 몇번만에 맞추었는지 count<br>
+   <br>
+      <input type="text" id="su"><br>   
+  <input type="button" value="확인" onclick="proc1()">
+  <br><br>
+  출력:발생된 난수, 입력했던 수, 횟수
+  <div id="result1"></div>
+</div>
+
+<div class="box">
+  <h3>Math객체</h3>
+   가위 바위 보 게임을 할 수 있는 프로그램을 작성<br>
+   (단, 컴퓨터는 랜덤을 이용하고, 사용자는 prompt로 입력 받아서 처리)<br>
+   <br>
+  <input type="button" value="확인" onclick="proc2()">
+  <br><br>
+  출력:발생된 난수, 입력했던 수, 횟수
+  <div id="result2"></div>
+</div>
+
+</body>
+</html>

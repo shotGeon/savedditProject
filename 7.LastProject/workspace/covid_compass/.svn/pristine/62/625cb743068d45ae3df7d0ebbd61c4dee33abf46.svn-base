@@ -1,0 +1,38 @@
+package com.spring.compass.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.spring.compass.dao.AdminDAO;
+import com.spring.compass.vo.HsptVO;
+import com.spring.compass.vo.InspVO;
+import com.spring.compass.vo.InstVO;
+import com.spring.compass.vo.LtctVO;
+import com.spring.compass.vo.PbhtVO;
+
+
+
+public class AdminServiceImpl implements AdminService{
+	
+	private AdminDAO adminDAO;
+	public void setAdminDAO(AdminDAO adminDAO) {
+		this.adminDAO = adminDAO;
+	}
+	
+	
+	@Override
+	public List<InstVO> getInstList() throws Exception {
+		List<InstVO> instList = new ArrayList<InstVO>();
+		
+		List<InspVO> inspList = adminDAO.selectAllInsp();
+		List<PbhtVO> pbhtList = adminDAO.selectAllPbht();
+		List<HsptVO> hsptList = adminDAO.selectAllHspt();
+		List<LtctVO> ltctList = adminDAO.selectAllLtct();
+		
+		return instList;
+	}
+
+	
+
+
+}

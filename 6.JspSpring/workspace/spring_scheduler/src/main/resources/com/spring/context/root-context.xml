@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<!-- <context:component-scan base-package="com.spring.scheduler" />
+	<task:annotation-driven/> -->
+	
+	<context:property-placeholder file-encoding="utf-8" location="classpath:com/spring/properties/*.properties"/>
+	
+	<bean id="templateLogPath" class="java.lang.String">
+		<constructor-arg value="${center.template.log}"/>
+	</bean>
+	
+	<bean id="templateLogFileName" class="java.lang.String">
+		<constructor-arg value="center_template_log.csv"/>
+	</bean>	
+	
+	<!-- 
+	<bean id="jobTask" class="com.spring.scheduler.TestScheduler"/>
+	
+	 <task:scheduler id="printScheduler"/>
+	
+	<task:scheduled-tasks scheduler="printScheduler">
+		<task:scheduled ref="jobTask" method="testMessage" cron="*/5 * * * * *"/>
+	</task:scheduled-tasks> -->
+	
+	<bean id="centerTask" class="com.spring.scheduler.LogScheduler"
+		p:fileName-ref="templateLogFileName"
+		p:savePath-ref="templateLogPath"
+	/>
+	
+	<!-- <task:scheduler id="templateScheduler"/>
+	
+	<task:scheduled-tasks scheduler="templateScheduler">
+		<task:scheduled ref="centerTask" method="dataWrite" cron="*/5 * * * * *"/>
+	
+	</task:scheduled-tasks> -->
+	
+	<bean id="fileReadTask" class="com.spring.scheduler.FileReaderScheduler"
+		p:fileName-ref="templateLogFileName"
+		p:savePath-ref="templateLogPath"
+	/>
+	
+	<task:scheduler id="fileReaderScheduler"/>
+	
+	<task:scheduled-tasks scheduler="fileReaderScheduler">
+		<task:scheduled ref="fileReadTask" method="readFile" cron="*/10 * * * * *"/>
+	</task:scheduled-tasks>
+	
+			
+		
+</beans>

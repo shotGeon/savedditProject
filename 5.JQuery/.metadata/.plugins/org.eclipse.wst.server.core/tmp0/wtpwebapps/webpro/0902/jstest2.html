@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div{
+		height:auto; /*글자 수에 맞춰서 자동으로 늘어난다.*/
+		width :30%;
+		border :1px solid blue;
+	}
+</style>
+<script>
+   function proc1() {
+	
+	   now= new Date();
+	   
+	   //기존의 실행된 document를 덮어쓰기 한다.
+	   //document.write(now);
+	   
+	   //div인 요소로 접근
+	   //div가 여러개가 생길수 있기때문에 element에 s를 붙인다. 반환은 배열로 된다.
+	   var vdiv=document.getElementsByTagName('div');
+	   
+	   
+	   //접근된 요송에 출력
+	   vdiv[0].innerHTML = now +"<br>";
+	   
+	   now1=now.toLocaleString();
+	   now2=now.toLocaleDateString();
+	   now3=now.toLocaleTimeString();
+	   
+	   //now 출력이 사라지고 now1번만 나온다.(덮어쓰기 되기 때문)(+를 안해줬을때)
+	   vdiv[0].innerHTML +=now1+"<br>";
+	   vdiv[0].innerHTML +=now2+"<br>";
+	   vdiv[0].innerHTML +=now3+"<br>";
+	   
+	   
+}
+</script>
+</head>
+<body>
+  <input type="button" value="확인" onclick="proc1()"><br><br>
+  
+  <div></div>
+</body>
+</html>

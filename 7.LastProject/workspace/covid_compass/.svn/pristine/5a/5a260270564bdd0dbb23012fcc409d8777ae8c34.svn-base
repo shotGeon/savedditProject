@@ -1,0 +1,56 @@
+package com.spring.compass.vo;
+
+import java.util.Date;
+
+public class InptntVO {
+
+	private String hsptNo;
+	private String hsptlzCode;
+	private String manageNo;
+	private String inptntNo;
+	private Date outYmd;
+	private Date inYmd = new Date();
+	@Override
+	public String toString() {
+		return "InptntVO [hsptNo=" + hsptNo + ", hsptlzCode=" + hsptlzCode + ", manageNo=" + manageNo + ", inptntNo="
+				+ inptntNo + ", outYmd=" + outYmd + ", inYmd=" + inYmd + "]";
+	}
+	public String getHsptNo() {
+		return hsptNo;
+	}
+	public void setHsptNo(String hsptNo) {
+		this.hsptNo = hsptNo;
+	}
+	public String getHsptlzCode() {
+		return hsptlzCode;
+	}
+	public void setHsptlzCode(String hsptlzCode) {
+		this.hsptlzCode = hsptlzCode;
+	}
+	public String getManageNo() {
+		return manageNo;
+	}
+	public void setManageNo(String manageNo) {
+		this.manageNo = manageNo;
+	}
+	public String getInptntNo() {
+		return inptntNo;
+	}
+	public void setInptntNo(String inptntNo) {
+		this.inptntNo = inptntNo;
+	}
+	public Date getOutYmd() {
+		return outYmd;
+	}
+	public void setOutYmd(Date outYmd) {
+		this.outYmd = outYmd;
+	}
+	public Date getInYmd() {
+		return inYmd;
+	}
+	public void setInYmd(Date inYmd) {
+		this.inYmd = inYmd;
+	}
+	
+
+}

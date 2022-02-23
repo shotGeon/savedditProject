@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+ <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="../js/board.js"></script>  
+<script src="../js/jquery.serializejson.min.js"></script>  
+
+<script>
+
+currentPage = 1;
+reply = {}; // 객체- 동적으로 속성과 함수를 추가하여 사용 가능
+board ={};
+$(function(){
+	//전체리스트 출력
+	//listServer();
+	listPageServer(1);
+	
+	//이벤트
+	//페이지 번호에 대한 이벤트
+	$('.plist').on('click','.pagination li a', function(){
+		if($('#modiForm').css('display') !='none'){
+			//두번째~ 댓글수정을 클릭하면 이미 열려있는 댓글수정창을 닫고 초기상태로 변환
+			replyReset(); 	             
+		}
+		currentPage = $(this).text();
+		
+		//alert(currentPage);
+		listPageServer(currentPage);
+	})
+	//다음버튼에 대한 이벤트
+	$('.plist').on('click', '.next a', function(){
+		
+		if($('#modiForm').css('display') !='none'){
+			//두번째~ 댓글수정을 클릭하면 이미 열려있는 댓글수정창을 닫고 초기상태로 변환
+			replyReset(); 	             
+		}
+		cpage = $('.pagination li a').last().text();
+		
+		currentPage = parseInt(cpage)+1;
+		
+		//alert(currentPage);
+		listPageServer(currentPage);
+	})
+	//이전버튼에 대한 이벤트
+	$('.plist').on('click', '.previous a', function(){
+		if($('#modiForm').css('display') !='none'){
+			//두번째~ 댓글수정을 클릭하면 이미 열려있는 댓글수정창을 닫고 초기상태로 변환
+			replyReset(); 	             
+		}
+		cpage = $('.pagination li a').first().text();
+		
+		currentPage = parseInt(cpage)-1;
+		
+		//alert(currentPage);
+		listPageServer(currentPage);
+	})
+	
+	//글쓰기 모달창의 전송버튼에 대한 이벤트
+	$('#send').on('click', function(){
+		//입력한 모든 값을 가져온다 - serialize()이용
+		fdata = $('#writeModal form').serializeJSON();
+		//console.log(fdata);
+		
+		
+		//서버로 비동기를 이용하여 전송 한다.
+		
+		$.ajax({
+			
+			url : '/boardpro/Insert.do',
+			data : fdata,
+			type : 'post',
+			dataType : 'json',
+			success : function(res){
+				//alert(res.flag);
+				listPageServer(1);
+				
+				//모달 창 지우기
+				$('#writeModal .fin').val("");
+				$('#writeModal').modal('hide');
+			},
+			error : function(xhr){
+				alert(xhr.status);
+			}
+		})
+	})
+	
+	//수정, 삭제, 등록 버튼, 제목에 대한 이벤트
+	//댓글수정, 댓글삭제 이벤트
+	$('.box').on('click', '.action', function(){
+		vname = $(this).attr('name');
+		vidx = $(this).attr('idx');
+		
+		console.log(vname, vidx);
+		
+		if(vname == "modify"){
+			//alert(vidx +"번 글 수정");
+			
+			btnupdate =this;
+			
+			//수정 대상의 원글을 가져온다.
+			
+			parent = $(this).parents('.panel');
+			
+			subject = $(parent).find('a').html();
+			
+			name = $(parent).find('.name2').text();
+			
+			mail = $(parent).find('.mail').html();
+			pass = $(parent).find('.password').html();
+			cont = $(parent).find('.bcont').html();
+			
+			cont = cont.replace(/<br>/g, "\n");
+			
+			console.log(subject, name, mail, pass, cont);
+			
+			//updateModal에 값을 출력한다.
+			$('#updateModal .subject').val(subject);
+			$('#updateModal .mail').val(mail);
+			$('#updateModal .password').val(pass);
+			$('#updateModal .content').val(cont);
+			$('#updateModal .num').val(vidx);
+			$('#updateModal .writer').val(name);
+			
+			
+			
+			$('#updateModal').modal('show');
+			
+			
+			
+			
+			
+		}else if(vname =="delete"){
+			//alert(vidx +"번 글 삭제");
+			deleteBoardServer();
+			
+		}else if(vname == "reply"){
+			//alert(vidx +"번 글에 답글을 쓴다");
+			
+			if($('#modiForm').css('display') !='none'){
+				//두번째~ 댓글수정을 클릭하면 이미 열려있는 댓글수정창을 닫고 초기상태로 변환
+				replyReset(); 	             
+			}
+			
+			cont = $(this).prev().val();
+			console.log(cont);
+			name1 = String.fromCharCode(Math.random() *26 + 65); //65~90
+			name2 = String.fromCharCode(Math.random() *26 + 97); //97~122
+			
+			name = name1 + name2;
+			bonum =vidx;
+			
+			//datas ={"cont" : cont, "name" : name, "bonum" : bonum};
+			reply.cont = cont;
+			reply.name = name;
+			reply.bonum = bonum;
+			
+			//비동기를 이용한 서버전송
+			replySaveServer(this); //this는 등록버튼
+			
+			$(this).prev().val("");
+			
+		}else if(vname == "list"){
+			//제목을 클릭하면-----
+			replyListServer(this);
+			
+			//조회수 증가
+			hit1 = $(this).parents('.panel').find('.collapse').attr('class');
+			console.log(hit1);
+			hit2=$(this).parents('.panel').find('.collapse').attr('aria-expanded');
+			console.log(hit2);
+			
+			//닫혀있는 상태- in이 없다, false인 상태 - 조회수 증가
+			//undefined는 자료형에 속하기때문에 type으로 본다.
+			if(hit2 == 'false'|| typeof hit2 =='undefined'){
+				//alert("조회수 증가");
+				hvalue = $(this).parents('.panel').find('.hit').text().trim();
+				hvalue = parseInt(hvalue)+1;
+				$(this).parents('.panel').find('.hit').text(hvalue);
+				
+			
+			board.num = vidx;
+			board.hit = hvalue;
+			increaseHit();
+				
+			}
+			
+		}else if(vname == "rmodify"){
+			//alert(vidx +"번 댓글을 수정");
+			
+			//댓글폼의 display의 값을 가져온다.
+			console.log($('#modiForm').css('display'));
+			if($('#modiForm').css('display') !='none'){
+				//두번째~ 댓글수정을 클릭하면 이미 열려있는 댓글수정창을 닫고 초기상태로 변환
+				replyReset(); 	             
+			}
+			
+			
+			//댓글원본을 가져오기
+			modifycont = $(this).parents('.rep').find('.p3').html();
+			//<br> ->> \n으로 변경한다.
+			modifycont = modifycont.replace(/<br>/g, "\n");
+			
+			//수정폼에 출력한다.
+			$('#modiForm textarea').val(modifycont);
+			
+			//댓글 수정폼 띄우기
+			$(this).parents('.rep').find('.p3').empty().append($('#modiForm'));
+			$('#modiForm').show();
+		}else if(vname =="rdelete"){
+			replyDeleteServer(this);
+		}
+	})
+	
+	replyReset = function(){
+		cp3 = $('#modiForm').parent(); //class=p3
+		
+		$('body').append($('#modiForm'));
+		$('#modiForm').hide();
+		
+		modifycont = modifycont.replace(/\n/g, "<br>");
+		$(cp3).html(modifycont);
+	}
+	
+	//댓글 수정에서 취소버튼 클릭
+	$('#btnreset').on('click', function(){
+		replyReset();
+	})
+	
+	//댓글 수정에서 확인버튼 클릭
+	$('#btnok').on('click', function(){
+		
+		//수정입력한 내용을 전부 가져오기
+		modifycont = $('#modiForm textarea').val();
+		
+		cp3 = $(this).parents('.p3'); //div class=p3
+		
+		//수정창을 body로 다시 append한다.
+		$('body').append($('#modiForm'));
+		$('#modiForm').hide();
+		
+		modifycont = modifycont.replace(/\r/g, "").replace(/\n/g, "<br>");
+		$(cp3).html(modifycont);
+		
+		//db에서 수정
+		reply.cont = modifycont;
+		reply.renum = vidx;
+		console.log(reply.cont, reply.renum);
+		
+		replyUpdateServer();
+		
+		
+	})
+	
+	//수정 모달창에서 전송버튼 클릭 - db를 수정한다.
+	$('#bupdate').on('click', function(){
+		udatas = $('#updateModal form').serializeJSON();
+		console.log(udatas);
+		console.log(udatas.mail);
+		updateBoardServer();
+		
+		$('#updateModal .fin').val("");
+		$('#updateModal').modal('hide');
+				
+	})
+	
+})
+</script> 
+
+<style>
+	.box{
+	padding: 10px;
+	}
+	h2{
+	margin-left: 10%;
+	}
+
+	.p1{
+  		width : 75%;
+  		float : left;
+  	}
+  	
+  	.p2{
+  		width : 20%;
+  		float : right;
+  	}
+  	.p3{
+  		clear : both;
+  	}
+  	
+  	.p4 input[type=button]{
+  		height: 65px;
+  		vertical-align: top;
+  	}
+  	.plist{
+  		margin-left: 20%;
+  	}
+  	.plist ul{
+  		width: 200px;
+  		float: left;
+  	}
+  	.plist ul.pagination{
+  		width: 200px;
+  	}
+	
+	#write{
+		margin-left: 10%;
+	}
+	
+	#writeModal label, #updateModal label{
+		width: 150px;
+	}
+	.rep{
+		border : 1px solid gray;
+		background: hotpink;
+		margin : 3px;
+		padding : 3px;
+	}
+	.panel-heading:hover{
+		background: lightblue;
+	}
+	#modiForm{
+		display : none;
+	}
+</style> 
+</head>
+
+<body>
+<div id="modiForm">
+	<textarea rows="5" cols="30"></textarea>
+	<input type="button" id="btnok" value="확인">
+	<input type="button" id="btnreset" value="취소">
+</div>
+<br>
+<br>
+<h2>게시판</h2>
+<br>
+<br>
+<button id="write" data-toggle="modal" data-target="#writeModal" class="btn btn-primary" type="button">글쓰기</button>
+<br><br>
+<div class="box">
+</div>
+<br>
+<br>
+
+<div class="plist">
+
+</div>
+<!-- Modal -->
+<div id="writeModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+    
+        <h3>글쓰기</h3>
+        <form>
+        	<label>작성자</label>
+        	<input class="fin" type="text" name="writer"><br>
+        	
+        	<label>제목</label>
+        	<input class="fin" type="text" name="subject"><br>
+        	
+        	<label>메일</label>
+        	<input class="fin" type="text" name="mail"><br>
+        	
+        	<label>비밀번호</label>
+        	<input class="fin" type="password" name="password"><br>
+        	
+        	<label>내용</label><br>
+        	<textarea class="fin" name="content" rows="10" cols="50"></textarea>
+        	<br>
+        	<button type="button" id="send" class="btn btn-info">전송</button>
+        </form>
+   		
+    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="updateModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+    
+        <h3>수정하기</h3>
+        <form>
+        	<label>작성자</label>
+        	<!-- 작성자는 수정하지 못하도록 disabled를 사용한다. -->
+        	<input  type="text" class="fin writer" name="writer" disabled><br>
+        	
+        	<label>제목</label>
+        	<input  type="text" class="fin subject" name="subject"><br>
+        	
+        	<label>메일</label>
+        	<input  type="text" class="fin mail" name="mail"><br>
+        	
+        	<label>비밀번호</label>
+        	<input  type="password" class="fin password" name="password"><br>
+        	
+        	<label>내용</label><br>
+        	<textarea  class="fin content" name="content" rows="10" cols="50"></textarea>
+        	<input type="hidden" name="num" class="num">
+        	<br>
+        	<button type="button" id="bupdate" class="btn btn-info">전송</button>
+        </form>
+   		
+    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+</body>
+</html>

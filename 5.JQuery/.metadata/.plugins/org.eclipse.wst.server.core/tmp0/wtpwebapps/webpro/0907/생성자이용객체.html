@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script>
+
+//객체를 나타내는 function
+ function Rect(width, height){
+	this.width = width;
+	this.height =height;
+	
+	//메소드
+	this.getArea =function(){
+		return this.width *this.height;	
+	}
+	
+	this.getCircum =function(){
+		return (this.width +this.height)*2
+	}
+}
+
+/* function Circle(rad){
+	
+	this.rad=rad;
+	
+	//메소드
+	this.getArea =function(){
+		return Math.PI*Math.pow(this.rad,2);	
+	}
+	
+	this.getCircum =function(){
+		return 2*Math.PI*this.rad;
+	}
+} */
+
+//es6버전에서는 class를 사용할 수 있다.
+  class Circle{
+	constructor(rad){
+		this.rad=rad;
+	}
+	getArea(){
+		return Math.PI*Math.pow(this.rad,2);
+	}
+	getCircum(){
+		return 2*Math.PI*this.rad;
+	}
+} 
+
+//일반function(처리)
+ function proc1(){
+	 //Rect객체 생성, 처리, 사용
+	 
+	 rect = new Rect(4,5);
+	 
+	 //출력
+	 str="";
+	 
+	 str=`가로: ${rect.width} <br>`;
+	 str+=`세로: ${rect.height} <br>`;
+	 str+=`면적: ${rect.getArea()} <br>`;
+	 str+=`둘레: ${rect.getCircum()}<br>`;
+	 
+	 document.getElementById('result1').innerHTML=str;
+ }
+ 
+ function proc2(){
+	 //Circle 객체 생성, 처리
+	 
+	 cir = new Circle(5);
+	 
+	 //원래 클래스에 없던 것들을 추가할 수 있다.
+	 cir.name="동그라미";
+	 cir.getRad = function(){
+		 return this.rad;
+	 }
+	 
+	 str="";
+	 str=`이름: ${cir.name}<br>`;
+	 str+=`반지름: ${cir.getRad()} <br>`;
+	 //str+=`반지름: ${cir.rad} <br>`;
+	 str+=`면적: ${cir.getArea().toFixed(2)} <br>`;
+	 str+=`둘레: ${cir.getCircum().toFixed(2)} <br>`;
+	 
+	 document.getElementById('result2').innerHTML=str;
+ }
+</script>
+
+</head>
+<body>
+
+<div class="box">
+  <h3>생성자를 이용한 객체 생성</h3>
+  function Rect(width, height){속성, 메소드 정의}<br>
+  function Circle(rad){속성, 메소드 정의}
+   <br>
+   <br>
+  <input type="button" value="Rect" onclick="proc1()">
+  <input type="button" value="Circle" onclick="proc2()">
+  <br><br>
+  <div id="result1"></div>
+  <div id="result2"></div>
+</div>
+
+</body>
+</html>

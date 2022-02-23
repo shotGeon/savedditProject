@@ -1,0 +1,101 @@
+package com.spring.compass.parse;
+
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
+public class ParsingCovidData {
+
+	public void infectionStatus() throws ParserConfigurationException, SAXException, IOException {
+		
+		DocumentBuilder builder =
+					DocumentBuilderFactory.newInstance().newDocumentBuilder();
+		
+		String svcKey ="jnO7kWmiB2N9pbk4eTUNlc4eUD3kfNR%2Br3cb34jsKnMY%2FTRb%2BQQygH9%2FT9Mm3xZkQ8jtnOxSlFoaZ7QIpfvC2A%3D%3D";
+		
+		String test ="&pageNo=1&numOfRows=10&startCreateDt=20211123&endCreateDt=20211123";
+		
+		URL url = new URL("http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19InfStateJson?serviceKey="+svcKey+test);
+		
+		Document document = builder.parse(url.toString());
+		
+		Element root = document.getDocumentElement();
+		
+		NodeList rowNodeList = root.getElementsByTagName("item");
+		
+		String resultCode = root.getElementsByTagName("resultCode").item(0).getTextContent();
+		
+		//System.out.println(resultCode);
+		if(resultCode.equals("00")) {
+			
+			for(int i=0; i<rowNodeList.getLength(); i++) {
+				Element element =(Element) rowNodeList.item(i);
+				
+				//누적확진률
+				String accDefRate = element.getElementsByTagName("accDefRate").item(0).getTextContent();
+				System.out.println("누적확진률:"+accDefRate);
+				//등록일시분초
+				String createDt = element.getElementsByTagName("createDt").item(0).getTextContent();
+				System.out.println("등록일시분초"+createDt);
+				//사망자 수
+				String deathCnt = element.getElementsByTagName("deathCnt").item(0).getTextContent();
+				System.out.println("사망자 수:"+deathCnt);
+				//확진자 수
+				String decideCnt = element.getElementsByTagName("decideCnt").item(0).getTextContent();
+				System.out.println("확진자 수:"+decideCnt);
+				//기준일
+				String stateDt = element.getElementsByTagName("stateDt").item(0).getTextContent();
+				System.out.println("기준일:"+stateDt);
+				//기준시간
+				String stateTime = element.getElementsByTagName("stateTime").item(0).getTextContent();
+				System.out.println("기준시간:"+stateTime);
+				//수정일시분토
+				String updateDt = element.getElementsByTagName("updateDt").item(0).getTextContent();
+				System.out.println("수정일시분초: "+updateDt);
+			}
+		}
+		
+	}
+	
+	public void test() throws ParserConfigurationException, SAXException, IOException{
+		String url="https://nip.kdca.go.kr/irgd/cov19stats.do?list=all";
+		DocumentBuilder builder =
+				DocumentBuilderFactory.newInstance().newDocumentBuilder();
+		URL url2 = new URL(url);
+		
+		Document document = builder.parse(url2.toString());
+		
+		Element root = document.getDocumentElement();
+		
+		NodeList rowNodeList = root.getElementsByTagName("item");
+		
+		for(int i=0; i<rowNodeList.getLength(); i++) {
+			Element element =(Element) rowNodeList.item(i);
+			String tpcd = element.getElementsByTagName("tpcd").item(0).getTextContent();
+			System.out.println("tpcd:"+tpcd);
+			String firstCnt = element.getElementsByTagName("firstCnt").item(0).getTextContent();
+			System.out.println("firstCnt:"+firstCnt);
+			String secondCnt = element.getElementsByTagName("secondCnt").item(0).getTextContent();
+			System.out.println("secondCnt:"+secondCnt);
+			String thirdCnt = element.getElementsByTagName("thirdCnt").item(0).getTextContent();
+			System.out.println("thirdCnt:"+thirdCnt);
+		}
+		
+		
+	}
+	
+	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException{
+			new ParsingCovidData().infectionStatus();
+			//new ParsingCovidData().test();
+		
+	}	
+}

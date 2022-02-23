@@ -1,0 +1,20 @@
+package com.spring.compass.service;
+
+import com.spring.compass.dao.StatisticsDAO;
+import com.spring.compass.vo.HsptStatsVO;
+
+public class StatisticsServiceImpl implements StatisticsService {
+
+	private StatisticsDAO statisticsDAO;
+	public void setStatisticsDAO(StatisticsDAO statisticsDAO) {
+		this.statisticsDAO = statisticsDAO;
+	}
+
+	@Override
+	public HsptStatsVO getStatsByHsptNo(String hsptNo) throws Exception {
+		HsptStatsVO stats = statisticsDAO.selectHsptStats(hsptNo);
+		double operate = Math.floor((stats.getRmndSckbdCnt()/(double)stats.getSckbdCnt())*100);
+		stats.setRateOperate(operate);
+		return stats;
+	}
+}

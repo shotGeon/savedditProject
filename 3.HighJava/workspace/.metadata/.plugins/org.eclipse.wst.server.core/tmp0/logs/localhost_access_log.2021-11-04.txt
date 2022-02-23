@@ -1,0 +1,16 @@
+127.0.0.1 - - [04/Nov/2021:19:43:25 +0900] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [04/Nov/2021:19:44:08 +0900] "GET /ServletExam/ListMemberServlet.java HTTP/1.1" 404 1112
+0:0:0:0:0:0:0:1 - - [04/Nov/2021:19:45:37 +0900] "GET /ServletExam/ListMemberServlet.do HTTP/1.1" 404 1110
+0:0:0:0:0:0:0:1 - - [04/Nov/2021:19:45:43 +0900] "GET /ServletExam/ListMemberServlet HTTP/1.1" 404 1107
+0:0:0:0:0:0:0:1 - - [04/Nov/2021:19:48:52 +0900] "GET /ServletExam/member/list.do HTTP/1.1" 200 3424
+0:0:0:0:0:0:0:1 - - [04/Nov/2021:19:48:56 +0900] "GET /ServletExam/member/detail.do?memId=t001 HTTP/1.1" 200 854
+0:0:0:0:0:0:0:1 - - [04/Nov/2021:19:48:57 +0900] "GET /ServletExam/member/update.do?memId=t001 HTTP/1.1" 200 1129
+0:0:0:0:0:0:0:1 - - [04/Nov/2021:19:49:00 +0900] "GET /ServletExam/member/detail.do?memId=t001 HTTP/1.1" 200 854
+0:0:0:0:0:0:0:1 - - [04/Nov/2021:19:49:02 +0900] "GET /ServletExam/member/list.do HTTP/1.1" 200 3424
+0:0:0:0:0:0:0:1 - - [04/Nov/2021:19:49:11 +0900] "GET /ServletExam/member/detail.do?memId=ab001 HTTP/1.1" 200 866
+0:0:0:0:0:0:0:1 - - [04/Nov/2021:19:49:12 +0900] "GET /ServletExam/member/update.do?memId=ab001 HTTP/1.1" 200 1140
+0:0:0:0:0:0:0:1 - - [04/Nov/2021:19:49:18 +0900] "POST /ServletExam/member/update.do HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [04/Nov/2021:19:49:18 +0900] "GET /ServletExam/member/list.do?msg=%EC%84%B1%EA%B3%B5 HTTP/1.1" 200 3496
+0:0:0:0:0:0:0:1 - - [04/Nov/2021:19:49:21 +0900] "GET /ServletExam/member/detail.do?memId=ab001 HTTP/1.1" 200 1002
+0:0:0:0:0:0:0:1 - - [04/Nov/2021:19:49:22 +0900] "GET /ServletExam/filedownload.do?fileId=41&filsSn=1 HTTP/1.1" 200 22433
+0:0:0:0:0:0:0:1 - - [04/Nov/2021:19:49:28 +0900] "GET /ServletExam/member/list.do?msg=%EC%84%B1%EA%B3%B5 HTTP/1.1" 200 3496

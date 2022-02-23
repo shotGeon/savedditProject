@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>로그인 페이지</title>
+<style>
+ .loginBtn{
+ 	position: absolute;
+ 	left : 200px;
+ 	top : 20px;
+ 	
+ 	width: 60px;
+ 	height : 55px;
+ }
+</style>
+</head>
+<body>
+	
+	<div class="loginbox">
+		<form action="" method="post">
+			<p>
+				<input type="text" name="logid" id="logid">
+			</p>
+			<p>
+				<input type="password" name="logpw" id="logpw">
+			</p>
+			<p>
+				<input class="loginBtn" type="button" value="로그인">
+			</p>
+			
+			
+		</form>
+	</div>
+			
+		
+</body>
+</html>

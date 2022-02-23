@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+
+<script>
+   window.onload = ()=>{
+	   vdiv=document.getElementsByTagName('div')[0];
+	   
+	   //es6 여러개가 있어도 첫번째 것만 검색이 된다.
+	   vdiv = document.querySelector('div');
+	   //모든 div를 검색한다. (document.querySelectorAll('div')
+	   		   			   
+   su1 = prompt("첫번째 수를 입력하세요");
+   su2 = prompt("두번째 수를 입력하세요");
+   //이런식으로 해도 됨
+   //parseInt(prompt("첫번째 수를 입력하세요"))
+   sum = parseInt(su1)+parseInt(su2);
+   
+   //백틱:'첫번째 수 : ${su1} <br>'
+   vdiv.innerHTML ="첫번째 수 :"+su1+"<br>"
+   vdiv.innerHTML +="첫번째 수 :"+su2+"<br>"
+   vdiv.innerHTML +="합계 :"+sum+"<br>"
+   }
+   
+</script>
+</head>
+<body>
+ <pre>
+ prompt를 이용한 입력
+ 결과 리턴값은 문자열이다.
+ 
+ 두 수를 입력받아서 덧셈 결과를 출력한다.
+ </pre>
+ <br>
+ <div></div>
+</body>
+</html>

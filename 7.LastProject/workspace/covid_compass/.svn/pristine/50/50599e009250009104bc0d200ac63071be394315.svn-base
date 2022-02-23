@@ -1,0 +1,24 @@
+package com.spring.compass.command;
+
+public class HsptSckbdModifyCommand {
+	
+	private String hsptNo;
+	private int inputSckbd = 0;
+	
+	public String getHsptNo() {
+		return hsptNo;
+	}
+	public void setHsptNo(String hsptNo) {
+		this.hsptNo = hsptNo;
+	}
+
+	public int getInputSckbd() {
+		return inputSckbd;
+	}
+	public void setInputSckbd(int inputSckbd) {
+		this.inputSckbd = inputSckbd;
+	}
+	
+	
+
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+
+<script>
+
+/* a=prompt("수입력").trim();
+console.log(a); */
+
+//숫자비교 - isNaN(a) : a가 숫자가 아니냐???
+		//그렇다(숫자가 아니다)-true
+		//아니다(숫자다) -false
+
+  /* if(!isNaN(a) && a!=0){
+	  //숫자인 경우
+	  alert("숫자다.");
+  }else{
+	  //숫자가 아닌 경우
+	  alert("숫자가 아니다.");
+  } */
+
+
+
+function proc1(){
+	
+	 str="";
+	check=0;
+	while(true){
+		//입력-prompt
+		input = prompt("수를 입력하세요").trim();
+		//수가 공백인지 숫자가 아닌지 확인을 해야한다.
+		
+		if(isNaN(input) || input==0){
+			alert("다시 입력하세요.");
+			continue;
+		  }
+		
+		/*  if(isNaN(input)){
+			alert("공백이 입력되었습니다.");
+			continue;
+		}  */
+		
+		str+="----"+input+"단----<br>";
+		for(k=1; k<10; k++){
+			str+=input+"*"+k+"="+input*k+"<br>";
+		}
+		//계속 여부 판단,confirm의 반환값=true,false
+		cont=confirm("계속 하겠습니까");
+		if(cont==false) break;
+	}
+	document.getElementById('result1').innerHTML=str; 
+}
+</script>
+</head>
+<body>
+<div class="box">
+  <h3>수를 입력한다- prompt를 이용</h3>
+  입련한 수를 이용해 구구단을 출력한 후에 실행여부를 확인한다.(confirm)
+   <br>
+   <br>
+  <input type="button" value="확인" onclick="proc1()">
+  <br><br>
+  <div id="result1"></div>
+</div>
+</body>
+</html>

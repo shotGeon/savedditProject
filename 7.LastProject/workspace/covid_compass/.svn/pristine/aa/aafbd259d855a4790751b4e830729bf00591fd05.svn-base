@@ -1,0 +1,289 @@
+package com.spring.compass.service;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.spring.compass.command.CnfrmDgnssListVO;
+import com.spring.compass.command.CnfrmDgnssReqDetailVO;
+import com.spring.compass.command.CnfrmDgnssWaitDetailVO;
+import com.spring.compass.command.CnfrmListDetailManageInstVO;
+import com.spring.compass.command.CnfrmListDetailVO;
+import com.spring.compass.command.CnfrmManageListVO;
+import com.spring.compass.command.PageMaker;
+import com.spring.compass.command.ResSmplDetailPstiHtscVO;
+import com.spring.compass.command.ResSmplDetailSmplCnfmInstVO;
+import com.spring.compass.command.ResSmplDetailVO;
+import com.spring.compass.command.SlfptntDetailDgnssHsptVO;
+import com.spring.compass.command.SlfptntDetailSmplCnfmVO;
+import com.spring.compass.command.SlfptntDetailVO;
+import com.spring.compass.command.SmplListDetailVO;
+import com.spring.compass.command.SmplResultCheckVO;
+import com.spring.compass.command.SmplSearchCommand;
+import com.spring.compass.command.VPstiCommand;
+import com.spring.compass.dao.PbhtDAO;
+import com.spring.compass.vo.CnfmVO;
+import com.spring.compass.vo.DgnssVO;
+import com.spring.compass.vo.ManageVO;
+import com.spring.compass.vo.PstiVO;
+import com.spring.compass.vo.SmplResultVO;
+import com.spring.compass.vo.SmplVO;
+
+public class PbhtServiceImplLMY extends PbhtServiceImpl implements PbhtServiceLMY {
+
+	private PbhtDAO pbhtDAO;
+
+	public void setPbhtDAO(PbhtDAO pbhtDAO) {
+		this.pbhtDAO = pbhtDAO;
+	}
+
+	@Override
+	public Map<String, Object> getSmplList(SmplSearchCommand cri) throws Exception {
+
+		Map<String, Object> dataMap = null;
+
+		PageMaker pageMaker = null;
+
+		pageMaker = new PageMaker();
+		pageMaker.setCri(cri);
+
+		int totalCount = pbhtDAO.selectSearchSemplListCount(cri);
+
+		pageMaker.setTotalCount(totalCount);
+
+		List<SmplVO> smplList = pbhtDAO.selectSmplList(cri);
+
+		dataMap = new HashMap<String, Object>();
+
+		dataMap.put("smplList", smplList);
+		dataMap.put("pageMaker", pageMaker);
+
+		return dataMap;
+	}
+
+	@Override
+	public Map<String, Object> getSmplResultList(SmplSearchCommand cri) throws Exception {
+		Map<String, Object> dataMap = null;
+
+		PageMaker pageMaker = null;
+
+		pageMaker = new PageMaker();
+		pageMaker.setCri(cri);
+
+		int totalCount = pbhtDAO.selectSearchSemplResultListCount(cri);
+
+		pageMaker.setTotalCount(totalCount);
+
+		List<SmplResultCheckVO> smplResultList = pbhtDAO.selectSearchSmplResultList(cri);
+		
+		
+		dataMap = new HashMap<String, Object>();
+		
+		dataMap.put("smplResultList", smplResultList);
+		dataMap.put("pageMaker", pageMaker);
+		
+		return dataMap;
+	}
+
+	@Override
+	public Map<String, Object> getCnfrmDgnssList(SmplSearchCommand cri) throws Exception {
+		Map<String, Object> dataMap = null;
+
+		PageMaker pageMaker = null;
+
+		pageMaker = new PageMaker();
+		pageMaker.setCri(cri);
+
+		int totalCount = pbhtDAO.selectCnfrmDgnssListCount(cri);
+
+		pageMaker.setTotalCount(totalCount);
+
+		List<CnfrmDgnssListVO> cfdList = pbhtDAO.selectCnfrmDgnssList(cri);
+
+		dataMap = new HashMap<String, Object>();
+		
+		dataMap.put("cfdList", cfdList);
+		dataMap.put("pageMaker", pageMaker);
+
+		return dataMap;
+	}
+
+	@Override
+	public Map<String, Object> getCnfrmManageList(SmplSearchCommand cri) throws Exception {
+		Map<String, Object> dataMap = null;
+		
+		int totalCount;
+		PageMaker pageMaker = null;
+		
+		pageMaker = new PageMaker();
+		pageMaker.setCri(cri);
+		if(cri.getTypeCode().equals("A107")) {
+			
+			totalCount = pbhtDAO.selectSlfManageListCount(cri);
+		}else {
+			totalCount = pbhtDAO.selectCnfrmManageListCount(cri);
+		}
+		
+		pageMaker.setTotalCount(totalCount);
+
+		List<CnfrmManageListVO> cfmList = pbhtDAO.selectCnfrmManageList(cri);
+
+		dataMap = new HashMap<String, Object>();
+		
+		dataMap.put("cfmList", cfmList);
+		dataMap.put("pageMaker", pageMaker);
+
+		return dataMap;
+	}
+
+	@Override
+	public SmplListDetailVO getSmplDetail(Map<String, Object> sldData) throws Exception {
+		
+		SmplListDetailVO sldVO = pbhtDAO.selectSmplDetail(sldData);
+		
+		return sldVO;
+	}
+
+	@Override
+	public CnfrmDgnssWaitDetailVO getCnfrmDgnssWaitDetail(Map<String, Object> cdwdData) throws Exception {
+		CnfrmDgnssWaitDetailVO cdwdVO = pbhtDAO.selectCnfrmDgnssWaitDetail(cdwdData);
+		return cdwdVO;
+	}
+
+	@Override
+	public CnfrmDgnssReqDetailVO getCnfrmDgnssReqDetail(Map<String, Object> cdrdData) throws Exception {
+		CnfrmDgnssReqDetailVO cdrdVO = pbhtDAO.selectCnfrmDgnssReqDetail(cdrdData);
+		return cdrdVO;
+	}
+
+	@Override
+	public CnfrmListDetailVO getCnfrmListDetail(String manageNo) throws Exception {
+		
+		CnfrmListDetailVO cldVO = new CnfrmListDetailVO();
+		
+		PstiVO pstiVO = pbhtDAO.selectCnfrmListDetailPsti(manageNo);
+		CnfmVO cnfmVO = pbhtDAO.selectCnfrmListDetailCnfm(manageNo);
+		CnfrmListDetailManageInstVO manageVO = pbhtDAO.selectCnfrmListDetailManage(manageNo);
+		SmplResultVO smplVO = pbhtDAO.selectCnfrmListDetailSmpl(manageNo);
+		DgnssVO dgnssVO = pbhtDAO.selectCnfrmListDetailDgnss(manageNo);
+		
+		cldVO.setData(pstiVO);
+		cldVO.setData(cnfmVO);
+		cldVO.setData(manageVO);
+		cldVO.setData(smplVO);
+		cldVO.setData(dgnssVO);
+		
+		return cldVO;
+	}
+
+	@Override
+	public SlfptntDetailVO getSlfptntDetail(String manageNo) throws Exception {
+		
+		SlfptntDetailVO sdVO = new SlfptntDetailVO();
+		
+		VPstiCommand psti = pbhtDAO.selectSlfptntDetailPsti(manageNo);
+		SlfptntDetailSmplCnfmVO sdscVO = pbhtDAO.selectSlfptntDetailSmplCnfm(manageNo); 
+		SlfptntDetailDgnssHsptVO sddhVO = pbhtDAO.selectSlfptntDetailDgnssHspt(manageNo);
+		
+		sdVO.setData(psti);
+		sdVO.setData(sdscVO);
+		sdVO.setData(sddhVO);
+		
+		return sdVO;
+	}
+
+	@Override
+	public ResSmplDetailVO getResSmplDetail(String manageNo) throws Exception {
+		
+		ResSmplDetailVO rsdVO = new ResSmplDetailVO();
+		
+		ResSmplDetailPstiHtscVO rsdphVO = pbhtDAO.selectResSmplDetailPstiHtsc(manageNo);
+		ResSmplDetailSmplCnfmInstVO rsdscVO = pbhtDAO.selectResSmplDetailSmplCnfmInst(manageNo);
+		
+		rsdVO.setDate(rsdphVO);
+		rsdVO.setDate(rsdscVO);
+		
+		System.out.println(rsdVO);
+		
+		return rsdVO;
+	}
+
+	@Override
+	public int setCheckSmplRegist(Map<String, Object> checkData) throws Exception {
+	
+		int result = 0;
+
+		String check = "success";
+		
+		int cnt = 0;
+		
+		cnt = pbhtDAO.selectCheckNewSmpl(checkData);
+		if(cnt > 0) {
+			if(checkData.get("sttusCode").equals("A102")) {
+				checkData.put("pstvYn", "Y");
+				checkData.put("chkdYn", "Y");
+				checkData.put("smplResCode", "K102");
+				if(pbhtDAO.newSmplResultRegist(checkData) == 0) check = "fail";
+				if(pbhtDAO.smplUpdate(checkData) == 0)  check = "fail";
+				if(pbhtDAO.cnfmUpdateY(checkData) == 0)  check = "fail";
+			}else {
+				checkData.put("pstvYn", "N");
+				checkData.put("chkdYn", "Y");
+				checkData.put("smplResCode", "K103");
+				if(pbhtDAO.newSmplResultRegist(checkData) == 0) check = "fail";
+				if(pbhtDAO.smplUpdate(checkData) == 0)  check = "fail";
+				
+				if(pbhtDAO.selectCnfmNgtv(checkData) < 2) {
+					if(pbhtDAO.cnfmUpdateN(checkData) == 0)  check = "fail";
+				}else {
+					checkData.put("SttusCode", "A108");
+					if(pbhtDAO.cnfmCureUpdate(checkData) == 0)  check = "fail";
+					if(pbhtDAO.manageCureUpdate(checkData) == 0)  check = "fail";
+					
+					String instCode = pbhtDAO.selectInstCode(checkData);
+					if(instCode.equals("C101")) {
+						if(pbhtDAO.slfptntCureUpdate(checkData) == 0)  check = "fail";
+					}else if(instCode.equals("C103")) {
+						checkData.put("hsptlzCode", "E102");
+						if(pbhtDAO.inptntCureUpdate(checkData) == 0)  check = "fail";
+					}else {
+						// isoptnt	{hsptlz_code : E102}
+						checkData.put("hsptlzCode", "E102");
+						if(pbhtDAO.isoptntCureUpdate(checkData) == 0)  check = "fail";
+					}
+				}
+			}
+		}else{	 // A102 = 양성, A103 = 음성
+			if(checkData.get("sttusCode").equals("A102")) {
+				int cnfmNo = pbhtDAO.selectCnfmNextVal();
+				checkData.put("pstvYn", "Y");
+				checkData.put("chkdYn", "Y");
+				checkData.put("cnfmNo", cnfmNo);
+				checkData.put("smplResCode", "K102");
+				if(pbhtDAO.newSmplResultRegist(checkData) == 0) check = "fail";
+				if(pbhtDAO.newCnfmResultRegist(checkData) == 0) check = "fail";
+				if(pbhtDAO.smplUpdate(checkData) == 0)  check = "fail";
+				if(pbhtDAO.manageUpdate(checkData) == 0)  check = "fail";
+			}else{
+				checkData.put("pstvYn", "N");
+				checkData.put("chkdYn", "Y");
+				checkData.put("smplResCode", "K103");
+				if(pbhtDAO.newSmplResultRegist(checkData) == 0) check = "fail";
+				if(pbhtDAO.smplUpdate(checkData) == 0)  check = "fail";
+				if(pbhtDAO.manageUpdate(checkData) == 0)  check = "fail";
+			}
+			
+		}
+		
+		if(check.equals("success")) {
+			result = 1;
+		}
+		
+		return result;
+	}
+	
+	
+	
+
+
+}

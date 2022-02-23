@@ -1,0 +1,12 @@
+package com.spring.compass.dao;
+
+import java.sql.SQLException;
+
+import com.spring.compass.vo.HsptStatsVO;
+
+public interface StatisticsDAO {
+	//병원통계에서 병상관리 값추출 메서드
+	public HsptStatsVO selectHsptStats(String hsptNo) throws SQLException;
+
+
+}

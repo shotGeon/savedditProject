@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script src="../js/jquery-3.6.0.min.js"></script>
+
+<script>
+$(function(){
+	$('.box1 input[type=button]').on('click',function(){
+		//$('#result1 p').css('color', 'red');
+		$('p', '#result1').css('color','blue');
+		//동시에 선택할때
+		//$('p, #result1')
+	})
+	
+	$('.box2 input[type=button]').on('click', function(){
+		
+		//객체는 ''안에 들어가면 안된다.
+		$(document.forms[1], 'p').css('color','green').css('font-size','2.0em');
+	})
+	
+	$('div', '.box').on('click', function(){
+		//내가 클릭한 div=this
+		$('p', this).css('background', 'lime');
+	})
+	
+	
+})
+
+</script>
+
+<style>
+span{
+  border-bottom: 2px solid red;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="box box1">
+  $('#result1 p').css('color', 'red');<br>
+  $('p', '#result1').css('color','blue');<br>
+		
+  <p>box1 안쪽의 p태그Hello</p>
+  
+  <h3></h3>
+   <br>
+   <br>
+  <input type="button" value="확인">
+  <br><br>
+  <div id="result1">
+ 		<p>무궁화 꽃이 피었습니다.1</p>
+ 		<p>무궁화 꽃이 피었습니다.2</p>
+ 		<p>무궁화 꽃이 피었습니다.3</p>
+ 		<p>무궁화 꽃이 피었습니다.4</p>
+ 		<p>무궁화 꽃이 피었습니다.5</p>
+  </div>
+  
+  <form>
+  	<p>상사화</p>
+  	<p>구절초</p>
+  	<p>국화</p>
+  	<p>단풍</p>
+  </form>
+</div>
+
+
+<div class="box box2">
+   $(document.forms[1], 'p').css('color','green')
+   .css('font-size','2.0em');<br>
+   	<span>$('div', '.box').on('click'</span>, function(){<br>
+   	$('p',<span>this</span>).css('background', 'lime');<br>
+   	})<br>
+  <p>box2 안쪽의 p태그Hello</p>
+  
+  <h3></h3>
+   <br>
+   <br>
+  <input type="button" value="확인">
+  <br><br>
+  <div id="result2">
+ 		<p>무궁화 꽃이 피었습니다.1</p>
+ 		<p>무궁화 꽃이 피었습니다.2</p>
+ 		<p>무궁화 꽃이 피었습니다.3</p>
+ 		<p>무궁화 꽃이 피었습니다.4</p>
+ 		<p>무궁화 꽃이 피었습니다.5</p>
+  </div>
+  
+  <form>
+  	<p>상사화</p>
+  	<p>구절초</p>
+  	<p>국화</p>
+  	<p>단풍</p>
+  </form>
+</div>
+
+
+</body>
+</html>

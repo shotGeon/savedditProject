@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+</head>
+
+
+
+<script>
+function checkNotEmpty(input){
+	uservalue=input.value.trim();
+	//리턴 false를 주어서 밑으로 가지 않게한다.
+	if(uservalue.length <1){
+		alert("이름을 입력하세요");
+		return false;
+	}
+	
+	if(uservalue.length <5 || uservalue.length>10){
+		alert("이름은 5~10사이 입니다.");
+		return false;
+	}
+	
+	alert("올바른 입력입니다.")
+	
+	
+}
+
+function proc1(){
+	//id가 user인 input태그를 검색
+	input=document.getElementById('user').value;
+	uservalue=input.trim();
+	
+	if(uservalue.length <1){
+		alert("이름을 입력하세요");
+		return false;
+	}
+	
+	if(uservalue.length <5 || uservalue.length>10){
+		alert("이름은 5~10사이 입니다.");
+		return false;
+	}
+	
+	alert("올바른 입력입니다.")
+	
+}
+
+
+</script>
+<body>
+
+<div class="box">
+  <h3>폼데이터 검증</h3>
+   공백검증: trim()이용<br>
+   길이검증: trim()이용 : 5~10글자로 입력<br>
+  <form>​
+
+    이름:    <input type='text' id='user' />​
+    <input type='button'​ onclick="checkNotEmpty(document.getElementById('user'))"​
+        value='확인'/>​
+
+</form>
+  <br><br>
+  <input type="button" value="확인" onclick="proc1()">
+  <div id="result1"></div>
+</div>
+
+</body>
+</html>

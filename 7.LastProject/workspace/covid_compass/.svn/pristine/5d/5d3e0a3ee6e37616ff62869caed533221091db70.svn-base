@@ -1,0 +1,66 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
+		<div class="form-group">
+			<label for="inputInst">구분 <input type="text" id="inputName"
+				class="form-control" readonly value="검사소 "></label>
+		</div>
+
+		<div class="form-group">
+		<label for="inputInstName">기관명<input type="text" id="inputStatus" class="form-control" readonly value="대전 검사소"></label>
+			 
+			 
+		</div>
+
+		<div class="form-group">
+			<label>주소</label><br>
+			<div class="input-group" style="width: auto;">
+
+				<input type="text" class="form-control float-left"
+					value="대전시 중구 계룡로 486" readonly="readonly">
+
+				<div class="input-group-append">
+					<button type="submit" class="btn btn-default">
+						<i class="fas fa-search"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="form-group">
+			<label for="inputStatus">연락처</label> <input type="text"
+				id="inputStatus" class="form-control" readonly value="042-123-4567">
+
+		</div>
+
+		<div class="form-group">
+			<label for="inputStatus">비고</label> <input type="text"
+				id="inputStatus" class="form-control" readonly value="전자문진표 이용">
+
+		</div>
+
+                      <!-- Select multiple-->
+                      <div class="form-group">
+                        <label>직원 목록</label>
+                        <select multiple="" class="form-control" onchange="if(this.value)window.open(this.value,600,600);">
+                          <option value="./admin-emp-modifyForm">강 건</option>
+                          <option>이광효</option>
+                          <option>이민영</option>
+                          <option>이희현</option>
+                          <option>하기재</option>
+                          <option>김형민</option>
+                          <option>배미숙</option>
+                        </select>
+                      </div>
+                    
+
+		<div>
+			<div class="form-group" style="border: none; text-align: right;">
+				<button class="btn btn-info">수정</button>
+				<button class="btn btn-danger" style="margin-left: 1%;">삭제</button>
+				<button class="btn btn-secondary" style="margin-left: 1%;">목록</button>
+			</div>
+
+		</div>
+

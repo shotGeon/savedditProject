@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="/ServletTest/js/jquery.serializejson.min.js"></script>
+<title>Insert title here</title>
+
+<script>
+	$(function(){
+		
+		groupByAllBoard();
+		
+		$(document).on('click','#prodInsert', function(){
+			alert("등록");
+			$('#insertModal').modal('show');
+		
+		})
+		
+		$(document).on('click','#insertpro', function(){
+			fdata = $('#prForm').serializeJSON();
+			$.ajax({
+				url : '/ServletTest/ProdInsert.do',
+				type : 'post',
+				data : fdata,
+				dataType : 'json',
+				success : function(res){
+					alert(res.flag);
+					$('#insertModal').modal('hide');
+				},
+				error : function(xhr){
+					alert(xhr.status);
+				} 
+			})
+		})
+	})
+	
+	 groupByAllBoard = function(){
+	 
+	 $.ajax({
+		 url:'/ServletTest/ProdList.do',
+		 type:'get',
+		 dataType: 'html',
+		 success:function(result){
+			 $('#boardBox').html(result);
+		 },
+		 error:function(xhr){
+			 alert("에러코드 : " + xhr.status + " \n에러명 : " + xhr.statusText);
+		 }
+	 })
+ }
+
+</script>
+
+</head>
+
+
+<body>
+
+<div id="boardBox">
+
+
+</div>
+
+<div class="container">
+  <div class="modal fade" id="insertModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <form id="prForm">
+        <div class="modal-body">
+          <p>prod_id<input type="text" name="prod_id"></p>
+          <p>prod_name<input type="text" name="prod_name"></p>
+          <p>prod_lgu<input type="text" name="prod_lgu"></p>
+          <p>prod_buyer<input type="text" name="prod_buyer"></p>
+          <p>prod_cost<input type="text" name="prod_cost"></p>
+          <p>prod_price<input type="text" name="prod_price"></p>
+          <p>prod_sale<input type="text" name="prod_sale"></p>
+          <p>prod_outline<input type="text" name="prod_outline"></p>
+          <p>prod_img<input type="text" name="prod_img"></p>
+          <p>prod_totalstock<input type="text" name="prod_totalstock"></p>
+          <p>prod_properstock<input type="text" name="prod_properstock"></p>
+        </div>
+        </form>
+        <div class="modal-footer">
+          <input type="button" id="insertpro" value="등록">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+</body>
+</html>

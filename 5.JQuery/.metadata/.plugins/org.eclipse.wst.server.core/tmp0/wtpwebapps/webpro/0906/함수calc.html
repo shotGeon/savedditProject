@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+
+<script>
+
+function calc(a){
+	//alert(a);
+	//입력한 값 가져오기 - value
+	//입력받으면 결과는 String이 되기 때문에 변환 시켜주어야 한다.
+	xvalue=parseInt(document.getElementById("x").value);
+	yvalue=parseInt(document.getElementById("y").value);
+	
+	
+	switch (a) {
+	case '+':
+		str =xvalue+yvalue;
+		break;
+	case '-':
+		str =xvalue-yvalue;
+		break;
+	case '*':
+		str =xvalue*yvalue;
+		break;
+	case '/':
+		str =xvalue/yvalue;
+		break;
+	} 
+	document.getElementById("sum").value=str;
+	document.getElementById("sp1").textContent=xvalue;
+	document.getElementById("sp2").textContent=yvalue;
+	document.getElementById("sp3").textContent=str;
+}
+
+function proc1(){
+	//1~100사이의 랜덤수 5개
+	str="";
+	for(i=0; i<5; i++){
+		//첫번째 방법
+		str+=parseInt((Math.random()*100)+1)+" ";
+		
+		//두번째 방법
+		//str+=Math.floor((Math.random()*100)+1)+" ";
+		
+		//세번째 방법
+		//rand = Math.random()*100+1;
+		//rand.toFixed(rand,0);
+	}
+	//<br>을 적용하려면 innerHTML을 사용해야한다.
+	document.getElementById("sp4").textContent =str;
+	
+	//값을 계속 누적시키고 싶을때
+	//document.getElementById("sp4").innerHTML +=str+"<br>";
+}
+
+</script>
+</head>
+<body>
+<div class="box">
+<h3>함수</h3>
+textContent : input,select option, textarea를 제외한 요소의 값을 get, set<br>
+innerHTML : input,select option, textarea를 제외한 요소의 값을 get, set<br>
+value -input,select option, textarea 요소들의 값을 -get,set<br><br>
+첫번째 :<input type="text" id="x"><br>​
+두번째 :<input type="text" id="y"><br>
+결과 :<input type="text" id="sum"><br>​
+
+<input type="button" value="+" onclick="calc('+')">
+<input type="button" value="-" onclick="calc('-')">
+<input type="button" value="/" onclick="calc('/')">
+<input type="button" value="*" onclick="calc('*')">
+<br><br>
+  <div id="result1">
+		<p>	첫번째 값 :<span id="sp1"></span></p>
+	​
+		<p>두번째 값 :<span id="sp2"></span></p>
+		​
+		<p>결과 :<span id="sp3"></span></p>		​
+  </div>
+</div>
+
+<div class="box">
+  <h3>버튼을 클릭하면 1~100사이의 랜덤수 5개를 발생 해서 출력</h3>
+  <br>
+  <br>
+  <input type="button" value="확인" onclick="proc1()">
+  <br>
+   <div id="result1">
+  	<p>결과:<span id="sp4"></span></p>
+   </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

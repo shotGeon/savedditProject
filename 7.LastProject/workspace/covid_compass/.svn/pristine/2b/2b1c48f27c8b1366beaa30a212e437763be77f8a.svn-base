@@ -1,0 +1,101 @@
+package com.spring.compass.vo;
+
+import java.util.Date;
+
+public class VMberVO {
+
+	private String instNo;
+	private String mberPwd;
+	private String mberId;
+	private String mberNo;
+	private Date mberBir;
+	private String mberNm;
+	private String mberCode;
+	private String useYn = "Y";
+	private String instCode;
+	private Date mberRegdate = new Date();
+	private String childNo;
+	private String mberTelno;
+	private String mberAdres;
+	
+	public String getInstNo() {
+		return instNo;
+	}
+	public void setInstNo(String instNo) {
+		this.instNo = instNo;
+	}
+	public String getMberPwd() {
+		return mberPwd;
+	}
+	public void setMberPwd(String mberPwd) {
+		this.mberPwd = mberPwd;
+	}
+	public String getMberId() {
+		return mberId;
+	}
+	public void setMberId(String mberId) {
+		this.mberId = mberId;
+	}
+	public String getMberNo() {
+		return mberNo;
+	}
+	public void setMberNo(String mberNo) {
+		this.mberNo = mberNo;
+	}
+	public Date getMberBir() {
+		return mberBir;
+	}
+	public void setMberBir(Date mberBir) {
+		this.mberBir = mberBir;
+	}
+	public String getMberNm() {
+		return mberNm;
+	}
+	public void setMberNm(String mberNm) {
+		this.mberNm = mberNm;
+	}
+	public String getMberCode() {
+		return mberCode;
+	}
+	public void setMberCode(String mberCode) {
+		this.mberCode = mberCode;
+	}
+	public String getUseYn() {
+		return useYn;
+	}
+	public void setUseYn(String useYn) {
+		this.useYn = useYn;
+	}
+	public String getInstCode() {
+		return instCode;
+	}
+	public void setInstCode(String instCode) {
+		this.instCode = instCode;
+	}
+	public Date getMberRegdate() {
+		return mberRegdate;
+	}
+	public void setMberRegdate(Date mberRegdate) {
+		this.mberRegdate = mberRegdate;
+	}
+	public String getChildNo() {
+		return childNo;
+	}
+	public void setChildNo(String childNo) {
+		this.childNo = childNo;
+	}
+	public String getMberTelno() {
+		return mberTelno;
+	}
+	public void setMberTelno(String mberTelno) {
+		this.mberTelno = mberTelno;
+	}
+	public String getMberAdres() {
+		return mberAdres;
+	}
+	public void setMberAdres(String mberAdres) {
+		this.mberAdres = mberAdres;
+	}
+
+
+}

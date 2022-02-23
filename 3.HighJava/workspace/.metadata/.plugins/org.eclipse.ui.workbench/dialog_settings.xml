@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="WorkbenchPreferenceDialogSettings">
+		<item value="651" key="DIALOG_X_ORIGIN"/>
+		<item value="8" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.ui.internal.QuickAccess">
+		<item value="-1" key="dialogHeight"/>
+		<item value="-1" key="dialogWidth"/>
+		<list key="textEntries">
+		</list>
+		<list key="orderedElements">
+		</list>
+		<list key="orderedProviders">
+		</list>
+		<list key="textArray">
+		</list>
+	</section>
+	<section name="NewWizardAction">
+		<item value="org.eclipse.jdt.ui.wizards.NewClassCreationWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.jdt.ui.java"/>
+			<item value="org.eclipse.jpt.jaxb"/>
+		</list>
+	</section>
+	<section name="ImportExportAction">
+		<item value="org.eclipse.ui.wizards.export.ZipFile" key="ImportExportPage.STORE_SELECTED_EXPORT_WIZARD_ID"/>
+		<item value="org.eclipse.ui.wizards.import.ExternalProject" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
+		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
+			<item value="org.eclipse.ui.Basic"/>
+		</list>
+		<list key="ImportExportPage.STORE_EXPANDED_EXPORT_CATEGORIES">
+			<item value="org.eclipse.ui.Basic"/>
+		</list>
+	</section>
+	<section name="ZipFileExportWizard">
+		<item value="true" key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID"/>
+		<item value="true" key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID"/>
+		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="\\sem-pc\공유폴더2\고급자바\고급자바과제템플릿\JavaParsing\XML\TestParsing.zip"/>
+			<item value="\\sem-pc\공유폴더2\고급자바\고급자바과제템플릿\JavaNetwork\멀티챗 귓속말기능\강건_0917\MultiChatClient.zip"/>
+			<item value="\\sem-pc\공유폴더2\고급자바\고급자바과제템플릿\JavaNetwork\멀티챗 귓속말기능\강건_0917\MultiChatServer.zip"/>
+			<item value="C:\Users\PC-04\Desktop\multichatclient.zip"/>
+			<item value="C:\Users\PC-04\Desktop\network-2021-09-17.zip"/>
+			<item value="C:\Users\PC-04\Desktop\tcpfileserver.zip"/>
+			<item value="C:\Users\PC-04\Desktop\IBatisHomeWork.zip"/>
+			<item value="C:\Users\PC-04\Desktop\IBatisTest-2021-09-13.zip"/>
+			<item value="\\sem-pc\공유폴더2\고급자바\고급자바과제템플릿\JavaMVC\게시판작성하기\강건_0910\GVO.zip"/>
+			<item value="\\sem-pc\공유폴더2\고급자바\고급자바과제템플릿\JavaMVC\게시판작성하기\강건_0910\IGService.zip"/>
+			<item value="\\sem-pc\공유폴더2\고급자바\고급자바과제템플릿\JavaMVC\게시판작성하기\강건_0910\GService.zip"/>
+			<item value="\\sem-pc\공유폴더2\고급자바\고급자바과제템플릿\JavaMVC\게시판작성하기\강건_0910\GMain.zip"/>
+			<item value="\\sem-pc\공유폴더2\고급자바\고급자바과제템플릿\JavaMVC\게시판작성하기\강건_0910\IGDao.zip"/>
+			<item value="\\sem-pc\공유폴더2\고급자바\고급자바과제템플릿\JavaMVC\게시판작성하기\강건_0910\GDao.zip"/>
+			<item value="C:\Users\PC-04\Desktop\IBatisTest-2021-09-10.zip"/>
+			<item value="C:\Users\PC-04\Desktop\JavaSingletonTest-2021-09-10.zip"/>
+			<item value="\\sem-pc\공유폴더2\고급자바\고급자바과제템플릿\JavaJDBC\Jdbc이용한회원관리프로그램\강건_0908\MemberJDBC.zip"/>
+			<item value="C:\Users\PC-04\Desktop\자바MVC패턴2021-09-09.zip"/>
+			<item value="C:\Users\PC-04\Desktop\Gaesi.zip"/>
+			<item value="\\sem-pc\공유폴더2\고급자바\고급자바과제템플릿\JavaJDBC\게시판작성하기\강건_0908\Gaesi.zip"/>
+		</list>
+	</section>
+</section>

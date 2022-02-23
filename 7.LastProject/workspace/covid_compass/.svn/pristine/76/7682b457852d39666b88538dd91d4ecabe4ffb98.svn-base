@@ -1,0 +1,63 @@
+package com.spring.compass.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.spring.compass.service.PstiService;
+import com.spring.compass.vo.PstiVO;
+
+@Controller
+public class GuestController {
+	
+	@Autowired
+	private PstiService pstiService;
+	public void setPstiService(PstiService pstiService) {
+		this.pstiService = pstiService;
+	}
+	
+	@RequestMapping("/guest/guest-main")
+	public String guest() {
+		String url ="guest/guest-main";
+		return url;
+	}
+	@RequestMapping("/guest/question")
+	public String question() {
+		String url ="guest/question";
+		return url;
+	}
+	@RequestMapping("/guest/chart")
+	public String guestChart() {
+		String url="guest/guest-chart";
+
+		return url;
+	}
+	@RequestMapping("/guest/insp-list")
+	public String inspList() {
+		String url="guest/insp-list";
+		
+		return url;
+	}
+	
+	@RequestMapping("/guest/gogo")
+	public String guestRegist(PstiVO psti) throws Exception{
+		String url="guest/regist_success";
+		
+		String city = psti.getPstiAdres().split(" ")[0];
+		
+		String cityNo= pstiService.getPstiCityNo(city);
+		String inspNo = Integer.toString(pstiService.getPstiNextVal());
+		
+		psti.setAreaNo(cityNo);
+		psti.setInspNo(inspNo);
+		
+		int cnt = pstiService.insertPsti(psti);
+		
+		if(cnt > 0) {
+			System.out.println("성공맨");
+		}
+		
+		
+		return url;
+	}
+}

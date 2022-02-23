@@ -1,0 +1,20 @@
+package com.spring.compass.service;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import com.spring.compass.vo.HsptVO;
+import com.spring.compass.vo.InspVO;
+import com.spring.compass.vo.LtctVO;
+import com.spring.compass.vo.PbhtVO;
+
+public interface AdminService {
+	
+	public List<InspVO> getInspList() throws SQLException;
+	
+	public List<PbhtVO> getPbhtList() throws SQLException;
+	
+	public List<HsptVO> getHsptList() throws SQLException;
+	
+	public List<LtctVO> getLtctList() throws SQLException;
+}

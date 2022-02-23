@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/task"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- <beans:bean id="inspStatisticsInsertTask"
+				class="com.spring.compass.scheduler.InspStatisticsInsertScheduler"
+				p:inspService-ref="inspService"
+				p:savePath-ref="inspStatisticsFilePath"
+				p:fileName-ref="inspStatisticsFileName"
+	/>
+	
+	<scheduler id="inspStatisticsInsertScheduler"/>
+	<scheduled-tasks scheduler="inspStatisticsInsertScheduler">
+		<scheduled ref="inspStatisticsInsertTask" 
+				   method="registInspStatistics"
+				   cron="0 0 17 * * *"/>
+	</scheduled-tasks>
+	
+	<beans:bean id="inspStatisticsUpdateTask"
+				class="com.spring.compass.scheduler.InspStatisticsUpdateScheduler"
+				p:inspService-ref="inspService"
+				p:savePath-ref="inspStatisticsFilePath"
+				p:fileName-ref="inspStatisticsFileName"
+	/>
+	
+	<scheduler id="inspStatisticsUpdateScheduler"/>
+	<scheduled-tasks scheduler="inspStatisticsUpdateScheduler">
+		<scheduled ref="inspStatisticsUpdateTask" 
+				   method="updateInspStatistics"
+				   cron="0 2 17 * * *"/>
+	</scheduled-tasks>
+	
+	<beans:bean id="hsptStatisticsInsertTask"
+				class="com.spring.compass.scheduler.HsptStatisticsInsertScheduler"
+				p:hsptService-ref="hsptService"
+	/>
+	
+	<scheduler id="hsptStatisticsInsertScheduler"/>
+	<scheduled-tasks scheduler="hsptStatisticsInsertScheduler">
+		<scheduled ref="hsptStatisticsInsertTask" 
+				   method="registHsptStatistics"
+				   cron="0 0 21 * * *"
+		/>
+	</scheduled-tasks> -->
+	
+	<!-- <beans:bean id="hsptStatisticsUpdateTask"
+				class="com.spring.compass.scheduler.HsptStatisticsUpdateScheduler"
+				p:hsptService-ref="hsptService"
+	/>
+	<scheduler id="hsptStatisticsUpdateScheduler"/>	
+	<scheduled-tasks scheduler="hsptStatisticsUpdateScheduler">
+		<scheduled ref="hsptStatisticsUpdateTask" 
+				   method="updateHsptStatistics"
+				   cron="0 0 21 * * *"
+		/>
+	</scheduled-tasks> -->
+</beans:beans>

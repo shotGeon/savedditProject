@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+</head>
+
+<script>
+
+proc1 =()=>{
+	
+	str="";
+	str+="href="+location.href+"<br>";
+	str+="protocol : "+location.protocol+"<br>"; 
+	str+="host : "+location.host+"<br>"; 
+	str+="hostname : "+location.hostname+"<br>"; 
+	str+="port : "+location.port+"<br>"; 
+	str+="pathname : "+location.pathname+"<br>"; 
+	
+	document.getElementById('result1').innerHTML=str;
+}
+
+proc2=()=>{
+	
+	location.href="test.jsp";
+}
+
+procReplace=(str)=>{
+	//리플레이스는 새로운 문서로 대체되기 때문에 되돌아 갈 수 없다.
+	location.replace(str);
+}
+
+procReload=()=>{
+	arr =["Hello", "Html","css","javascript","jQuery"];
+	
+	rand=Math.floor(Math.random()*arr.length);
+	
+	str="<h1>"+arr[rand]+"</h1>";
+	
+	document.getElementById('result2').innerHTML =str;
+	
+	document.getElementById('result2').style.color="red";
+	
+	
+	//1초가 경과한 후 어떤 문자를 출력
+	//다시 출력 되기 이전 문서로 다시 돌아온다
+	
+	setTimeout(function(){
+		
+		location.reload();
+		
+	},3000);
+	
+	
+}
+
+</script>
+
+
+<body>
+
+<div class="box">
+  <h3>Location 객체</h3>
+   url에 대한 정보<br>
+   <br>
+  <input type="button" value="확인" onclick="proc1()">
+  <br><br>
+  <div id="result1"></div>
+</div>
+
+<div class="box">
+  <h3>Location 객체</h3>
+   자동으로 특정페이지 이동<br>
+   <br>
+  <input type="button" value="확인" onclick="proc2()">
+  <br><br>
+  a태그에서 javascript함수를 이용하여 location.href사용
+  <a href="javascript:proc2()">공지사항 목록</a>
+  <br><br>
+  get방식으로 button에서 onclick="location.href='test.jsp'"사용
+  <button onclick="location.href='test.jsp'">공지사항 목록</button>
+  <br><br>
+  새로운 문서로 대체(replace(url))-현재 문서로 되돌아올 수 없다.
+  <button onclick="procReplace('test.jsp')">공지사항목록</button>
+  
+  <br><br>현재 페이지를 다시 로드한다.
+  <button type="button" onclick="procReload()">페이지 재호출</button>  
+  
+  <div id="result2"></div>
+</div>
+
+
+</body>
+</html>

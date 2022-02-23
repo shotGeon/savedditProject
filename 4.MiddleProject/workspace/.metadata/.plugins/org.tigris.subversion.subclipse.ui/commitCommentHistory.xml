@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CommitComments>	<CommitComment>건의사항 답글수정</CommitComment>
+	<CommitComment>반질문 자유 답글 수정시 원래글 갖고오기</CommitComment>
+	<CommitComment>반과제랑 반자유 답글 수정시 원래글 가져오기</CommitComment>
+	<CommitComment>반과제게시판 답글 수정 누를시 원래답글가져오기</CommitComment>
+	<CommitComment>건의사항 답글수정시 원래글 가져오기</CommitComment>
+	<CommitComment>답글 수정시 원래 답글 가져오기</CommitComment>
+	<CommitComment>답글 작성자 *처리</CommitComment>
+	<CommitComment>답글 줄바꿈</CommitComment>
+	<CommitComment>반 페이지 조회수 설정완료</CommitComment>
+	<CommitComment>마이페이지 수정버튼 누를시 원래 정보 표출해주기</CommitComment>
+</CommitComments>

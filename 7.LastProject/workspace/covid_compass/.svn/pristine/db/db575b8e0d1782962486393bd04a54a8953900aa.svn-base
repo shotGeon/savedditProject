@@ -1,0 +1,50 @@
+package com.spring.compass.parse;
+
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
+public class ParsingCovidData {
+	
+	public void covidInoculation() throws ParserConfigurationException, SAXException, IOException{
+		String url="https://nip.kdca.go.kr/irgd/cov19stats.do?list=all";
+		DocumentBuilder builder =
+				DocumentBuilderFactory.newInstance().newDocumentBuilder();
+		URL url2 = new URL(url);
+		
+		Document document = builder.parse(url2.toString());
+		
+		Element root = document.getDocumentElement();
+		
+		NodeList rowNodeList = root.getElementsByTagName("item");
+		
+			Element element =(Element) rowNodeList.item(2);
+			String tpcd = element.getElementsByTagName("tpcd").item(0).getTextContent();
+			System.out.println("tpcd:"+tpcd);
+			//1차접종률
+			String firstCnt = element.getElementsByTagName("firstCnt").item(0).getTextContent();
+			System.out.println("firstCnt:"+firstCnt);
+			//2차접종률
+			String secondCnt = element.getElementsByTagName("secondCnt").item(0).getTextContent();
+			System.out.println("secondCnt:"+secondCnt);
+			//3차접종률
+			String thirdCnt = element.getElementsByTagName("thirdCnt").item(0).getTextContent();
+			System.out.println("thirdCnt:"+thirdCnt);
+		
+		
+	}
+	
+	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException{
+			new ParsingCovidData().covidInoculation();
+		
+	}	
+}

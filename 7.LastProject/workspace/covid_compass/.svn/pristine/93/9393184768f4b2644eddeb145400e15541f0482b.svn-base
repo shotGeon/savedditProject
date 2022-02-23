@@ -1,0 +1,261 @@
+<%@page import="com.fasterxml.jackson.annotation.JsonInclude.Include"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page trimDirectiveWhitespaces="true"%>
+
+<head>
+   <style>
+      .redcircle{
+         color: red; 
+      }
+      .orangecircle{
+         color:orange;
+      }
+      .greencircle{
+         color: green;
+      }
+   </style>
+</head>
+<title></title>
+
+<body >
+<div class="card col-lg-3" style="background-color: #FFFFFF; float: left; margin-top: 6px;">
+
+         <div class="sidebar os-host os-theme-light os-host-overflow os-host-overflow-y os-host-resize-disabled os-host-scrollbar-horizontal-hidden os-host-transition" >
+            <div class="row">
+               <div class="col-md-12">범례
+                  <table border="1" style="width: 100%;">
+                  <tr>
+                     <th colspan="2">병상수 대비 사용률</th>
+                  </tr>
+                  
+                     <tr>
+                        <td>빨강<span class="redcircle">●</span></td>
+                        <td>80% 이상</td>
+                     </tr>
+                     <tr>
+                        <td>주황<span class="orangecircle">●</span></td>
+                        <td>70~79%</td>
+                     </tr>
+                     <tr>
+                        <td>초록<span class="greencircle">●</span></td>
+                        <td>70% 이하</td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+            
+            
+            <div class="row">
+               <div class="col-md-12">
+              <div class="card-header">
+                <h3 class="card-title"></h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                   확진자리스트
+              <ul class="pagination pagination-sm m-0 float-right">
+                  <li class="page-item"><a class="page-link" href="#">«</a></li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">»</a></li>
+                </ul>
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th style="width: 10px"><input type="checkbox"></th>
+                      <th>이름</th>
+                      <th>확진일</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><input type="checkbox"></td>
+                      <td>홍길동</td>
+                      <td>2022-01-01</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox"></td>
+                      <td>홍길동</td>
+                      <td>2022-01-01</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox"></td>
+                      <td>홍길동</td>
+                      <td>2022-01-01</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox"></td>
+                      <td>홍길동</td>
+                      <td>2022-01-01</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox"></td>
+                      <td>홍길동</td>
+                      <td>2022-01-01</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox"></td>
+                      <td>홍길동</td>
+                      <td>2022-01-01</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox"></td>
+                      <td>홍길동</td>
+                      <td>2022-01-01</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox"></td>
+                      <td>홍길동</td>
+                      <td>2022-01-01</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox"></td>
+                      <td>홍길동</td>
+                      <td>2022-01-01</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox"></td>
+                      <td>홍길동</td>
+                      <td>2022-01-01</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
+                
+               </div>
+            </div>
+         </div>
+      </div>
+
+   <div class="card col-lg-9" >
+      <div class="row" style="margin-top: 7px;">
+         <div class="card col-md-6" style="position: relative; left: 0px; top: 0px;">
+               <div class="card-header ui-sortable-handle" style="cursor: move;">
+                  <h3 class="card-title">
+                     <i class="ion ion-clipboard mr-1"></i> 병원 목록
+                  </h3>
+
+                  <div class="card-tools">
+                     <ul class="pagination pagination-sm">
+                        <li class="page-item"><a href="#" class="page-link">«</a></li>
+                        <li class="page-item"><a href="#" class="page-link">1</a></li>
+                        <li class="page-item"><a href="#" class="page-link">2</a></li>
+                        <li class="page-item"><a href="#" class="page-link">3</a></li>
+                        <li class="page-item"><a href="#" class="page-link">»</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- /.card-header -->
+               <div class="card-body" style="padding: 0px;">
+                  <div class="table-responsive">
+                     <table class="table table-hover text-nowrap" style="text-align: center;">
+                        <thead>
+                           <tr role="row">
+                              <th tabindex="0" aria-controls="example2" rowspan="1" style="text-align: center;" colspan="1" aria-label="">순서</th>
+                              <th tabindex="0" aria-controls="example2" rowspan="1" style="text-align: center;" colspan="1" aria-label="">병원명</th>
+                              <th tabindex="0" aria-controls="example2" rowspan="1" style="text-align: center;" colspan="1" aria-sort="ascending" aria-label="">잔여병상수</th>
+                              <th tabindex="0" aria-controls="example2" rowspan="1" style="text-align: center;" colspan="1" aria-label="">가동률</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr data-psti-no="" onclick="OpenWindow('psti-registform?pstiInnb=','','1200','750');" style="cursor: pointer;">
+                              <td>1</td>
+                              <td>을지대학병원</td>
+                              <td class="dtr-control sorting_1" tabindex="0">67</td>
+                              <td>34%</td>
+                           </tr>
+                           <tr data-psti-no="" onclick="OpenWindow('psti-registform?pstiInnb=','','1200','750');" style="cursor: pointer;">
+                              <td>1</td>
+                              <td>건양대학병원</td>
+                              <td class="dtr-control sorting_1" tabindex="0">67</td>
+                              <td>34%</td>
+                           </tr>
+                           <tr data-psti-no="" onclick="OpenWindow('psti-registform?pstiInnb=','','1200','750');" style="cursor: pointer;">
+                              <td>1</td>
+                              <td>충남대학병원</td>
+                              <td class="dtr-control sorting_1" tabindex="0">67</td>
+                              <td>34%</td>
+                           </tr>
+                           <tr data-psti-no="" onclick="OpenWindow('psti-registform?pstiInnb=','','1200','750');" style="cursor: pointer;">
+                              <td>1</td>
+                              <td>연세대학병원</td>
+                              <td class="dtr-control sorting_1" tabindex="0">67</td>
+                              <td>34%</td>
+                           </tr>
+                           <tr data-psti-no="" onclick="OpenWindow('psti-registform?pstiInnb=','','1200','750');" style="cursor: pointer;">
+                              <td>1</td>
+                              <td>서울대학병원</td>
+                              <td class="dtr-control sorting_1" tabindex="0">67</td>
+                              <td>34%</td>
+                           </tr>
+                        </tbody>
+                     </table>
+
+                  </div>
+
+               </div>
+               <!-- /.card-body -->
+            </div>
+         <div class="card col-md-6" >
+                <table class="table">
+                  <thead>
+                  <tr>
+                     <th colspan="2" style="text-align: left; vertical-align: middle;">병상신청</th>
+                     <th colspan="2" align="right"><button type="submit" class="btn btn-primary col-md-5" style="background-color: #5bbc71; border-color: #5bbc71; float: right;">병상신청</button></th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style="background-color: #f5f6f7;"><strong>성명</strong></td>
+                      <td >아무개</td>
+                      
+                      <td style="background-color: #f5f6f7;"><strong>생년월일</strong></td>
+                      <td >1996/06/25</td>
+                      
+                    </tr>
+                    
+                    <tr>
+                      <td style="background-color: #f5f6f7;"><strong>성별</strong></td>
+                      <td>남</td>
+                      
+                      <td style="background-color: #f5f6f7;"><strong>연락처</strong></td>
+                      <td>010-7777-7777</td>
+                      
+                      
+                    </tr>
+                    
+                     <tr>
+                      <td style="background-color: #f5f6f7;"><strong>주소</strong></td>
+                      <td colspan="3">대전시 어딘가</td>
+                    </tr>
+                    
+                    <tr>
+                       <td style="background-color: #f5f6f7;"><strong>증상</strong></td>
+                       <td colspan="3">어지러움, 발열, 호흡곤란</td>
+                    </tr>
+                    
+                    <tr>
+                       <td style="background-color: #f5f6f7;"><strong>병원명</strong></td>
+                       <td colspan="3">을지대학병원</td>
+                    </tr>
+                    <tr>
+                       <td style="background-color: #f5f6f7;"><strong>연락처</strong></td>
+                       <td colspan="3">042-452-1234</td>
+                    </tr>
+                  </tbody>
+                </table>
+         </div>
+      </div>
+      
+      <div class="row">
+         <div class="col-md-12">
+         <img src="">
+         </div>
+      </div>
+   </div>
+
+
+</body>
+

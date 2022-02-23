@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+
+<script>
+
+
+
+proc1=()=>{
+	setTimeout(function(){
+		
+		document.querySelector('#result1').style.background ="pink";
+		
+		
+	},500);
+}
+
+function proc2(btn){
+	
+	//확인버튼
+	
+	btn.style.display="none";
+	
+	//btn전역변수 만들기
+	gbtn=btn;
+	
+	
+	a = setInterval(function(){
+		console.log(a);
+		cr=Math.floor(Math.random()*256);
+		cg=Math.floor(Math.random()*256);
+		cb=Math.floor(Math.random()*256);
+		
+		document.querySelector('#result2').style.background=`rgb(${cr},${cg},${cb})`; 
+		
+		/* cr = cr.toString(16);
+		cg = cg.toString(16);
+		cb = cb.toString(16);
+		
+		document.querySelector('#result2').style.background="#"+cr+cg+cb;
+		 */
+		
+	}, 500);
+}
+
+proc3=()=>{
+	//종료버튼
+	clearInterval(a);
+	
+	//확인버튼 다시 나타나기
+	
+	gbtn.style.display="inline"; //block을 사용하면 줄이 바뀐다.
+	
+}
+
+
+
+</script>
+
+</head>
+<body>
+
+<div class="box">
+  <h3>setTimeout(fn,millisec)</h3>
+  millisec의 시간이 경과하면 fn을 수행한다.<br>
+   <br>
+   <br>
+  <input type="button" value="확인" onclick="proc1()">
+  <br><br>
+  <div id="result1"></div>
+</div>
+
+<div class="box">
+  <h3>setInterval(fn,millisec)</h3>
+  millisec의 시간이 경과할 때만다 반복적으로 fn을 수행한다.
+   <br>
+   <br>
+  <input type="button" value="확인" onclick="proc2(this)">
+  <input type="button" value="종료" onclick="proc3()">
+  <br><br>
+  <div id="result2"></div>
+</div>
+
+</body>
+</html>

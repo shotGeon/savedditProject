@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Share Project</title>
+</head>
+
+<style>
+	:root {
+		--main-orange : #faa62f;
+		--side-darkgray : #555555;
+		--side-lightgray : #CDC9C3;
+		--side-color3 : #B8DFD8;
+		--side-color4 : #FBF7F0;
+	}
+	html, body {
+		margin : 0px;
+		padding : 0px;
+		
+	}
+	#mainBox {
+		width : 1500px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#header1 {
+		margin : 0px;
+		padding : 0px;
+		height: 90px;
+		background : var(--side-color3)
+	}
+	#mainLogo {
+		margin-top : 20px;
+		margin-left : 50px;
+		width : 200px;
+		height: 50px;
+	}
+	#topMenu {
+		height : 50px;
+		background : var(--main-orange);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	#topUl {
+		margin : 0px;
+		list-style : none;
+	}
+	#topUl li {
+		float: left;
+		margin-right: 50px;
+		font-weight: bold;
+	}
+	.topLink:link {
+		color : white;
+		text-decoration: none;
+	}
+	.topLink:hover {
+		color : var(--side-darkgray);
+	}
+	#thinHr {
+		margin : 0px;
+		border : 3px solid var(--side-darkgray);
+	}
+	#bigBox {
+		display: flex;
+	}
+	#leftBox {
+		background : var(--side-lightgray);
+		width: 330px;
+		height: 700px;
+	}
+	#container1 {
+		background : var(--side-color4);
+		width : 1170px;
+		height: 700px;
+	}
+	#bottom1 {
+		margin : 0px;
+		padding : 0px;
+		height: 60px;
+		background : var(--side-color3);
+	}
+	
+</style>
+
+<body>
+<div id="mainBox">
+	<header id="header1">
+		<img id="mainLogo" src="./img/rogo.jpg" alt="logo">
+	<nav id="topMenu">
+		<ul id="topUl">
+			<li><a class="topLink" href="#">공지사항</a>
+			<li><a class="topLink" href="#">건의사항</a>
+			<li><a class="topLink" href="#">자료공유</a>
+			<li><a class="topLink" href="#">질문</a>
+			<li><a class="topLink" href="#">보강자료</a>
+			<li><a class="topLink" href="#">자유</a>
+			<li><a class="topLink" href="#">장터</a>
+			<li><a class="topLink" href="#">수료후기</a>
+			<li><a class="topLink" href="#">회사정보</a>
+		</ul>
+	</nav>
+	</header>
+	
+	
+	<hr id="thinHr">
+	
+	<main id="bigBox">
+		<aside id="leftBox"></aside>
+		<div id="container1"></div>
+	</main>
+	
+	<footer id="bottom1"></footer>
+</div>
+</body>
+</html>

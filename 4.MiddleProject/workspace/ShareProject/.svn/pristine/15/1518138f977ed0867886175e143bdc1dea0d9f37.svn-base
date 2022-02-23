@@ -1,0 +1,40 @@
+package kr.or.ddit.cal.service;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import kr.or.ddit.cal.dao.CalDaoImpl;
+import kr.or.ddit.cal.dao.ICalDao;
+import kr.or.ddit.cal.vo.CalVO;
+
+public class CalServiceImpl implements ICalService{
+
+	private ICalDao dao;
+	private static ICalService service;
+	
+	public CalServiceImpl() {
+		dao = CalDaoImpl.getInstance();
+	}
+	
+	public static ICalService getInstance() {
+		if(service == null) {
+			new CalServiceImpl();
+		}
+		return service;
+	}
+	
+	@Override
+	public ArrayList<CalVO> calenList() {
+		
+		ArrayList<CalVO> list = null;
+		try {
+			list = dao.calenList();
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+		
+		return list;
+	}
+
+}

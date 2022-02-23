@@ -1,0 +1,11 @@
+<web-app>
+	<servlet>
+		<servlet-name>MemberList</servlet-name>
+		<servlet-class>controller.MemberListServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>MemberList</servlet-name>
+		<url-pattern>/member/list</url-pattern>
+	</servlet-mapping>
+</web-app>

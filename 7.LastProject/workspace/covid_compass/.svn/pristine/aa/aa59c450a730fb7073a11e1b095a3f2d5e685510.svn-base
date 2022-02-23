@@ -1,0 +1,20 @@
+package com.spring.compass.service;
+
+import java.sql.SQLException;
+
+import com.spring.compass.dao.HsptDAO;
+import com.spring.compass.vo.HsptVO;
+
+public class HsptServiceImpl implements HsptService{
+	
+	private HsptDAO hsptDAO;
+	public void setHsptDAO(HsptDAO hsptDAO) {
+		this.hsptDAO = hsptDAO;
+	}
+	@Override
+	public HsptVO getHsptByInstNo(String instNo) throws SQLException {
+		HsptVO hspt = hsptDAO.selectHsptByInstNo(instNo);
+		return hspt;
+	}
+
+}

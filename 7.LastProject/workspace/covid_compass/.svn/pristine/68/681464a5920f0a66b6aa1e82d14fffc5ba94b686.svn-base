@@ -1,0 +1,121 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<div class="" id="psti-detail-info-module">
+	<table class="table table-bordered">
+		<thead>
+			<tr style="text-align: center;">
+				<th>성명</th>
+				<td>홍길동</td>
+				<th>국적</th>
+				<td>KOREA</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="shittr" style="text-align: center;">
+				<th>검사요청일</th>
+				<td>2021/01/12</td>
+				<th>백신접종</th>
+				<td>3차 이상</td>
+			</tr>
+			<tr class="shittr" style="text-align: center;">
+				<th>성별</th>
+				<td>남</td>
+				<th>나이</th>
+				<td>27</td>
+			</tr>
+			<tr class="shittr" style="text-align: center;">
+				<th>양성 확정일</th>
+				<td>2022-01-01</td>
+				<th>결과</th>
+				<td>양성</td>
+			</tr>
+			<tr class="shittr" style="text-align: center;">
+				<th>발열여부</th>
+				<td>Y</td>
+				<th>임신여부</th>
+				<td>N</td>
+			</tr>
+			<tr class="shittr" style="text-align: center;">
+				<th>주민/외국인등록번호</th>
+				<td>960101-1111111</td>
+				<th>연락처</th>
+				<td>010-5678-1234</td>
+			</tr>
+			<tr class="shittr" style="text-align: center;">
+				<th>주소</th>
+				<td colspan="3">대전광역시 서구 둔산동 1032 70호8</td>
+			</tr>
+			<tr class="shittr" style="text-align: center;">
+				<th>증상</th>
+				<td colspan="3">기침, 두통, 복통, 어지러움</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="">
+	<div class="form-group row">
+		<label for="inputPassword3" class="col-sm-2 control-label text-right"
+			style="padding-top: 7px;">검사 결과</label>
+		<div class="col-sm-2">
+			<input name="pstiSymptms" type="text" class="form-control"
+				id="inputPassword3" value="양성" readonly>
+		</div>
+		<label for="inputPassword3" class="col-sm-2 control-label text-right"
+			style="padding-top: 7px;">확진 일자</label>
+		<div class="col-sm-2">
+			<input name="pstiSymptms" type="text" class="form-control"
+				id="inputPassword3" value="2022-01-05" readonly>
+		</div>
+		<label for="inputPassword3" class="col-sm-2 control-label text-right"
+			style="padding-top: 7px;">요청 일자</label>
+		<div class="col-sm-2">
+			<input name="pstiAdres" type="text" class="form-control"
+				id="inputPassword3" value="2022-01-06" readonly>
+		</div>
+	</div>
+
+	<div class="form-group row">
+		<label for="inputPassword3" class="col-sm-2 control-label text-right" style="padding-top: 7px;">진료 결과</label>
+		<select class="form-control col-sm-4" name="statusCode">
+			<option value="">진단</option>
+			<option value="D101">중증 및 중등증</option>
+			<option value="D102">미중증 및 경증</option>
+			<option value="D103">무증상</option>
+		</select>
+		<label for="inputPassword3" class="col-sm-2 control-label text-right"
+			style="padding-top: 7px;">요청 기관</label>
+		<div class="col-sm-4">
+			<input name="pstiTelno" type="text" class="form-control"
+				id="inputPassword3" value="OO 보건소" readonly>
+		</div>
+	</div>
+	<div class="form-group row">
+		<label for="inputPassword3" class="col-sm-2 control-label text-right"
+			style="padding-top: 7px;">진료 메모</label>
+	</div>
+	<div class="form-group row">
+		<div class="col-sm-12">
+			<textarea name="pstiAdres" class="form-control" id="inputPassword3"
+			style="margin-left: 30px; height: 149px; width: 558px;"></textarea>
+		</div>
+	</div>
+
+	<div class="row" style="margin-bottom: 7px; margin-left: 24px;" align="right">
+		<div class="col-md-3">
+			<button style="background-color: #5b6f90; border-color: #5b6f90;"
+				type="button" class="btn btn-block btn-primary btn-sm">입원</button>
+		</div>
+		<div class="col-md-3">
+			<button style="background-color: #5b6f90; border-color: #5b6f90;"
+				type="button" class="btn btn-block btn-primary btn-sm">이원</button>
+		</div>
+		<div class="col-md-3">
+			<button style="background-color: #5b6f90; border-color: #5b6f90;"
+				type="button" class="btn btn-block btn-primary btn-sm">생활치료센터</button>
+		</div>
+		<div class="col-md-3">
+			<button style="background-color: #5b6f90; border-color: #5b6f90;"
+				type="button" class="btn btn-block btn-primary btn-sm">자가격리</button>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>로그인 페이지</title>
+<script src="../js/jquery-3.6.0.min.js"></script>
+
+<script>
+	/* memvo ={};
+	$(function(){
+		
+		$('#logBtn').on('click', function(){
+			idvalue=$('#logId').val().trim();
+			pwvalue=$('#logPass').val().trim();
+			console.log(idvalue);
+			console.log(pwvalue);
+			
+			memvo.mem_id = idvalue;
+			memvo.mem_pass = pwvalue;
+			
+			$.ajax({
+				url : '/boardpro/IdCheck.do',
+				type : 'post',
+				data : memvo,
+				success : function(res){
+					alert(res.flag);
+					if(res.flag=="실패"){
+						alert(res.count);
+					}
+					if(res.count==5){
+						alert("비밀번호 5회실패(계정잠김!!)");
+					}
+				},
+				error : function(xhr){
+					alert(xhr.status);
+				},
+				dataType : 'json'
+			})
+			
+		})
+		
+	}) */
+</script>
+</head>
+<body>
+
+<div class="box">
+<form action="./IdCheck.do" method="post">
+  <h3></h3>
+   <br>
+   <br>
+   <input id="logId" type="text">
+   <br>
+   <input id="logPass" type="text">
+   
+  <input id="logBtn" type="button" value="로그인">
+</form>
+  <br><br>
+  <div id="result1"></div>
+</div>
+</body>
+</html>

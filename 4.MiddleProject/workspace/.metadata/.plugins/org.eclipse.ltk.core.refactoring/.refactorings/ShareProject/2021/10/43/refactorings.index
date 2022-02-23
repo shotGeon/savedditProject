@@ -1,0 +1,50 @@
+1634516026639	Rename type 'adminVO'
+1634518415702	Delete element
+1634518418183	Delete element
+1634518420470	Delete element
+1634519259972	Move 'member' to 'whole'
+1634532264562	Delete element
+1634614811117	Delete element
+1634618467275	Delete element
+1634619745755	Copy file
+1634619755484	Delete element
+1634620278010	Delete element
+1634621568575	Move 'selectMsgPage.jsp' to 'member_jsp'
+1634706115320	Copy file
+1634706143986	Copy file
+1634706183451	Delete element
+1634706187149	Delete element
+1634706207103	Move 'whNoticeBoard' to 'whole'
+1634706218594	Rename resource 'whNoticeBoard'
+1634706221798	Copy files
+1634706241947	Rename resource 'DeleteBoard.jsp'
+1634706247566	Rename resource 'InsertBoard.jsp'
+1634706253222	Rename resource 'ListBoard.jsp'
+1634706259175	Rename resource 'SelectBoard.jsp'
+1634706264566	Rename resource 'UpdateBoard.jsp'
+1634706774275	Delete element
+1634706776147	Copy file
+1634706787174	Rename resource 'InsertBoard.jsp'
+1634707215989	Copy file
+1634708547557	Delete element
+1634709726977	Copy compilation unit
+1634709737976	Delete element
+1634710357373	Move 'NotiInsertBoard.jsp' to 'board'
+1634715855062	Copy compilation unit
+1634715912398	Copy compilation unit
+1634717669720	Move 'NotiInsertBoard.jsp' to 'whNoticeBoard_jsp'
+1634717674379	Move 'NotiInsertBoard.jsp' to 'board_jsp'
+1634717808662	Delete element
+1634717830187	Rename resource 'NotiinsertBoard.html'
+1634775969782	Delete element
+1634775973140	Move 'NotiDeleteBoard.jsp' to 'whNoticeBoard_jsp'
+1634776523860	Copy file
+1634779637607	Copy file
+1634784321101	Copy file
+1634813699821	Delete element
+1634885859971	Copy file
+1634900994937	Rename resource 'AtInsertBoard.jsp'
+1634901024783	Rename resource 'AtSelectBoard.jsp'
+1634905212007	Rename resource 'ClAtInsertBoard.jsp'
+1634905217739	Rename resource 'ClAtSelectBoard.jsp'
+1634906652185	Delete elements

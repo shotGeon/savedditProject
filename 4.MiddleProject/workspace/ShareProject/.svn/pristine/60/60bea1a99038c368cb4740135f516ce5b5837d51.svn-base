@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Share Project</title>
+</head>
+
+<style>
+	:root {
+		--main-color1 : #4c4c6d;
+		--side-color1 : #FFE194;
+		--side-color2 : #E8F6EF;
+		--side-color3 : #B8DFD8;
+		--side-color4 : #FBF7F0;
+	}
+	
+	#mainBox {
+		width : 1200px;
+		background : 
+	}
+</style>
+
+<body>
+<div id="mainBox">
+	<header id="top1">
+		<img src="./img/rogo.jpg" alt="logo">
+	</header>
+	
+	<nav id="topMenu"></nav>
+	
+	<div id="bigBox">
+		<aside id="left1"></aside>
+		<div id="container"></div>
+	</div>
+	
+	<footer id="bottom"></footer>
+</div>
+</body>
+</html>

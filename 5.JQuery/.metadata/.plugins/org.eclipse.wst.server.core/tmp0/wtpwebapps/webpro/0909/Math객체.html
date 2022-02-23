@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+
+<script>
+
+function proc1(){
+	arr= new Array();
+	
+	while(arr.length<6){
+		lotto=parseInt(Math.random()*45+1);
+		
+		if(arr.indexOf(lotto)<0){
+			arr.push(lotto);
+		}
+	}
+	
+	res="로또번호: "+arr
+	
+	document.getElementById('result1').innerHTML=res;
+}
+
+
+
+</script>
+
+
+
+</head>
+<body>
+
+<div class="box">
+  <h3>로또</h3>
+   로또 번호를 생성하는 프로그램을 작성하시오.(1번 ~ 45번 중 6개의 번호를 추첨)<br>
+   <br>
+  <input type="button" value="확인" onclick="proc1()">
+  <br><br>
+  <div id="result1"></div>
+</div>
+
+</body>
+</html>

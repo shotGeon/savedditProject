@@ -1,0 +1,26 @@
+package com.spring.compass.service;
+
+import java.sql.SQLException;
+import java.util.Map;
+
+import com.spring.compass.command.InptntListSearchCommand;
+import com.spring.compass.vo.HsptVO;
+
+public interface HsptService {
+
+	public HsptVO getHsptByInstNo(String instNo) throws SQLException;
+	
+	public Map<String, Object> getInptntListPage(InptntListSearchCommand cri) throws SQLException;
+	
+	
+	public String getHsptCityNo(String city) throws SQLException;
+	
+	public int getHsptSeqNo() throws SQLException;
+	
+	public int getInstSeqNo() throws SQLException;
+	
+	public int registHspt(HsptVO hspt) throws SQLException;
+	
+	public int registInst(HsptVO hspt) throws SQLException;
+	
+}

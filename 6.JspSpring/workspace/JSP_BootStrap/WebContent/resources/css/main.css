@@ -1,0 +1,45 @@
+@charset "UTF-8";
+* {
+	margin: 0px;
+	padding : 0px;
+}
+
+.tr1{
+	background: lightblue;
+}
+
+.thTitle {
+	text-align: center;
+}
+.tdNum {
+	width : 70px;
+}
+.tdTitle {
+	width : 300px;
+	text-align: left;
+	padding-left : 10px;
+}
+.tdName {
+	width : 100px;
+}
+.tdDate {
+	width : 150px;
+}
+.tdView {
+	width : 100px;
+}
+.tdCount {
+	width : 100px;
+}
+
+#searchBar {
+	margin-top: 20px;
+	margin-left: 20px;
+	position : relative;
+	left : 3%;
+}
+
+#memInsert, #memChkDelete{
+	width: 65px;
+}
+

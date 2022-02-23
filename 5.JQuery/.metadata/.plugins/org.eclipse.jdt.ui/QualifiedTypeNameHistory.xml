@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.ibatis.sqlmap.client.SqlMapClientBuilder"/>
+<fullyQualifiedTypeName name="kr.or.ddit.buyer.dao.IBuyerDao"/>
+<fullyQualifiedTypeName name="kr.or.ddit.buyer.dao.BuyerDaoImpl"/>
+<fullyQualifiedTypeName name="kr.or.ddit.buyer.service.IBuyerService"/>
+<fullyQualifiedTypeName name="kr.or.ddit.buyer.service.BuyerServiceImpl"/>
+<fullyQualifiedTypeName name="kr.or.ddit.buyer.vo.BuyerVO"/>
+<fullyQualifiedTypeName name="kr.or.ddit.lprod.dao.iLprodDao"/>
+<fullyQualifiedTypeName name="kr.or.ddit.lprod.dao.ILprodDao"/>
+<fullyQualifiedTypeName name="kr.or.ddit.lprod.dao.LprodDaoImpl"/>
+<fullyQualifiedTypeName name="kr.or.ddit.lprod.service.ILprodService"/>
+<fullyQualifiedTypeName name="kr.or.ddit.lprod.service.LprodServiceImpl"/>
+<fullyQualifiedTypeName name="kr.or.ddit.lprod.vo.LprodVO"/>
+<fullyQualifiedTypeName name="kr.or.ddit.prod.dao.IProdDao"/>
+<fullyQualifiedTypeName name="kr.or.ddit.prod.dao.ProdDaoImpl"/>
+<fullyQualifiedTypeName name="kr.or.ddit.prod.service.IProdService"/>
+<fullyQualifiedTypeName name="kr.or.ddit.prod.service.ProdServiceImpl"/>
+<fullyQualifiedTypeName name="kr.or.ddit.prod.vo.ProdVO"/>
+<fullyQualifiedTypeName name="com.ibatis.sqlmap.engine.impl.SqlMapClientImpl"/>
+<fullyQualifiedTypeName name="kr.or.ddit.member.vo.ZipVO"/>
+<fullyQualifiedTypeName name="kr.or.ddit.member.vo.MemberVO"/>
+<fullyQualifiedTypeName name="kr.or.ddit.ibatis.config.SqlMapClientPactory"/>
+<fullyQualifiedTypeName name="kr.or.ddit.board.dao.IBoardDao"/>
+<fullyQualifiedTypeName name="kr.or.ddit.board.dao.BoardDaoImpl"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="kr.or.ddit.board.vo.ReplyVO"/>
+<fullyQualifiedTypeName name="kr.or.ddit.board.vo.BoardVO"/>
+<fullyQualifiedTypeName name="kr.or.ddit.board.service.IBoardService"/>
+<fullyQualifiedTypeName name="kr.or.ddit.board.service.BoardServiceImpl"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="com.ibatis.sqlmap.client.SqlMapClient"/>
+<fullyQualifiedTypeName name="kr.or.ddit.ibatis.config.SqlMapClientFactory"/>
+<fullyQualifiedTypeName name="kr.or.ddit.member.dao.IMemberDao"/>
+<fullyQualifiedTypeName name="kr.or.ddit.member.dao.MemberDaoImpl"/>
+<fullyQualifiedTypeName name="kr.or.ddit.member.service.IMemberService"/>
+<fullyQualifiedTypeName name="kr.or.ddit.member.service.MemberServiceImpl"/>
+<fullyQualifiedTypeName name="org.apache.commons.beanutils.BeanUtils"/>
+<fullyQualifiedTypeName name="kr.or.ddit.member.vo.MemVO"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+</qualifiedTypeNameHistroy>

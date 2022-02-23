@@ -1,0 +1,144 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="col-12" style="margin-top: 10px;">
+			<!-- Custom Tabs -->
+			<div class="card">
+				<div class="card-header d-flex p-0">
+					<h3 class="card-title p-3">접속로그 관리</h3>
+					<ul class="nav nav-pills ml-auto p-2">
+						<li class="nav-item"><a class="nav-link active" href="#tab_5"
+							data-toggle="tab">검사소</a></li>
+						<li class="nav-item"><a class="nav-link" href="#tab_6"
+							data-toggle="tab">보건소</a></li>
+						<li class="nav-item"><a class="nav-link" href="#tab_7"
+							data-toggle="tab">병원</a></li>
+						<li class="nav-item"><a class="nav-link" href="#tab_8"
+							data-toggle="tab">생활치료센터</a></li>
+					</ul>
+				</div>
+				<!-- /.card-header -->
+
+				<div class="tab-content">
+					<div class="tab-pane active" id="tab_5">
+						<div class="card col-md-12"
+							style="position: relative; left: 0px; top: 0px; margin-bottom: 0px;">
+							<div class="card-header ui-sortable-handle" style="cursor: move;">
+								<div class="input-group float-left" style="width: 180px;">
+									<input type="text" name="table_search" class="form-control"
+										placeholder="Search" style="width: 35px; height: 30px;">
+
+									<div class="input-group-append"
+										style="width: 35px; height: 30px;">
+										<button type="submit" class="btn btn-default">
+
+											<i class="fas fa-search fa-sm"></i>
+										</button>
+									</div>
+								</div>
+								<div class="card-tools">
+									<ul class="pagination pagination-sm">
+										<li class="page-item"><a href="#" class="page-link">«</a></li>
+										<li class="page-item"><a href="#" class="page-link">1</a></li>
+										<li class="page-item"><a href="#" class="page-link">2</a></li>
+										<li class="page-item"><a href="#" class="page-link">3</a></li>
+										<li class="page-item"><a href="#" class="page-link">»</a></li>
+									</ul>
+								</div>
+							</div>
+							<!-- /.card-header -->
+							<div class="card-body" style="padding: 0px;">
+								<div class="table-responsive">
+									<table class="table table-hover text-nowrap"
+										style="text-align: center;">
+										<thead>
+											<tr role="row">
+												<th tabindex="0" aria-controls="example2" rowspan="1"
+													style="text-align: center;" colspan="1" aria-label="">번호</th>
+												<th tabindex="0" aria-controls="example2" rowspan="1"
+													style="text-align: center;" colspan="1" aria-label="">로그ID</th>
+												<th tabindex="0" aria-controls="example2" rowspan="1"
+													style="text-align: center;" colspan="1" aria-label="">발생일자</th>
+
+												<th tabindex="0" aria-controls="example2" rowspan="1"
+													style="text-align: center;" colspan="1" aria-label="">사용자명</th>
+												<th tabindex="0" aria-controls="example2" rowspan="1"
+													style="text-align: center;" colspan="1" aria-label="">접속
+													IP</th>
+											</tr>
+										</thead>
+										<tbody>
+
+											<tr data-psti-no="${pstiNo }"
+												onclick="OpenWindow('psti-registform?pstiInnb=${pstiReadyListVO.pstiInnb}','','1200','750');"
+												style="cursor: pointer;">
+												<td>1</td>
+												<td>LOGIN_00000000001761</td>
+												<td>2022-01-12</td>
+												<td>손흥민</td>
+												<td>192.111.0.1</td>
+											</tr>
+											<tr data-psti-no="${pstiNo }"
+												onclick="OpenWindow('psti-registform?pstiInnb=${pstiReadyListVO.pstiInnb}','','1200','750');"
+												style="cursor: pointer;">
+												<td>2</td>
+												<td>LOGIN_00000000001761</td>
+												<td>2022-01-12</td>
+												<td>손흥민</td>
+												<td>192.111.0.1</td>
+											</tr>
+											<tr data-psti-no="${pstiNo }"
+												onclick="OpenWindow('psti-registform?pstiInnb=${pstiReadyListVO.pstiInnb}','','1200','750');"
+												style="cursor: pointer;">
+												<td>3</td>
+												<td>LOGIN_00000000001761</td>
+												<td>2022-01-12</td>
+												<td>손흥민</td>
+												<td>192.111.0.1</td>
+											</tr>
+											<tr data-psti-no="${pstiNo }"
+												onclick="OpenWindow('psti-registform?pstiInnb=${pstiReadyListVO.pstiInnb}','','1200','750');"
+												style="cursor: pointer;">
+												<td>4</td>
+												<td>LOGIN_00000000001761</td>
+												<td>2022-01-12</td>
+												<td>손흥민</td>
+												<td>192.111.0.1</td>
+											</tr>
+											<tr data-psti-no="${pstiNo }"
+												onclick="OpenWindow('psti-registform?pstiInnb=${pstiReadyListVO.pstiInnb}','','1200','750');"
+												style="cursor: pointer;">
+												<td>5</td>
+												<td>LOGOUT_00000000001761</td>
+												<td>2022-01-12</td>
+												<td>손흥민</td>
+												<td>192.111.0.1</td>
+											</tr>
+										</tbody>
+									</table>
+
+								</div>
+
+							</div>
+							<!-- /.card-body -->
+						</div>
+					</div>
+					<!-- /.tab-pane -->
+					<div class="tab-pane" id="tab_6"></div>
+					<!-- /.tab-pane -->
+					<div class="tab-pane" id="tab_7"></div>
+					<!-- /.tab-pane -->
+					<div class="tab-pane" id="tab_8"></div>
+					<!-- /.tab-pane -->
+				</div>
+				<!-- /.tab-content -->
+			</div>
+		</div>
+</body>
+</html>

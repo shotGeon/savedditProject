@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script src="../js/jquery-3.6.0.min.js"></script>
+
+<script>
+$(function(){
+	//두번째 form의 확인버튼 클릭- 서버로 전송
+	$('.box1 form').on('submit', function(){
+		
+		fdata=$(this).serialize();
+		console.log(fdata);
+		
+		//비동기 전송
+		$.ajax({
+			url : 'submit.jsp',
+			type : 'post',
+			data : fdata,
+			success : function(result){
+				$('#result1').html(result);
+			},
+			error : function(xhr){
+				alert(xhr.status);//404, 500
+			},
+			dataType : 'html'
+		})
+		
+		
+	})
+})
+</script>
+</head>
+<body>
+
+<div class="box">
+  <h3>동기방식</h3>
+   전체 페이지로 응답결과를 받는다<br>
+   input type=submit을 클릭하면 곧바로 form의 action="submit.jsp"가 실행<br>
+   <br>
+   <form action="submit.jsp" method="post">
+   	아이디: <input type="text" id="id" name="id"><br>
+   	이름: <input type="text" id="name" name="name"><br>
+   	전화번호: <input type="text" id="tel" name="tel"><br>
+   	주소: <input type="text" id="addr" name="addr"><br>
+   
+    <input id="sync" type="submit" value="확인">
+   </form>
+
+  <br><br>
+
+</div>
+
+
+<div class="box box1">
+  <h3>비동기방식</h3>
+    응답결과를 현재페이지의 일부분으로 받는다<br>
+    input type=submit 에 대한 이벤트는 script에서 수행<br>
+    form태그안에 onsubmit="return false;"문장을 기술한다.<br>
+     form을 이용해서 on('submit')으로 실행<br>
+   <br>
+   <form action="submit.jsp" method="post" onsubmit="return false;">
+   	아이디: <input type="text" id="id" name="id"><br>
+   	이름: <input type="text" id="name" name="name"><br>
+   	전화번호: <input type="text" id="tel" name="tel"><br>
+   	주소: <input type="text" id="addr" name="addr"><br>
+   
+    <input id="async" type="submit" value="확인">
+   </form>
+   
+  <br><br>
+  <div id="result1"></div>
+</div>
+
+</body>
+</html>

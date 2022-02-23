@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script src="../js/jquery-3.6.0.min.js"></script>
+
+<style>
+	table{
+		border: 2px solid blue;
+	}
+	
+	td{
+		width: 350px;
+		height: 40px;
+	}
+	tr:nth-child(1){
+		background: lightblue;
+	}
+</style>
+<script>
+$(function(){
+	$('#member').on('click', function(){
+		//
+		$.ajax({
+			
+			url : 'memberList.jsp',
+			type : 'get',
+			success : function(res){				
+				code="<table border='1'>";
+				code+="<tr><td>아이디</td>";
+				code+="<td>이름</td><td>이메일</td>";
+				code+="<td>생일</td></tr>";
+				$.each(res, function(i, v){
+					code+="<tr><td>"+v.id+"</td>";
+					code+="<td>"+v.name+"</td><td>"+v.mail+"</td>";
+					code+="<td>"+v.bir+"</td></tr>";
+					/* code+=v.hp+"<br>";
+					code+=v.add1+"<br>";
+					code+=v.add2+"<br>";
+					code+=v.zip+"<br>";
+					code+=v.bir+"<br><br>"; */
+				})
+				code+="</table>";
+				
+				$('#result1').html(code);
+			},
+			error : function(xhr){
+				alert(xhr.status+"\n"+xhr.statusText);
+			},
+			dataType : 'json'
+		})
+	})
+})
+</script>
+</head>
+<body>
+
+<div class="box">
+  <h3></h3>
+   <br>
+   <br>
+  <input type="button" value="MemberList" id="member">
+  <br><br>
+  <div id="result1"></div>
+</div>
+
+</body>
+</html>

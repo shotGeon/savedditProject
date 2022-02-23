@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+			PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+			"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="member">
+
+	<select id="memList" resultClass="memVO">
+		SELECT ID,PWD,EMAIL,PICTURE,ENABLED
+	    ,TO_CHAR(REGDATE,'YYYY-MM-DD'),PHONE,NAME,REGISTER,ADDRESS,AUTHORITY FROM MEMBER
+	
+	</select>
+	
+	<select id="memCheck" parameterClass="String" resultClass="int">
+		SELECT COUNT(*) FROM MEMBER WHERE ID=#data#
+	
+	</select>
+	
+	
+	<select id="memPagingList" parameterClass="pagingVO" resultClass="memVO">
+		SELECT AA.*
+		FROM
+		(SELECT ROWNUM AS RNUM, A.*
+		FROM
+		(SELECT ID,PWD,EMAIL,PICTURE,ENABLED
+	    	,TO_CHAR(REGDATE,'YYYY-MM-DD'),PHONE,
+	    	NAME,REGISTER,ADDRESS,AUTHORITY 
+	    	FROM MEMBER)A)AA
+	    	WHERE AA.RNUM BETWEEN #firstRecNo# and #lastRecNo#
+	    <isEqual property="field" compareValue="name">
+	    	AND NAME LIKE '%' ||#query#||'%'
+	    </isEqual>
+	    
+	    <isEqual property="field" compareValue="id">
+	    	AND ID LIKE '%' ||#query#||'%'
+	    </isEqual>
+	    
+	    <isEqual property="field" compareValue="email">
+	    	AND EMAIL LIKE '%'||#query#||'%'
+	    </isEqual>
+	    
+	    <isEqual property="field" compareValue="phone">
+	    	AND PHONE LIKE '%'||#query#||'%'
+	    </isEqual>
+	</select>
+	
+	
+	<select id="memFindTotalCount" parameterClass="pagingVO" resultClass="int">
+		SELECT COUNT(*) FROM MEMBER
+		
+		<isEqual property="field" compareValue="name">
+	    	WHERE NAME LIKE '%' ||#query#||'%'
+	    </isEqual>
+	    
+	    <isEqual property="field" compareValue="id">
+	    	WHERE ID LIKE '%' ||#query#||'%'
+	    </isEqual>
+	    
+	    <isEqual property="field" compareValue="email">
+	    	WHERE EMAIL LIKE '%'||#query#||'%'
+	    </isEqual>
+	    
+	    <isEqual property="field" compareValue="phone">
+	    	WHERE PHONE LIKE '%'||#query#||'%'
+	    </isEqual>
+		
+	</select>
+	
+	
+	<select id="memTotalCount" resultClass="int">
+		select count(*) from member
+	</select>
+	
+	<insert id="memInsert" parameterClass="memVO">
+		INSERT INTO MEMBER(ID,PWD,EMAIL,PICTURE,ENABLED
+		                ,REGDATE,PHONE,NAME,REGISTER,ADDRESS,AUTHORITY) 
+		  VALUES(#id#,#pwd#,#email#,#picture#,#enabled#
+		                ,TO_DATE(#regdate#,'YYYY-MM-DD'),#phone#,#name#,#register#,#address#,#authority#)
+	
+	</insert>
+	
+	<select id="memSelect" parameterClass="String" resultClass="memVO">
+		SELECT * FROM MEMBER WHERE ID =#id#
+	
+	</select>
+	
+	<delete id="memDelete" parameterClass="String">
+		DELETE FROM MEMBER WHERE ID =#id#
+	</delete>
+	
+	<update id="memUpdate" parameterClass="memVO">
+		UPDATE MEMBER
+		   SET PWD =#pwd#,
+		       EMAIL = #email#,
+		       PICTURE =#picture#,
+		       ENABLED = #enabled#,
+		       PHONE = #phone#,
+		       NAME = #name#,
+		       ADDRESS = #address#
+		  WHERE ID = #id# 
+	
+	</update>
+	
+	<select id="findSize" parameterClass="pagingVO" resultClass="int">
+		SELECT COUNT(*)
+		  FROM MEMBER
+		  WHERE 1 = 1
+		  <isNotEmpty>
+		  	AND ID LIKE '%'|| #id# ||'%'
+		  </isNotEmpty>
+		 
+		  <isNotEmpty>
+		  	AND NAME LIKE '%'|| #name# ||'%'
+		  </isNotEmpty>
+		 
+		  <isNotEmpty>
+		  	AND EMAIL LIKE '%'|| #email# ||'%'
+		  </isNotEmpty>
+		  
+		  <isNotEmpty>
+		  	AND PHONE LIKE '%' || #phone# ||'%'
+		  </isNotEmpty>
+	</select>
+	
+	<select id="findMem" parameterClass="pagingVO" resultClass="memVO">
+		SELECT AA.*
+		  FROM
+			(SELECT ROWNUM AS RNUM, A.*
+			   FROM 
+				 (SELECT ID,PWD,EMAIL,PICTURE,ENABLED,
+        	   			 TO_CHAR(REGDATE,'YYYY-MM-DD'),PHONE,
+        				 NAME,REGISTER,ADDRESS,AUTHORITY  
+           			FROM MEMBER
+		   			WHERE 1 = 1
+		 <isNotEmpty property="id">
+		 	AND ID LIKE '%'|| #id# ||'%')A)AA
+		 </isNotEmpty>
+		 
+		 <isNotEmpty property="name">
+		 	AND NAME LIKE '%'|| #name# ||'%')A)AA
+		 </isNotEmpty>
+		 
+		 <isNotEmpty property="email">
+		 	AND EMAIL LIKE '%'|| #email# ||'%')A)AA
+		 </isNotEmpty>
+		 
+		 <isNotEmpty property="phone">
+		 	AND PHONE LIKE '%' || #phone# ||'%')A)AA
+		 </isNotEmpty>
+		 	WHERE AA.RNUM BETWEEN #firstRecNo# AND #lastRecNo#
+		 
+	
+	</select>
+
+</sqlMap>

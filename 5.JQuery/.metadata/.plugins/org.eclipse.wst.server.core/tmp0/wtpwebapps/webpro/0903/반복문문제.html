@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+
+<script>
+proc1=function(){
+	res=0;
+	for(i=1; i<201; i++){
+		if(i%2==1){
+			continue;
+		}else{
+			res+=i;
+		}
+	}
+	document.getElementById('result1').innerHTML ="1~200까지 짝수의 합="+res;
+}
+
+proc2=function(){
+	hap=0;
+	str="";
+	while(true){
+		invalue=parseInt(prompt("수를 입력하세요"));
+		if(invalue==0){
+			break;
+		}else{
+			hap+=invalue;
+			str+=invalue+"&nbsp;&nbsp;";
+		}
+	}
+	document.getElementById('result2').innerHTML=str+"까지의합="+hap;
+}
+
+proc3=function(){
+	sum="";
+	sum2="";
+	for(i=1; i<11; i++){
+		for(j=1; j<11; j++){
+			if((i+j)%3!=0){
+				continue;
+			}else{
+				sum+=i+"&nbsp;&nbsp;";
+				sum2+=j+"&nbsp;&nbsp;";
+				break;
+			}
+		}
+	}
+	document.getElementById('result3').innerHTML="i는  "+sum+"<br>"+"j는  "+sum2+"<br>";
+}
+
+proc4=function(){
+	bae="";
+	for(i=1; i<101; i++){
+		if(i%2==0&&i%3==0){
+			bae+=i+"&nbsp;&nbsp;";
+		}
+	}
+	document.getElementById('result4').innerHTML="i는"+bae;
+	
+}
+proc5=function(){
+	//sum="";
+	rinput1="";
+	rinput2="";
+	rinput3="";
+	rinput4="";
+	while(true){
+		input1=parseInt(prompt("첫번째 수를 입력하세요."));
+		input2=parseInt(prompt("두번째 수를 입력하세요."));
+		if(input1==0&&input2==0){
+			break;
+		}else{
+			if(input1+input2>=100){
+				rinput1+=input1+"&nbsp;"+input2+"&nbsp;";
+				//sum+=input1+input2+"&nbsp;&nbsp;";
+			}else{
+				rinput3+=input1+"&nbsp;"+input2+"&nbsp;";
+			}
+		}
+	}
+	document.getElementById('result5').innerHTML="합이 100이상인 수는"+rinput1+"&nbsp;&nbsp;"
+	+"<br>"+"합이 100이하인 수는"+rinput3;
+}
+</script>
+</head>
+<body>
+<div class="box">
+  <h3>1~200까지 짝수의 합을 구한다.</h3>
+  (continue를 이용)
+  <br>
+  <input type="button" value="확인" onclick="proc1()"><br>
+  <div id="result1"></div>
+</div>
+
+<div class="box">
+  <h3>사용자가 0을 입력할때까지 값을 계속 더해라</h3>
+  -prompt를 이용하여 입력한다.<br>
+  <br>
+  <input type="button" value="확인" onclick="proc2()"><br>
+  <div id="result2"></div>
+</div>
+
+<div class="box">
+  <h3>다중 for문을 이용해서 1~10까지 중 i와 k의 더한 합이 3의 배수일때만 출력</h3>
+  -continue를 이용<br>
+  <br>
+  <input type="button" value="확인" onclick="proc3()"><br>
+  <div id="result3"></div>
+</div>
+
+<div class="box">
+  <h3>1~100까지 중 2의 배수이면서 3의 배수인것만 출력</h3>
+  <br>
+  <input type="button" value="확인" onclick="proc4()"><br>
+  <div id="result4"></div>
+</div>
+
+<div class="box">
+  <h3>두 수를 입력(prompt) 두수의 합이 100이상일이때 입력받은 두수와 함께  출력, 두수 모두 0이 입력되면 종료. ​
+          ​</h3><br>
+    continue를 이용
+  <br>
+  <input type="button" value="확인" onclick="proc5()"><br>
+  <div id="result5"></div>
+</div>
+</body>
+</html>

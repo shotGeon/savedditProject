@@ -1,0 +1,311 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
+<head>
+</head>
+
+<title></title>
+
+<body>
+
+	<div class="row">
+		<div class="col-md-6">
+			<div class="card card-default">
+				<div class="card-header">
+					<h3 class="card-title">
+						<i class="fas fa-bullhorn"></i> 에러로그
+					</h3>
+				</div>
+				<!-- /.card-header -->
+				<div class="card-body">
+					<div class="callout callout-danger">
+						<h5>서버 에러  발생!</h5>
+
+						<p>500에러 발생!</p>
+					</div>
+					<div class="callout callout-info">
+						<h5>정보!</h5>
+
+						<p>파란색</p>
+					</div>
+					<div class="callout callout-warning">
+						<h5>알림!</h5>
+
+						<p>노란색</p>
+					</div>
+					<div class="callout callout-success">
+						<h5>확인!</h5>
+
+						<p>녹색!</p>
+					</div>
+				</div>
+				<!-- /.card-body -->
+			</div>
+			<!-- /.card -->
+		</div>
+		<!-- /.col -->
+
+		<div class="col-md-6">
+			<div class="card card-default">
+				<div class="card-header">
+					<h3 class="card-title">
+						<i class="fas fa-bullhorn"></i> 접속로그
+					</h3>
+				</div>
+				<!-- /.card-header -->
+				<div class="card-body">
+					<div class="callout callout-danger">
+						<h5>허가되지 않은 접속!</h5>
+
+						<p>'''''''''에서 허가되지 않은 접속 기록!</p>
+					</div>
+					<div class="callout callout-info">
+						<h5>정보!</h5>
+
+						<p>파란색</p>
+					</div>
+					<div class="callout callout-warning">
+						<h5>알림!</h5>
+
+						<p>노란색</p>
+					</div>
+					<div class="callout callout-success">
+						<h5>확인!</h5>
+
+						<p>녹색!</p>
+					</div>
+				</div>
+				<!-- /.card-body -->
+			</div>
+			<!-- /.card -->
+		</div>
+		<!-- /.col -->
+	</div>
+
+	<div class="row">
+		<div class="col-6">
+			<!-- Custom Tabs -->
+			<div class="card">
+				<div class="card-header d-flex p-0">
+					<h3 class="card-title p-3">기관관리</h3>
+					<ul class="nav nav-pills ml-auto p-2">
+						<li class="nav-item"><a class="nav-link active" href="#tab_1"
+							data-toggle="tab">검사소</a></li>
+						<li class="nav-item"><a class="nav-link" href="#tab_2"
+							data-toggle="tab">보건소</a></li>
+						<li class="nav-item"><a class="nav-link " href="#tab_3"
+							data-toggle="tab">병원</a></li>
+						<li class="nav-item dropdown"><a
+							class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
+							aria-expanded="false"> 관리메뉴 <span class="caret"></span>
+						</a>
+							<div class="dropdown-menu" style="">
+								<a class="dropdown-item" tabindex="-1" href="#">조회</a> <a
+									class="dropdown-item" tabindex="-1" href="#">등록</a> <a
+									class="dropdown-item" tabindex="-1" href="#">수정</a> <a
+									class="dropdown-item" tabindex="-1" href="#">삭제</a>
+							</div></li>
+					</ul>
+				</div>
+				<!-- /.card-header -->
+
+				<div class="tab-content">
+					<div class="tab-pane active" id="tab_1">
+						<div class="col-md-12">
+							<div class="card">
+
+								<!-- /.card-header -->
+								<div class="card-body">
+									<table class="table table-bordered">
+										<thead>
+											<tr>
+												<th style="width: 10px">#</th>
+												<th>기관명</th>
+												<th>연락처</th>
+												<th style="width: 40px">구분</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1.</td>
+												<td>Update software</td>
+												<td>
+													<div class="progress progress-xs">
+														<div class="progress-bar progress-bar-danger"
+															style="width: 55%"></div>
+													</div>
+												</td>
+												<td><span class="badge bg-danger">병원</span></td>
+											</tr>
+											<tr>
+												<td>2.</td>
+												<td>Clean database</td>
+												<td>
+													<div class="progress progress-xs">
+														<div class="progress-bar bg-warning" style="width: 70%"></div>
+													</div>
+												</td>
+												<td><span class="badge bg-warning">생활치료센터</span></td>
+											</tr>
+											<tr>
+												<td>3.</td>
+												<td>Cron job running</td>
+												<td>
+													<div class="progress progress-xs progress-striped">
+														<div class="progress-bar bg-primary" style="width: 30%"></div>
+													</div>
+												</td>
+												<td><span class="badge bg-primary">검사소</span></td>
+											</tr>
+											<tr>
+												<td>4.</td>
+												<td>Fix and squish bugs</td>
+												<td>
+													<div class="progress progress-xs progress-striped active">
+														<div class="progress-bar bg-success" style="width: 90%"></div>
+													</div>
+												</td>
+												<td><span class="badge bg-success">보건소</span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- /.card-body -->
+								<div class="card-footer clearfix">
+									<ul class="pagination pagination-sm m-0 float-right">
+										<li class="page-item"><a class="page-link" href="#">«</a></li>
+										<li class="page-item"><a class="page-link" href="#">1</a></li>
+										<li class="page-item"><a class="page-link" href="#">2</a></li>
+										<li class="page-item"><a class="page-link" href="#">3</a></li>
+										<li class="page-item"><a class="page-link" href="#">»</a></li>
+									</ul>
+								</div>
+							</div>
+							<!-- /.card -->
+						</div>
+					</div>
+					<!-- /.tab-pane -->
+					<div class="tab-pane" id="tab_2">보건소.</div>
+					<!-- /.tab-pane -->
+					<div class="tab-pane" id="tab_3">
+						
+					</div>
+
+					<!-- /.tab-pane -->
+				</div>
+				<!-- /.tab-content -->
+
+			</div>
+			<!-- /.card-body -->
+		</div>
+		<!-- ./card -->
+
+
+		<!-- /.col -->
+		<div class="col-md-6">
+			<div class="card">
+				<div class="card-header">
+					<h3 class="card-title">데이터 백업</h3>
+				</div>
+				<!-- /.card-header -->
+				<div class="card-body">
+					<!-- we are adding the accordion ID so Bootstrap's collapse plugin detects it -->
+					<div id="accordion">
+						<div class="card card-primary">
+							<div class="card-header">
+								<h4 class="card-title w-100">
+									<a class="d-block w-100 collapsed" data-toggle="collapse"
+										href="#collapseOne" aria-expanded="false"> 검사소 데이터 백업 </a>
+								</h4>
+							</div>
+							<div id="collapseOne" class="collapse" data-parent="#accordion"
+								style="">
+								<div class="card-body">Anim pariatur cliche reprehenderit,
+									enim eiusmod high life accusamus terry richardson ad squid. 3
+									wolf moon officia aute, non cupidatat skateboard dolor brunch.
+									Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+									tempor, sunt aliqua put a bird on it squid single-origin coffee
+									nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+									craft beer labore wes anderson cred nesciunt sapiente ea
+									proident. Ad vegan excepteur butcher vice lomo. Leggings
+									occaecat craft beer farm-to-table, raw denim aesthetic synth
+									nesciunt you probably haven't heard of them accusamus labore
+									sustainable VHS.</div>
+							</div>
+						</div>
+						<div class="card card-success">
+							<div class="card-header">
+								<h4 class="card-title w-100">
+									<a class="d-block w-100 collapsed" data-toggle="collapse"
+										href="#collapseTwo" aria-expanded="false"> 보건소 데이터 백업 </a>
+								</h4>
+							</div>
+							<div id="collapseTwo" class="collapse" data-parent="#accordion"
+								style="">
+								<div class="card-body">Anim pariatur cliche reprehenderit,
+									enim eiusmod high life accusamus terry richardson ad squid. 3
+									wolf moon officia aute, non cupidatat skateboard dolor brunch.
+									Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+									tempor, sunt aliqua put a bird on it squid single-origin coffee
+									nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+									craft beer labore wes anderson cred nesciunt sapiente ea
+									proident. Ad vegan excepteur butcher vice lomo. Leggings
+									occaecat craft beer farm-to-table, raw denim aesthetic synth
+									nesciunt you probably haven't heard of them accusamus labore
+									sustainable VHS.</div>
+							</div>
+						</div>
+						<div class="card card-danger">
+							<div class="card-header">
+								<h4 class="card-title w-100">
+									<a class="d-block w-100 collapsed" data-toggle="collapse"
+										href="#collapseThree" aria-expanded="false"> 병원데이터 백업 </a>
+								</h4>
+							</div>
+							<div id="collapseThree" class="collapse" data-parent="#accordion"
+								style="">
+								<div class="card-body">Anim pariatur cliche reprehenderit,
+									enim eiusmod high life accusamus terry richardson ad squid. 3
+									wolf moon officia aute, non cupidatat skateboard dolor brunch.
+									Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+									tempor, sunt aliqua put a bird on it squid single-origin coffee
+									nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+									craft beer labore wes anderson cred nesciunt sapiente ea
+									proident. Ad vegan excepteur butcher vice lomo. Leggings
+									occaecat craft beer farm-to-table, raw denim aesthetic synth
+									nesciunt you probably haven't heard of them accusamus labore
+									sustainable VHS.</div>
+							</div>
+						</div>
+						<div class="card card-warning">
+							<div class="card-header">
+								<h4 class="card-title w-100">
+									<a class="d-block w-100 collapsed" data-toggle="collapse"
+										href="#collapseThree" aria-expanded="false"> 생활치료센터 백업 </a>
+								</h4>
+							</div>
+							<div id="collapseThree" class="collapse" data-parent="#accordion"
+								style="">
+								<div class="card-body">Anim pariatur cliche reprehenderit,
+									enim eiusmod high life accusamus terry richardson ad squid. 3
+									wolf moon officia aute, non cupidatat skateboard dolor brunch.
+									Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+									tempor, sunt aliqua put a bird on it squid single-origin coffee
+									nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+									craft beer labore wes anderson cred nesciunt sapiente ea
+									proident. Ad vegan excepteur butcher vice lomo. Leggings
+									occaecat craft beer farm-to-table, raw denim aesthetic synth
+									nesciunt you probably haven't heard of them accusamus labore
+									sustainable VHS.</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /.card-body -->
+			</div>
+			<!-- /.card -->
+		</div>
+	</div>
+
+</body>
++

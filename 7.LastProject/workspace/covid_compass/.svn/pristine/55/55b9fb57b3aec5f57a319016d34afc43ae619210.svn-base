@@ -1,0 +1,38 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ page trimDirectiveWhitespaces="true"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+<head></head>
+<title></title>
+
+<body>
+<div class="row">
+  <div class="col-12">
+    <div class="card" style="margin: 1px;">
+      <div class="card-header p-0 t-1">
+        <ul class="nav nav-pills ml-auto p-2" id="custom-tabs-two-tab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="custom-res-smple-pstv-y-list-tab" data-toggle="pill" href="#custom-res-smple-pstv-y-list" role="tab" aria-controls="custom-tabs-three-home-tab" aria-selected="true">양성 판정 목록</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="custom-res-smple-pstv-n-list-tab" data-toggle="pill" href="#custom-res-smple-pstv-n-list" role="tab" aria-controls="custom-tabs-three-profile-tab" aria-selected="false">음성 판정 목록</a>
+          </li>
+        </ul>
+      </div>
+      <div class="card-body">
+        <div class="tab-content" id="custom-tabs-two-tabContent">
+          <div class="tab-pane fade show active" id="custom-res-smple-pstv-y-list" role="tabpanel" aria-labelledby="custom-tabs-three-home-tab">
+          	<%@ include file="./res-smple-pstv-y-list.jsp" %>
+          </div>
+          <div class="tab-pane fade" id="custom-res-smple-pstv-n-list" role="tabpanel" aria-labelledby="custom-tabs-three-profile-tab">
+            <%@ include file="./res-smple-pstv-n-list.jsp"%>
+          </div>
+        </div>
+      </div>
+      <!-- /.card -->
+    </div>
+  </div>
+</div>
+</body>

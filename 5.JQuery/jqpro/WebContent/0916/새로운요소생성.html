@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script src="../js/jquery-3.6.0.min.js"></script>
+</head>
+
+
+<script>
+function proc1(){
+	
+}
+
+//$(document).ready(function(){
+$(function(){
+	
+	$('#btn1').on('click',function(){
+	  ptag=	$("<p id='p1' onclick='alert(\"korea\")'>Hello</p>");
+	  
+	  ptag.appendTo($('#result1'));
+	  //$('#result1').append(ptag);
+	})
+	
+	$('#btn2').on('click', function(){
+		
+		 ptag=$("<p></p>", {
+			
+					'text' : 'Hello',
+					'id' : 'p2',
+					'click' : function(){
+						alert('korea');	
+					}
+			
+		});	
+		ptag.appendTo($('#result2')); 
+		
+		
+	})
+	
+})
+
+</script>
+
+<body>
+
+<div class="box">
+  <h3></h3>
+  $('html문장') : html문장을 생성한다.<br>
+  result1에 추가 : appendTo('#result1')<br>
+   <br>
+   <br>
+  <!-- <input type="button" value="확인" onclick="proc1()"> -->
+  <input id="btn1" type="button" value="확인">
+  <br><br>
+  <div id="result1"></div>
+</div>
+
+<div class="box">
+  <h3></h3>
+  $('html문장', { 속성 }) : html문장을 생성한다.<br>
+  result2에 추가 : appendTo('#result1')<br>
+   <br>
+   <br>
+  <!-- <input type="button" value="확인" onclick="proc1()"> -->
+  <input id="btn2" type="button" value="확인">
+  <br><br>
+  <div id="result2"></div>
+</div>
+
+</body>
+</html>

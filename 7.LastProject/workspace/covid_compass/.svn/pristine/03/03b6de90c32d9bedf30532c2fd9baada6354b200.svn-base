@@ -1,0 +1,15 @@
+package com.spring.compass.service;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import com.spring.compass.vo.PstiVO;
+
+public interface PstiService {
+
+	public PstiVO getPstiByPstiNo(String pstiNo) throws SQLException;
+	
+	public PstiVO getPstiByManageNo(String manageNo) throws SQLException;
+	
+	public List<PstiVO> getPstiListByInspNo(String inspNo) throws SQLException;
+}

@@ -1,0 +1,22 @@
+package com.spring.compass.service;
+
+import java.sql.SQLException;
+
+import com.spring.compass.vo.HsptVO;
+import com.spring.compass.vo.PbhtVO;
+
+public interface HsptService {
+
+	public HsptVO getHsptByInstNo(String instNo) throws SQLException;
+	
+	public String getHsptCityNo(String city) throws SQLException;
+	
+	public int getHsptSeqNo() throws SQLException;
+	
+	public int getInstSeqNo() throws SQLException;
+	
+	public int registHspt(HsptVO hspt) throws SQLException;
+	
+	public int registInst(HsptVO hspt) throws SQLException;
+	
+}

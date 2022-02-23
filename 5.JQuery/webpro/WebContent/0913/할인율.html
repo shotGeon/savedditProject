@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<style>
+
+  .box, .imgbox, img{
+  	box-sizing : border-box;
+  	width : 100%;
+  }
+  #result1, #result2{
+  	height: 200px;
+  }
+  .imgbox{
+  	//display: inline-block;
+  	width: calc(20% - 1%); 
+  	height: 200px;
+  	float : left;
+  }
+  img{
+  	width: 100%;
+  	height: 80%;
+  }
+  #result2 img{
+  	width : 100px;
+  	height: 100px;
+  	padding: 10px;
+  }
+
+
+</style>
+
+<script>
+  window.onload =function(){
+     
+	 boxes = document.getElementsByClassName('imgbox');
+	 
+	 for(i=0; i<boxes.length; i++){
+		//proc1=파라미터로 사용되는 함수 안에는()가 없다.
+		 boxes[i].addEventListener('click', proc1);
+	 }
+  	 
+  }
+  
+   pid=null;
+  //this는 람다식에서 쓸 수 없다.
+  function proc1(){
+	  
+	  //ptag가 이미 만들어져 있는가를 비교한다.
+	  //만약 만들어져 있다면 ptag를 지워라
+	  pid=document.getElementById('sale');
+	  if(pid!=null){
+	  pid.parentNode.removeChild(pid);	  
+	  }
+	  
+  	  //여기서 this는 클릭한 imgbox를 가리킨다.	
+	  
+  	  //5~10사이에 랜덤 발생
+  	  rand=Math.floor(Math.random()*6+5);
+  	  
+  	  //textNode생성 할인률: 랜덤
+  	  text = document.createTextNode("할인률: "+rand+"%");
+  	  
+  	  //p태그 생성
+  	  
+  	  ptag=document.createElement('p');
+  	  ptag.id="sale";
+  	  ptag.appendChild(text);
+  	  
+  	  this.appendChild(ptag);
+  	  
+  	  //이벤트 제거(같은거를 다시 클릭했을때 중복되지 않게 삭제된다.)
+  	  this.removeEventListener('click',proc1);
+		  
+  }
+  
+  function proc2(btn){
+	  
+	  btn.style.display = "none";
+	  
+	  gvbtn = btn;
+	  
+	  
+	  //result2를 접근 검색
+	  result=document.getElementById('result2');
+	  
+	  
+	  a=setInterval(function(){
+		  
+	  //result2에서 첫번째 자식을 선택한다.
+	  //childimg= result.firstChild
+	  childimg=result.getElementsByTagName('img')[0];
+	  console.log(childimg);
+	  
+	  //선택한 자식요소를 result2에 추가한다.
+	  result.appendChild(childimg);
+		  
+		  
+		  
+	  },500)
+	  
+	  
+  }
+  
+  function proc3(){
+	  
+	  clearInterval(a);
+	  
+	  //확인버튼 나타내기
+	  gvbtn.style.display="inline";
+  }
+</script>
+</head>
+<body>
+
+<div class="box">
+  <h3>새로운 요소 추가</h3>
+  imgbox를 클릭하면&lt;p>할인율 : 5% &lt;/p>를 추가한다.
+   <br>
+   이벤트 일괄등록<br>
+   imgbox.addEventListner('click',fn)<br>
+   fn에서 imgbox를 this로 받는다<br>
+   <br>
+   이벤트 제거<br>
+   this.removeEventListener('click',proc1);<br>
+  <br><br>
+  <div id="result1">
+    <div class="imgbox"><img src="../images/단풍.jpg" alt="단풍.jpg"></div>
+    <div class="imgbox"><img src="../images/뱅쇼.jpg" alt="뱅쇼.jpg"></div>
+    <div class="imgbox"><img src="../images/수국.jpg" alt="수국.jpg"></div>
+    <div class="imgbox"><img src="../images/국화7.jpg" alt="국화7.jpg"></div>
+    <div class="imgbox"><img src="../images/식품1.jpg" alt="식품1.jpg"></div>
+  
+  
+  </div>
+</div>
+
+
+<div class="box">
+  <h3>새로운 요소 추가</h3>
+  부모노드.appendChild(자식노드)
+  기존의 요소를 가지고 appendChild를 사용할때는 기존의 요소가 잘라내기 후 추가된다.
+  <br><br>
+  <input type="button" value="확인" onclick="proc2(this)">
+  <input type="button" value="종료" onclick="proc3()">
+  
+  <br><br>
+  <div id="result2">
+    <img class="imgbox" src="../images/단풍.jpg" alt="단풍.jpg">
+    <img class="imgbox" src="../images/뱅쇼.jpg" alt="뱅쇼.jpg">
+    <img class="imgbox" src="../images/수국.jpg" alt="수국.jpg">
+    <img class="imgbox" src="../images/국화7.jpg" alt="국화7.jpg">
+    <img class="imgbox" src="../images/식품1.jpg" alt="식품1.jpg">
+  
+  
+  </div>
+</div>
+
+</body>
+</html>

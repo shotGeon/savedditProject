@@ -1,0 +1,27 @@
+package com.spring.compass.dao;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import com.spring.compass.command.InptntListSearchCommand;
+import com.spring.compass.command.InptntListVO;
+import com.spring.compass.vo.HsptVO;
+
+public interface HsptDAO {
+	
+	public HsptVO selectHsptByInstNo(String instNo) throws SQLException;
+	
+	public int selectInptntListCount(InptntListSearchCommand cri) throws SQLException;
+	
+	public List<InptntListVO> selectInptntList(InptntListSearchCommand cri) throws SQLException;
+	
+	public String selectHsptCityNo(String city) throws SQLException;
+	
+	public int selectHsptNextVal() throws SQLException;
+	
+	public int selectInstNextval() throws SQLException;
+	
+	public int insertHspt(HsptVO hspt) throws SQLException;
+	
+	public int insertInst(HsptVO hspt) throws SQLException;
+}
